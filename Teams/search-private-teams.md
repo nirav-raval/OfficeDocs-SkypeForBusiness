@@ -28,9 +28,8 @@ By default, users can't search for and find private teams. You can allow users t
 You can allow or prevent private team discovery for users or groups in your organization by using a Teams policy.
 
 To manage if users can search for private teams
-1. In the Teams admin center, expand **Teams** and select **Teams policies**.
-1. Select the policy that you want to update or create a new one.
-1. On the **Teams policy** pane, set **Private teams discovery** to **On** or **Off**.
+1. In the Teams admin center, select **Settings & policies**.
+1. Under the Teams settings, set **Discover private teams** to **On** or **Off**.
 
 Policy changes may take several hours to take effect.
 
