@@ -1,7 +1,7 @@
 ---
 title: Configure Operator Connect Conferencing
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.date: 02/22/2024
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: "Get phone numbers for your users"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: mikedav, roykuntz, jastark
 ms.date: 08/29/2023

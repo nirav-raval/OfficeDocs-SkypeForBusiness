@@ -88,6 +88,14 @@ To pin the Planner app for your users, you can edit the global (Org-wide default
 
 As described in the [Frontline workers and managers](#frontline-workers-and-managers) section of this article, there's a default app setup policy for users who are assigned an [F license](https://www.microsoft.com/microsoft-365/enterprise/frontline).
 
+## Use app-powered tasks to provide tailored task experiences
+
+The app-powered tasks feature offers your organization more control over what users see when they open their tasks in Planner. Instead of showing only the standard set of task fields, you can provide users with an experience tailored to the task at hand. 
+
+That experience might be a workflow-specific set of fields or step-by-step guidance to walk the user through a workflow from beginning to end. To achieve this, you integrate a Teams app with the task and create these tasks programmatically.
+
+To learn more, see [Manage app-powered tasks in Planner for tailored task experiences](app-powered-tasks-in-planner.md).
+
 ## Frontline workers and managers
 
 ### Tailored frontline app experience in Teams

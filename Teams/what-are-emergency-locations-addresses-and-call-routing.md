@@ -1,7 +1,7 @@
 ---
 title: Plan and manage emergency calling
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz
 ms.date: 01/22/2024

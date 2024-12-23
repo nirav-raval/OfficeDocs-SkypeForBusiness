@@ -1,14 +1,14 @@
 ---
 title: Manage app setup policies in Microsoft Teams
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.subservice: teams-apps
 ms.service: msteams
 audience: Admin
-ms.date: 07/31/2024
+ms.date: 11/05/2024
 ms.reviewer: mhayrapetyan
 ms.collection: 
   - M365-collaboration
@@ -38,6 +38,9 @@ The following built-in app setup policies are available in the Microsoft Teams a
 * **Global (Org-wide default)**: This default policy applies to all users in your organization unless you assign another policy. Edit the global policy to pin apps that are most important for your users.
 
 * **FirstlineWorker**: This policy is for Frontline Worker. The policy can't be customized. You can assign it to Frontline Workers in your organization.
+
+> [!NOTE]
+> The user pinning setting is available in the Teams admin center in Microsoft 365 Commercial, GCC, GCC High, and DoD environments.
 
 ## Pin apps
 
@@ -75,7 +78,7 @@ To modify the pinned apps for everyone in your organization, edit the existing `
 
     :::image type="content" source="media/add-pinned-apps-trimmed.png" alt-text="Screenshot shows how to add pinned apps in app setup policy." lightbox="media/add-pinned-apps-large.png":::
 
-1. Arrange the apps in the order that you want the apps to appear in Teams client. You can change the sequence independently under **App bar**, **Messaging extensions**, and **Meeting extensions**. You can remove apps from a scope.
+1. Arrange the apps in the order that you want the apps to appear in Teams client. You can change the sequence independently under **App bar**, **Messaging extensions**, and **Meeting extensions**. You can remove apps from a scope. The first pinned app opens by default when a user opens Teams client on mobile.
 
    :::image type="content" source="media/pinned-apps.png" alt-text="Screenshot of the pinned apps and options to change their order.":::
 
@@ -188,8 +191,6 @@ When you unassign policies in bulk, you're removing policy assignments that were
 * Users can change the order of their pinned apps on Teams desktop and mobile clients if the user pinning option is turned on. Users can't change the order of their pinned apps on Teams web client.
 
 * Admin pins always take precedence. If the user pinning option is turned on, then apps pinned by the users display below the apps pinned by the admins. If the user pinning option is turned off, then the users lose existing pins and only the apps pinned by the admins are available in the app bar.
-
-* The user pinning setting is available in the Teams admin center in Microsoft 365 Government Community Cloud (GCC) environments (GCC, GCC High, and DoD), but it has no effect.
 
 * There's no limit on the maximum number of pinned apps that you can add to a policy. However, at least two apps must be pinned to the Teams mobile client (iOS and Android). If a policy has fewer than two apps, the mobile client doesn't reflect the policy settings. Instead, the mobile client continues to use the existing configuration.
 

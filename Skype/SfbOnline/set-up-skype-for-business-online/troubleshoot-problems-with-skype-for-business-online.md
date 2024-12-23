@@ -40,7 +40,7 @@ For dial-in conferencing issues, see [Audio Conferencing troubleshooting and kno
 
 - [Skype for Business Online users can't communicate with external contacts](/SkypeForBusiness/troubleshoot/online-im-presence/cannot-communicate-with-external-contacts)
 
-- [Skype for Business and Lync Troubleshooting Guide (downloadable PDF)](https://gallery.technet.microsoft.com/office/Skype-for-Business-and-7857597d/view/Discussions)
+- [Skype for Business and Lync Troubleshooting Guide (downloadable PDF)](https://www.academia.edu/26652404/SKYPE_for_BUSINESS_and_LYNC_Troubleshooting_Guide)
 
 - [Diagnosing and resolving PowerShell connection problems with Skype for Business Online](../set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell.md)
 

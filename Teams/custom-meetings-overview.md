@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: msteams
 audience: admin
 ms.reviewer: margidesai, nraghavan
-ms.date: 12/18/2023
+ms.date: 11/1/2024
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection:
@@ -93,3 +93,10 @@ Collaborating with each team to define a standardized set of needs for meetings 
 Consider the compliance implications of your customization features. Establish policies and guidelines to prevent the use of inappropriate or offensive images. I'ts important to ensure compliance with data protection and privacy regulations.
 Have your compliance team review meeting compliance features to find out which settings need to be on for all users in your org, specific users, or specific groups.
 Keep in mind that meeting background images are visible to external participants, so you should choose images that you’re okay with anyone viewing.
+
+## Related topics
+
+- [Plan for Teams meetings](plan-meetings.md)
+- [Custom meeting backgrounds](custom-meeting-backgrounds.md)
+- [Meeting themes](meeting-themes.md)
+- [Custom meeting templates](custom-meeting-templates-overview.md)

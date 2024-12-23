@@ -1,7 +1,7 @@
 ---
 title: Team templates for small and medium businesses built with Microsoft Graph
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 audience: ITPro
 ms.topic: conceptual

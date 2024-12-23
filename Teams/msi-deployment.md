@@ -6,7 +6,7 @@ manager: jtremper
 ms.topic: article
 ms.service: msteams
 ms.reviewer: amitsri
-ms.date: 08/03/2023
+ms.date: 10/30/2024
 audience: admin
 description: Use Windows Installer (MSI) files to distribute the Teams client to multiple users and computers.
 ms.localizationpriority: medium
@@ -23,6 +23,9 @@ appliesto:
 ---
 
 # Bulk install classic Teams using Windows Installer (MSI)
+
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
 
 >[!Important]
 >This article is for classic Teams only. To bulk deploy to new Teams, see: [Bulk upgrade to the new Microsoft Teams client](new-teams-bulk-install-client.md)

@@ -1,7 +1,7 @@
 ---
 title: User requests for admins
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: how-to
 ms.service: msteams

@@ -1,7 +1,7 @@
 ---
 title: Plan for Teams Phone Mobile
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 07/08/2024
 ms.topic: article
@@ -12,7 +12,7 @@ ms.collection:
   - m365initiative-voice
   - highpri
   - Tier1
-ms.reviewer: crowe
+ms.reviewer: scottfrancis
 search.appverid: MET150
 
 description: Learn more about Teams Phone Mobile, such as requirements and planning for deployment.

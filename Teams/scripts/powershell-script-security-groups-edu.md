@@ -1,8 +1,8 @@
 ---
 title: PowerShell script sample - Create security groups for educators and students in your school
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: article
 ms.reviewer: angch
 ms.date: 07/22/2020

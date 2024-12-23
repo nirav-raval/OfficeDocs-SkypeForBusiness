@@ -84,7 +84,7 @@ We recommend that you visit the vendor's web site for the latest information.
             <td align ="center" valign="middle">&#x2714;+S</td>
         </tr>
         <tr align="left" valign="top">
-            <td><a href="http://bressner.com/ucfeaturebox-advanced-unified-box-communications/">Bressner</a></td>
+            <td><a href="https://www.bressner.de/en/products/unified-communications-en/">Bressner</a></td>
             <td>UCFeatureBox UCFB-xxx</td>
             <td>r1.8-422960M</td>
             <td>Basic Gateway</td>
@@ -177,7 +177,7 @@ We recommend that you visit the vendor's web site for the latest information.
                 <ol>
                     <li>PBX is tested and is supported only with an AudioCodes Mediant 1000 Gateway v6.2</li>
                     <li>When a user configures simul-ring to a PSTN IVR number, the calling party will hear ring back not early media played from the IVR</li>
-                    <li>PBX does'ot support DNS load balancing</li>
+                    <li>PBX doesn't support DNS load balancing</li>
                     <li>PBX doesn't generate OPTIONS ping</li>
                 </ol>
                 <p>C2100 &amp; C20 Notes:</p>

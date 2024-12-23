@@ -4,7 +4,7 @@ author: mkbond007
 ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 09/27/2024
+ms.date: 11/22/2024
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -54,7 +54,7 @@ These reports use data from the Voice Applications Analytics Collector (VAAC) se
 You need to have Power BI Desktop installed. You can install and use the free version from the [Microsoft Windows Store](https://aka.ms/pbidesktopstore).
 
 > [!IMPORTANT]
-> Power BI Desktop is updated and released on a monthly basis, incorporating customer feedback and new features. Only the most recent version of Power BI Desktop is supported; customers who contact support for Power BI Desktop will be asked to upgrade to the most recent version. You can get the most recent version of Power BI Desktop from the [Windows Store](https://aka.ms/pbidesktopstore), or as a single executable containing all supported languages that you [download](https://www.microsoft.com/download/details.aspx?id=58494) and install on your computer.
+> Power BI Desktop is updated and released on a monthly basis, incorporating customer feedback and new features. Only the most recent version of Power BI Desktop is supported. Customers who contact support for Power BI Desktop are asked to upgrade to the most recent version. You can get the most recent version of Power BI Desktop from the [Windows Store](https://aka.ms/pbidesktopstore), or as a single executable containing all supported languages that you [download](https://www.microsoft.com/download/details.aspx?id=58494) and install on your computer.
 
 ### Power BI Service
 
@@ -91,7 +91,7 @@ Use one of the following methods to control access to the historical reports:
   For more information, see [CQD access role](./turning-on-and-using-call-quality-dashboard.md#assign-admin-roles-for-access-to-cqd).
 
   > [!NOTE]
-  > If a user is assigned a CQD access role and a voice applications policy, the CQD role will take precendence and the user will see all the Auto attendants, Call queues and Agents in the tenant.
+  > If a user is assigned a CQD access role and a voice applications policy, the CQD role takes precendence and the user can see all the Auto attendants, Call queues, and Agents in the tenant.
 
 ## V3.x.x desktop installation
 
@@ -604,6 +604,9 @@ A valid query consists of several attributes in a JSON object:
 - **Parameters**: Currently only UserAgent is supported.
 
 - **LimitResultRowsCount**: the max count of rows returned by VAAC
+
+>[!NOTE]
+> When you submit a query that searches by `Date`, and the search criteria includes both date and time (ISO 8601 format), the time portion is ignored.
 
 ## Accessing VAAC outside of Power BI
 

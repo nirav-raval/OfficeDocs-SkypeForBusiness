@@ -1,14 +1,14 @@
 ---
 title: Manage apps that work across Outlook and Microsoft 365 App
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: conceptual
 ms.service: msteams
 ms.subservice: teams-apps
 ms.custom: intro-get-started
 audience: admin
-ms.date: 07/08/2024
+ms.date: 11/12/2024
 ms.collection: 
   - M365-collaboration
   - tier2
@@ -83,7 +83,7 @@ Outcomes of app availability setting applied to a particular app.
 | No one                                              | No user in the organization can install              | No one                                                      |
 | No one                                              | All users in the organization can install            | Everyone                                                    |
 | No one                                              | Specific users/groups can install                    | Specific users & groups                                     |
-| Specific users & groups                             | Specific users/groups can install                    | Specific users & groups                                     |
+| Specific users & groups                             | All users in the organization can install            | Everyone                                                    |
 | Specific users & groups (example: Marketing, Legal) | Specific users/groups can install (example: Marketing, Design) | Specific users & groups (example: Legal, Design, Marketing) |
 | Specific users & groups                             | No user in the organization can install              | Specific users & groups                                     |
 | Everyone                                            | All users in the organization can install            | Everyone                                                    |

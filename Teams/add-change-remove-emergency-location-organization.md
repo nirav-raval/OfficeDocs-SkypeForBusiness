@@ -1,7 +1,7 @@
 ---
 title: Manage emergency locations
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: serdars
 ms.reviewer: jastark, roykuntz
 ms.date: 09/24/2024

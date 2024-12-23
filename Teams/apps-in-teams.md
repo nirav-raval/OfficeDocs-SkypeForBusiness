@@ -2,8 +2,8 @@
 title: Know about apps in Microsoft Teams
 description: Learn about apps and decide what apps to allow in Teams based on your organization's profile and business requirements.
 ms.topic: conceptual
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 audience: admin
 ms.service: msteams
@@ -178,6 +178,7 @@ The following apps are provided by Microsoft and are generally available:
 * Praise
 * Project
 * PTZ Camera Controls
+* Queues App
 * Roadmap – Microsoft Project
 * Selfhost - Avatars
 * SharePoint

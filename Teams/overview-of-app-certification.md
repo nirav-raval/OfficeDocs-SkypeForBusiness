@@ -1,14 +1,14 @@
 ---
-title: Overview of app certification by Microsoft
+title: Know about high quality Microsoft certified Teams apps
 description: Learn about the Microsoft 365 app compliance program for security, compliance, and privacy of third-party apps.
 ms.topic: article
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 audience: admin
 ms.subservice: teams-apps
 ms.service: msteams
-ms.date: 05/08/2024
+ms.date: 10/31/2024
 ms.collection: 
   - M365-collaboration
 f1.keywords:
@@ -37,7 +37,7 @@ Before an app developer can submit their app to Microsoft, the developer is requ
 
 ## Publisher attestation
 
-Publisher attestation is the next tier in the app compliance program. Publisher attested apps provide confidence to admins about security and compliance measures of an app. It also helps reduce the time to review this information for an app. The attestation will reflect an app's security, data handling, and compliance practices against more than 80 risk factors identified by [Microsoft Defender for Cloud Apps](/defender-cloud-apps/). Publisher attestation process can start before Publisher verification is complete.
+Publisher attestation is the next tier in the app compliance program. Publisher attested apps provide confidence to admins about security and compliance measures of an app. It also helps reduce the time to review this information for an app. The attestation reflects an app's security, data handling, and compliance practices against more than 80 risk factors identified by [Microsoft Defender for Cloud Apps](/defender-cloud-apps/). Publisher attestation process can start before Publisher verification is complete.
 
 App developers are asked to complete a self-assessment that includes questions frequently asked by customers and IT admins to evaluate the security and compliance of an app. Microsoft then publishes this information for easier and more timely evaluation. To know more, see [Attestation guide](/microsoft-365-app-certification/docs/enterprise-app-attestation-guide).
 
@@ -63,20 +63,22 @@ The attestation details page for an attested or certified app lists the followin
 
 App certification is achieved through:
 
-* A qualified analyst's review.
 * Approval of a comprehensive assessment centering on an app's security and compliance frameworks, processes, and procedures.
+* A qualified analyst's review.
 
-We check the app against a series of security controls derived from leading industry-standard frameworks.
+We check the app against a series of security controls derived from leading industry-standard frameworks. Developers demonstrate following strong security and compliance practices to protect customer data when their app is used in an organization. More information about how admins and users benefit from the certification is available at [Overview of Microsoft 365 app compliance program](/microsoft-365-app-certification/docs/enterprise-app-certification-guide).
 
-The certificate demonstrates the strong security and compliance practices that are in place to protect customer data when the app is used in an organization. More information about how admins and users benefit from the certification is available at [Overview of Microsoft 365 app compliance program](/microsoft-365-app-certification/docs/enterprise-app-certification-guide).
+Administrators can find Microsoft 365 certified apps and information about such apps in the following ways:
 
-Administrators can quickly check for Microsoft 365 certified apps in the following ways.
-
-* When gathering more information about an app on the web, see the shield icon in [Microsoft documentation about the app](/microsoft-365-app-certification/teams/teams-apps).
+* When evaluating an app, you can access app's security and compliance information and in some cases detailed evidences for this information. Developers provide answers to a questionnaire as part of their [Teams app's security and compliance information](/microsoft-365-app-certification/teams/teams-apps) for Publisher Attestation and for Microsoft 365 certification.
 
   :::image type="content" source="media/attested-app-doc-details.png" alt-text="View the Microsoft 365 certification information in the detailed help article about security and compliance of an app":::
 
-* When checking an application in [Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps), sort the list of apps using the Certification column. See the icon and optionally, select the link to access the app-specific page mentioned above.
+  Developers of some Microsoft 365 certified apps and Copilot agents can choose to provide detailed evidences to help your organization quickly assess their app. Developers submit these comprehensive details as part of the audits done during certification. If developers agree to share these detailed evidence, then you can download these app trust evidences from the app details page in the Teams admin center. The download option is available only in commercial tenants.
+
+   :::image type="content" source="media/m365-cert-download-evidence.png" alt-text="Screenshot showing the option to download detailed evidence provided by developers of certified apps." lightbox="media/m365-cert-download-evidence.png":::
+
+* When checking an application in [Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps), sort the list of apps using the Certification column. See the shield icon and optionally, select the link to access the app-specific page.
 
   :::image type="content" source="media/m365cert-apps-list1.png" alt-text="View Microsoft 365 certification status of an app in the Teams admin center." lightbox="media/m365cert-apps-list2.png":::
 

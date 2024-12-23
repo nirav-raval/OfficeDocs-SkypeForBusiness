@@ -26,7 +26,7 @@ description: Learn how to limit presenter role permissions and capabilities in y
 
 # Limit presenter role permissions for your org
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
 In Microsoft Teams, presenters have responsibilities related to presenting, sharing content and  collaborating within the meeting or event. Presenters can mute attendees, change roles within the meeting, manage the lobby, and more.
 

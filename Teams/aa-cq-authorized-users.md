@@ -8,7 +8,7 @@ ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 audience: admin
-ms.date: 03/25/2024
+ms.date: 10/22/2024
 ms.collection: 
 - M365-voice
 - m365initiative-voice
@@ -24,9 +24,6 @@ description: Learn how to set up authorized users and what they can manage for A
 ---
 
 # Set up Auto attendant and Call queue authorized users
-
-> [!NOTE]
-> Some of these features are in limited public preview. For more information, contact your Microsoft customer success manager. Information in this article is subject to change.
 
 This article is for IT Pros and administrators who want to delegate Auto attendant and Call queue change capabilities to users in their organization. This article describes the necessary steps to create an Authorized user.
 
@@ -63,6 +60,11 @@ To assign a Teams Phone and Teams Premium license, do the following steps:
 1. Select your Teams Phone license. On the product details page, select **Assign licenses** and assign the license to your users.
 1. Select **Assign** once you're finished.
 1. Repeat Steps 2 and 3 for a Teams Premium license.
+
+Before you can enable voice for your users, you must assign a license to them first. To enable voice for your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
 
 ## Step 2: Assign phone numbers to your users
 

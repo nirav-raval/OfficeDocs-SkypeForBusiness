@@ -26,7 +26,7 @@ description: "SIP Trunking and E-911 services partner qualification requirements
 
 SIP trunking enables connectivity to the public switched telephony network (PSTN) directly over SIP.
 
-E-911 service providers provide routing of emergency calls from Lync to the correct emergency dispatch center responsible for deploying emergency responders for the given client location. To learn about E-911, see [E-911 Services](e-911-service-providers.md)
+E-911 service providers provide routing of emergency calls from Lync to the correct emergency dispatch center responsible for deploying emergency responders for the given client location. To learn about E-911, see [E-911 Services](e-911-service-providers.md).
 
 ## SIP trunking services qualified for Lync Server 2013
 
@@ -63,7 +63,7 @@ E-911 service providers provide routing of emergency calls from Lync to the corr
 |[Phonero](http://www.phonero.no/)  | Phonero SIP-trunk |  |
 |[Pure-IP](http://pure-ip.com)  |OneLync SIP Trunks  | &#x2714; |
 |[QSC AG](https://www.qsc.com)  |IPfonie extended link  |  |
-|[Redwood Technologies](http://www.redwoodtech.com/products/microsoft-lync/)  | SIP Trunk |  |
+|[Redwood Technologies](http://www.redwoodtech.com/productjs/microsoft-lync/)  | SIP Trunk |  |
 |[Rogers Business Solutions](http://business.rogers.com/)  | Rogers Business Solutions (RBS) SIP Trunking |  |
 |SBC Europe  | SIP Trunking for Microsoft Lync (2013) |  |
 |[SoTel Systems, LLC](http://www.sotelsystems.com/)  | SIP Trunking |  |
@@ -113,7 +113,7 @@ E-911 service providers provide routing of emergency calls from Lync to the corr
 |[HIPCOM](https://netfore.com/featured-work/hipcom/)     |SIP Trunking|         |
 |[IECI](http://www.ieci.es/)     |IECI|         |
 |Infopact Network Solutions |SIP Trunk|&#x2714;|
-|[IntelePeer](http://www.intelepeer.com/SIPTrunking-microsoft-lync) |IntelePeer SIP Trunking |&#x2714;|
+|[IntelePeer](https://intelepeer.ai/partners) |IntelePeer SIP Trunking |&#x2714;|
 |[Interoute](http://www.interouteone.com/) |InterouteOne|         |
 |[Kordia](http://www.kordia.co.nz/)     |Onkor Voice|&#x2714;|
 |[KPN](http://www.kpn.com/zakelijk/vast-bellen/zakelijk-vast-bellen.htm)     |VoIP Connect| |

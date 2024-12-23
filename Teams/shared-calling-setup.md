@@ -67,7 +67,9 @@ Each user must have a Teams Phone license assigned, and each user must be "voice
   1. Select your Teams Phone license. On the product details page, select **Assign licenses** and assign the license to your users.
   1. Select **Assign** once you're finished.
 
-- To enable users for voice, use the [Set-CsPhoneNumberAssignment cmdlet](/powershell/module/teams/set-csphonenumberassignment) and set the -EnterpriseVoiceEnabled parameter to $true. Don't assign a phone number to any Shared Calling enabled user.
+- To enable voice for your users, you can use the Teams admin center or PowerShell. Don't assign a phone number to any Shared Calling enabled user.
+  - In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+  - For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
 
 For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md) and [assigning licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 
@@ -91,7 +93,7 @@ For information on the configuration of emergency locations, see [Manage emergen
 
 ### Using a Calling Plan service number
 
-If the resource account uses a Calling Plan service number, you must have a [Pay-As-You-Go Calling Plan](calling-plans-for-office-365.md#pay-as-you-go-calling-plan) assigned to the resource account, and fund calls either with [Enable pay-as-you-go for your subscription](/microsoft-365/commerce/subscriptions/manage-pay-as-you-go-services#buy-a-pay-as-you-go-product-or-service-and-enable-overage), if your tenant has [New commerce experience calling subscriptions](what-are-communications-credits.md#customers-with-new-commerce-experience-calling-subscriptions) and you want to post pay for calls, or [Set up Communications Credits for your organization](set-up-communications-credits-for-your-organization.md).
+If the resource account uses a Calling Plan service number, you can have a [Pay-As-You-Go Calling Plan](calling-plans-for-office-365.md#pay-as-you-go-calling-plan) assigned to the resource account and fund calls with [pay-as-you-go minutes](/microsoft-365/commerce/subscriptions/manage-pay-as-you-go-services#buy-a-pay-as-you-go-product-or-service-and-enable-overage). If your tenant has a [Calling Plan subscription with a Microsoft Online Subscription Agreement](what-are-communications-credits.md#customers-without-a-microsoft-online-subscription-agreement-mosa-billing-account), [set up Communications Credits for your organization](set-up-communications-credits-for-your-organization.md).
 
 > [!NOTE]
 > If funding is not available for a call, the caller will hear a voice treatment stating that "You are not setup to use this calling feature, please contact your admin". If only a Pay-As-You-Go Calling Plan is assigned to the Resource Account, be sure it's correctly enabled to fund calls. If Communication Credits are assigned, confirm that the Communication Credits have a funded balance.

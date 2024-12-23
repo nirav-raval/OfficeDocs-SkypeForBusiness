@@ -24,7 +24,7 @@ description: Using approved corporate assets like backgrounds to create custom b
 
 # IT Admins- Manage and create custom meeting backgrounds for Teams meetings
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
 
 [!INCLUDE[Teams Premium](includes/teams-premium-ecm.md)]
 

@@ -24,7 +24,7 @@ description: Learn to manage meeting and event policy settings in Teams and use 
 ---
 # Manage meeting and event policies in Microsoft Teams
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
 As an admin, you can use meeting and event policies to control the features that are available to organizers and participants of meetings, webinars, and town halls in your organization. Depending on the feature, you can manage meeting policies in the Microsoft Teams admin center or through [PowerShell](teams-powershell-overview.md).
 

@@ -26,7 +26,7 @@ description: Learn how to prevent or block users in your organization from joini
 
 # Prevent users from joining external Microsoft Teams meetings
 
-**APPLIES TO:** ✔️Meetings ✖️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a x for no](/office/media/icons/cancel-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 As an admin, you can control which types of Microsoft Teams meetings users in your org can join. Managing the types of meetings your users can join can be helpful in privacy and compliance scenarios, where you might not want specific users or groups in your org joining meetings with external non-trusted trusted or even trusted organizations.
 

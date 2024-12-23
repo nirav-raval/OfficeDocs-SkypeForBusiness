@@ -21,7 +21,7 @@ appliesto:
 
 [!INCLUDE[Teams Premium](includes/teams-premium-ecm.md)]
 
-**APPLIES TO:** ✔️Meetings ✖️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a x for no](/office/media/icons/cancel-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 ## Overview
 

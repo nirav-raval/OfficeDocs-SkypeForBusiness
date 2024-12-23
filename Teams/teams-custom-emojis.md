@@ -1,7 +1,7 @@
 ---
 title: Custom emojis in Microsoft Teams
-ms.author: heidip
-author: MicrosoftHeidi
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.topic: article
 ms.date: 07/15/2024

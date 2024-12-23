@@ -27,20 +27,21 @@ description: Learn how to set up and manage Auto attendants in Microsoft Teams.
 
 # Set up a Microsoft Teams Auto attendant
 
-Auto attendants let people call your organization and navigate a menu system to speak to the right department, Call queue, person, or an operator. You can create Auto attendants for your organization with the Microsoft Teams admin center or with PowerShell.
+Auto attendants let people call your organization and navigate a menu system to speak to the right department, Call queue, person, or operator. You can create Auto attendants for your organization with the Microsoft Teams admin center or with PowerShell.
 
-Be sure you've read [Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md) and followed the [getting started steps](plan-auto-attendant-call-queue.md#getting-started) before you follow the procedures in this article.
+Before you follow the procedures in this article, be sure you've read [Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md) and followed the [getting started steps](plan-auto-attendant-call-queue.md#getting-started).
 
 Auto attendants can redirect calls, based on callers' input, to one of the following destinations:
 
 - **Operator** - the operator defined for the Auto attendant. Defining an operator is optional. The operator can be defined as any of the other destinations in this list.
 - **Person in the organization** - a person in your organization who can receive voice calls. This person can be an online user or a user hosted on-premises using Skype for Business Server.
-- **Voice app** - another Auto attendant or a Call queue. Choose the resource account associated with the Auto attendant or Call queue when choosing this destination.
+- **Voice app** - Choose the Auto attendant or Call queue when choosing this destination.
+- **Resource account** - Choose the resource account associated with the Auto attendant or Call queue when choosing this destination.
 - **Voicemail** - the voice mailbox associated with a Microsoft 365 group that you specify. You can choose if you want voicemail transcriptions and the "Please leave a message after the tone." system prompt.
   - In Microsoft 365 admin center, enable **Let people outside the organization email this team** for the Microsoft 365 group that you specify.
 - **External phone number** - any phone number. See [external transfer technical details](create-a-phone-system-auto-attendant.md?tabs=general-info#external-phone-number-transfers---technical-details).
 - **Announcement (Audio file)** - Play an audio file. The system plays the announcement, and then returns to the Auto attendant menu. See [Supported audio file formats](plan-auto-attendant-call-queue.md#supported-audio-file-formats).
-- **Announcement (Typed)** - Type in a message. Text you want the system to read. You can enter up to 1000 characters. The system plays the announcement, and then returns to the Auto attendant menu.
+- **Announcement (Typed)** - Type in a message. Text you want the system to read. You can enter up to 1,000 characters. The system plays the announcement, and then returns to the Auto attendant menu.
 
 > [!NOTE]
 > When redirecting calls to a **Person in the organization**, that person must be voice enabled. For details on enabling voice, see [Assign Teams add-on licenses to users](teams-add-on-licensing/assign-teams-add-on-licenses.md).
@@ -54,7 +55,14 @@ Auto attendants can redirect calls, based on callers' input, to one of the follo
 
 ## What's new for Auto attendants in the past six months
 
-- No new features in the past six months.
+- December 11
+  - [Nested Auto attendants and Call queues](./plan-auto-attendant-call-queue.md#nested-auto-attendants-and-call-queues) that no longer require a resource account and associated licensing are now supported in Teams admin center.
+
+- November 21
+  - [Dial by name improvements](#dial-by-name-improvements) for when a search returns multiple people with the same name.
+
+- November 5
+  - [Nested Auto attendants and Call queues](./plan-auto-attendant-call-queue.md#nested-auto-attendants-and-call-queues) no longer require a resource account and associated licensing.
 
 ## Steps to create an Auto attendant
 
@@ -66,7 +74,7 @@ The steps to add an Auto attendant are:
 1. Set up resource accounts.
 1. Set up authorized users.
 
-The steps outlined in the article create Auto attendants using the Teams admin center. For instructions to **create Auto attendants using PowerShell**, see [Creating Auto attendants with PowerShell cmdlets](create-a-phone-system-auto-attendant-via-cmdlets.md).
+The steps outlined in the article create Auto attendants using the Teams admin center. For instructions on creating Auto attendants using PowerShell, see [Creating Auto attendants with PowerShell cmdlets](create-a-phone-system-auto-attendant-via-cmdlets.md).
 
 ## Follow these steps to set up your Auto attendant
 
@@ -85,9 +93,7 @@ To set up an Auto attendant, in the [Teams admin center](https://admin.teams.mic
 1. Specify a [supported language](create-a-phone-system-auto-attendant-languages.md) for this Auto attendant. This language is used for system-generated voice prompts.
 
    > [!IMPORTANT]
-   > When using *Text to Speech*, the text must be entered in the selected language as the system doesn't perform translation.
-   >
-   > All words are pronounced in the selected language.
+   > When using *Text to Speech*, the text must be entered in the selected language as the system doesn't perform translation. All words are pronounced in the selected language.
 
 1. Choose if you want to enable voice inputs. When enabled, the name of every menu option becomes a speech-recognition keyword. For example, callers can say "One" to select the menu option mapped to key 1, or they can say "Sales" to select the menu option named "Sales." If you choose a language in Step 4 that doesn't support voice inputs, this option isn't available.
 
@@ -103,7 +109,7 @@ Once you've set your Auto attendant's general info, select **Next**.
 
 - If you select **Play an audio file** you can use the **Upload file** button to upload a recorded greeting message saved as audio in .WAV, .MP3, or .WMA format. The recording can be no larger than 5 MB.
 
-- If you select **Type a greeting message**, the system reads the text that you enter (up to 1000 characters) when the Auto attendant answers a call.
+- If you select **Type a greeting message**, the system reads the text that you enter (up to 1,000 characters) when the Auto attendant answers a call.
 
 ### Route the call
 
@@ -125,7 +131,7 @@ For each menu option, specify the following settings:
 
 - **Voice command** - defines the voice command that a caller can give to access this option, if voice inputs are enabled. It can contain multiple words like "Customer Service" or "Operations and Grounds." For example, the caller can press 2, say "two," or say "Sales" to select the option mapped to the two keys. This text is also rendered by text to speech for the service confirmation prompt, which might be something like "Transferring your call to sales."
 
-- **Redirect to** - the call routing destination used when callers choose this option. If you're redirecting to an Auto attendant or Call queue, choose the resource account associated with it.
+- **Redirect to** - the call routing destination used when callers choose this option. When redirecting to an Auto attendant or Call queue, you can choose to redirect to the Auto attendant or Call queue directly or to the resource account associated with the Auto attendant or Call queue. For more information, see [Nested Auto attendants and Call queues](./plan-auto-attendant-call-queue.md#nested-auto-attendants-and-call-queues).
 
 ### Directory search
 
@@ -133,9 +139,8 @@ If you assign dial keys to destinations, we recommend that you choose **None** f
 
 If you didn't assign dial keys, then choose an option for **Directory search**.
 
-**Dial by name** - If you enable this option, callers can say the user's name or type it on the telephone keypad. Any online user or any user hosted on-premises using Skype for Business Server, is an eligible user and can be found with Dial by name.
-
-**Dial by extension** - If you enable this option, callers can connect with users in your organization by dialing their phone extension. Any online user or any user hosted on-premises using Skype for Business Server, is an eligible user and can be found with **Dial by extension**. (You can set who is and isn't included in the directory on the [Dial scope](?tabs=dial-scope) page.)
+- **Dial by name** - If you enable this option, callers can say the user's name or type it on the telephone keypad. Any online user or any user hosted on-premises using Skype for Business Server, is an eligible user and can be found with Dial by name.
+- **Dial by extension** - If you enable this option, callers can connect with users in your organization by dialing their phone extension. Any online user or any user hosted on-premises using Skype for Business Server, is an eligible user and can be found with **Dial by extension**. (You can set who is and isn't included in the directory on the [Dial scope](?tabs=dial-scope) page.)
 
 > [!NOTE]
 > If you want to use both the **Dial by name** and **Dial by extension** features, you can assign a dial key on your main Auto attendant to reach an Auto attendant enabled for **Dial by name**. Within that Auto attendant, you can assign the 1 key (which has no letters associated with it) to reach the **Dial by extension** Auto attendant.
@@ -174,10 +179,10 @@ Your Auto attendant can have a call flow for each [Holiday you've set up](set-up
 
 1. Choose the type of greeting that you want to use.
 
-1. Choose if you want to **Disconnect**, **Redirect** or **Play menu options** the call.
+1. Choose if you want to **Disconnect**, **Redirect**, or **Play menu options** the call.
 
-    1. If you chose to redirect, choose the call routing destination for the call.
-    1. If you choose to play menu options, configure the **Play menu options**.
+    - If you chose to redirect, choose the call routing destination for the call.
+    - If you choose to play menu options, configure the **Play menu options**.
 
 1. Select **Save**.
 
@@ -210,7 +215,9 @@ Before you can create and manage resource accounts, you must do the following:
 - [Obtain phone numbers](manage-resource-accounts.md#obtain-phone-numbers)
 - [Assign permissions for managing a resource account](manage-resource-accounts.md#assign-permissions-for-managing-a-resource-account)
 
-All Auto attendants must have an associated resource account. All resource accounts must be assigned a [Microsoft Teams Phone Resource Account license](teams-add-on-licensing/virtual-user.md). If you wish, you can assign several resource accounts to an Auto attendant.
+All Auto attendants that directly answer calls must have an associated resource account. All resource accounts must be assigned a [Microsoft Teams Phone Resource Account license](teams-add-on-licensing/virtual-user.md). If you wish, you can assign several resource accounts to an Auto attendant.
+
+Nested Auto attendants and Call queues that receive calls from an auto attendant or call queue that has already answered the call don't require a resource account.
 
 For details on how to create resource accounts and ready them for use with auto attendants, see [Manage Teams resource accounts](manage-resource-accounts.md).
 
@@ -220,7 +227,7 @@ Once you've added resource accounts, select **Next**.
 
 ## Step 5: Authorized users
 
-**Authorized users** specifies the users who are authorized to make changes to this Auto attendant.  The capabilities that the users have are determined based on the [Teams voice applications policy](./manage-voice-applications-policies.md) that is assigned to the user.
+**Authorized users** specifies the users who are authorized to make changes to this Auto attendant. The capabilities that the users have are determined based on the [Teams voice applications policy](./manage-voice-applications-policies.md) that is assigned to the user.
 
 To **add a user** to the authorized users:
 
@@ -241,15 +248,29 @@ For more information, see [Set up authorized users](./aa-cq-authorized-users.md)
 
 ---
 
+## Extra functionality available through PowerShell cmdlets
+
+> [!CAUTION]
+> These configuration options are currently only available through PowerShell cmdlets and they don't appear in Teams admin center. If these options are configured through PowerShell, any changes to the Auto attendant through Teams admin center will erase these settings.
+
+### Dial by name improvements
+
+When a dial by name search returns multiple people with the same name, the results can now be enhanced by appending additional information after the name. This makes it easier for callers to reach the correct person.
+
+The default is to only say the name. However, the office or department information can now be added as part of the results.
+
+For more information, see [New-CsAutoAttendant -UserNameExtension](/powershell/module/teams/new-csautoattendant#-UserNameExtension).
+
 ## Resources for complex scenarios
 
 ### External phone number transfers - technical details
 
-Refer to the [Prerequisites](plan-auto-attendant-call-queue.md#prerequisites) in order to allow Auto attendants to transfer calls externally.  In addition,
+Refer to the [Prerequisites](plan-auto-attendant-call-queue.md#prerequisites) in order to allow Auto attendants to transfer calls externally.
 
-- For a resource account with a [Calling Plan license](calling-plans-for-office-365.md) or [Operator Connect](operator-connect-plan.md) number, the external transfer phone number must be entered in E.164 format (+[country code][area code][phone number]).
+In addition, for a resource account with a:
 
-- For a resource account with a Microsoft Teams Phone License and Direct Routing online voice routing policy, the external transfer phone number format is dependant on the [Session Border Controller (SBC)](direct-routing-connect-the-sbc.md) settings.
+- [Calling Plan license](calling-plans-for-office-365.md) or [Operator Connect](operator-connect-plan.md) number, the external transfer phone number must be entered in E.164 format (+[country code][area code][phone number]).
+- [Microsoft Teams Phone license](setting-up-your-phone-system.md) and [Direct Routing online voice routing policy](direct-routing-voice-routing.md), the external transfer phone number format is dependant on the [Session Border Controller (SBC)](direct-routing-connect-the-sbc.md) settings.
 
 The outbound phone number that's displayed is determined as follows:
 
@@ -262,7 +283,7 @@ In a Skype for Business hybrid environment, to transfer an Auto attendant call t
 
 ### Auto Attendant Diagnostic Tool
 
-If you're an administrator, you can use the following diagnostic tool to validate that an Auto attendant is able to receive calls:
+As an administrator, you can use the following diagnostic tool to validate that an Auto attendant is able to receive calls:
 
 1. Select **Run Tests**, which populates the diagnostic in the Microsoft 365 Admin Center.
 
@@ -271,7 +292,7 @@ If you're an administrator, you can use the following diagnostic tool to validat
 
 1. In the Run diagnostic pane, enter the Resource Account in the **Username or Email** field, and then select **Run Tests**.
 
-1. The tests identify tenant, policy, or resource account configurations that are preventing the Auto attendant from receiving calls and also provide steps to fix any problems identified.
+The tests identify tenant, policy, or resource account configurations that are preventing the Auto attendant from receiving calls and also provide steps to fix any problems identified.
 
 ## Related articles
 

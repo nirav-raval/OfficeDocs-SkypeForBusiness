@@ -1,7 +1,7 @@
 ---
 title: "See a list of telephone numbers in your organization"
-ms.author: crowe
-author: CarolynRowe
+ms.author: scottfrancis
+author: sfrancis206
 manager: pamgreen
 ms.reviewer: davlick, roykuntz, jastark
 ms.date: 10/09/2023

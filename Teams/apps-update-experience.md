@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams apps update experience and admin role
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.tgt.pltfrm: cloud

@@ -1,7 +1,7 @@
 ---
 title: "Country/region availability - Audio Conferencing, Calling Plans"
-ms.author: crowe
-author: CarolynRowe
+ms.author: scottfrancis
+author: sfrancis206
 manager: pamgreen
 ms.reviewer: mikedav, jastark, oscarr
 ms.date: 11/29/2017

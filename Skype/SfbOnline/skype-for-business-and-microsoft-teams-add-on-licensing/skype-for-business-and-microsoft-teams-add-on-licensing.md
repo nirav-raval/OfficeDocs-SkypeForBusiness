@@ -92,8 +92,6 @@ If you want to use your existing Calling Plan, buy the **Phone System** add-on a
 
 If you are using on-premises PSTN connectivity for hybrid users, you  *only*  assign **Phone System** licenses to your users. **DO NOT** also assign a Calling Plan.
 
-[!INCLUDE [LinkedIn Learning Info](../../common/office/linkedin-learning-info.md)]
-
 ## Related topics
 
 - [Set up Skype for Business Online](../set-up-skype-for-business-online/set-up-skype-for-business-online.md)

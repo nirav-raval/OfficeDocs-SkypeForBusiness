@@ -9,7 +9,7 @@ ms.service: msteams
 search.appverid: MET150
 ms.reviewer: 
 ms.date: 03/26/2018
-description: Learn how technologies like single sign-on, and Modern Authentication affects your sign-in behavior on iOS, Android, macOS, and PC. How to use Teams with many accounts, and restrict sign in. Includes how to tell Teams to ignore the pre-fill of the user's name (UPN) at sign-in.
+description: Learn how technologies like single sign-on, and Modern Authentication affects your sign-in behavior on iOS, Android, macOS, and PC, how to use Teams with many accounts, and restrict sign in. Includes how to tell Teams to ignore the prefill of the user's name (UPN) at sign-in.
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: high
 ms.collection: 
@@ -22,7 +22,7 @@ appliesto:
 
 # How different technologies affect Microsoft Teams sign-in
 
-If you need to understand how technologies like single sign-on (SSO), modern authentication (MS), and multifactor authentication (MA) affect users' experience of sign-in, this article helps clarify what users and admins can expect to see. It also outlines the sign-in behavior for macOS, Android, and iOS devices, how sign-in works using multiple accounts, how to remove automatically filled credentials or "pre-fill" at the sign-in screen, how to restrict sign-in, and how to simplify the sign-in experience with domain-less sign-in on shared and managed mobile devices.
+If you need to understand how technologies like single sign-on (SSO), modern authentication (MS), and multifactor authentication (MA) affect users' experience of sign-in, this article helps clarify what users and admins can expect to see. It also outlines the sign-in behavior for macOS, Android, and iOS devices, how sign-in works using multiple accounts, how to remove automatically filled credentials or "prefill" at the sign-in screen, how to restrict sign-in, and how to simplify the sign-in experience with domain-less sign-in on shared and managed mobile devices.
 
 Bookmark this article if your role involves knowing Microsoft Team's expected behaviors during sign-in.
 
@@ -50,14 +50,14 @@ Here's a rundown of the behavior users can expect with each modern authenticatio
 
 - If users are signed in to a domain-joined computer, when they start Teams, they might be asked to go through one more authentication step, depending on whether your organization opted to require MFA or if their computer already requires MFA to sign in. If their computer already requires MFA to sign in, when they open up Teams, the app automatically starts.
 
-- On domain-joined PCs, when SSO isn't possible, Teams may pre-fill its sign-in screen with the user principal name (UPN). There are cases where you may not want this, especially if your organization uses different UPNs on-premises and in Microsoft Entra ID. If that's the case, **you can use the following Windows registry key to turn off pre-population of the UPN**:
+- On domain-joined PCs, when SSO isn't possible, Teams may prefill its sign-in screen with the user principal name (UPN). There are cases where you might not want this, especially if your organization uses different UPNs on-premises and in Microsoft Entra ID. If that's the case, **you can use the following Windows registry key to turn off pre-population of the UPN**:
 
   Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\Teams<br/>
   SkipUpnPrefill(REG_DWORD)<br/>
   0x00000001 (1)
 
     > [!NOTE]
-    > Skipping or ignoring user name pre-fill for user names that end in ".local" or ".corp" is on by default, so you don't need to set a registry key to turn these off.
+    > Skipping or ignoring user name prefill for user names that end in ".local" or ".corp" is on by default, so you don't need to set a registry key to turn these off.
 
 ### Microsoft Teams sign-in to another account on a domain-joined computer
 
@@ -65,7 +65,7 @@ Users on domain-joined computer may not be able to sign in to Teams with another
 
 ## macOS users and Microsoft Teams sign-in prompts
 
-On macOS, Teams will prompt users to enter their username and credentials and may prompt for multifactor authentication depending on your organization's settings. Once users enter their credentials, they won't be required to provide them again. From that point on, Teams automatically starts whenever they're working on the same computer.
+On macOS, Teams will prompt users to enter their username and credentials and might prompt for multifactor authentication depending on your organization's settings. Once users enter their credentials, they won't be required to provide them again. From that point on, Teams automatically starts whenever they're working on the same computer.
 
 ## Microsoft Teams sign-in for iOS and Android users
 
@@ -88,7 +88,7 @@ The following images show how users can add multiple accounts in Teams mobile ap
 
 ## Restrict sign-in to Microsoft Teams
 
-Organization may want to restrict how corporate-approved apps are used on managed devices, for example to restrict students' or employees' ability to access data from other organizations or use corporate-approved apps for personal scenarios. These restrictions can be enforced by setting Devices Policies that Teams applications recognize.
+Organization might want to restrict how corporate-approved apps are used on managed devices, for example to restrict students' or employees' ability to access data from other organizations or use corporate-approved apps for personal scenarios. These restrictions can be enforced by setting Devices Policies that Teams applications recognize.
 
 ### How to restrict Microsoft Teams sign-in on mobile devices
 
@@ -116,12 +116,12 @@ To create an app configuration policy for managed Android devices, see [Add app 
 
 Microsoft Teams apps on Windows and macOS are gaining support for device policies that restrict sign in to your organization. The policies can be set via usual Device Management solutions such as MDM (Mobile Device Management) or GPO (Group Policy Object).
 
-When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that is included in the "Tenant Allow List" defined in the policy. The policy applies to all sign-ins, including first and additional accounts. If your organization spans multiple Microsoft Entra tenants, you can include multiple Tenant IDs in the Allow List. Links to add another account may continue to be visible in the Teams app, but they won't be operable.
+When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that's included in the "Tenant Allow List" defined in the policy. The policy applies to all sign-ins, including first and additional accounts. If your organization spans multiple Microsoft Entra tenants, you can include multiple Tenant IDs in the Allow List. Links to add another account might continue to be visible in the Teams app, but they won't be operable.
 
 > [!NOTE]
 > 
->1. The policy only restricts sign-ins. It does not restrict the ability for users to be invited as a guest in other Microsoft Entra tenants, or switch to those other tenants (where users have been invited as a guest).
->2. The policy requires Teams for Windows version 1.3.00.30866 or higher, and Teams for macOS version 1.3.00.30882 (released mid-November 2020).
+>- The policy only restricts sign-ins. It does not restrict the ability for users to be invited as a guest in other Microsoft Entra tenants, or switch to those other tenants (where users have been invited as a guest).
+>- The policy requires Teams for Windows version 1.3.00.30866 or higher, and Teams for macOS version 1.3.00.30882 (released mid-November 2020).
 
 **Policies for Windows**
 Administrative Template files (ADMX/ADML) are available from the [Download center](https://www.microsoft.com/download/details.aspx?id=49030) (the policy setting descriptive name in the administrative template file is "Restrict sign in to Teams to accounts in specific tenants"). Additionally, you can manually set keys in Windows Registry:
@@ -162,14 +162,14 @@ The sign-in experience looks similar to our standard Teams sign-in experience.
 
 ## Simplify the sign-in experience with domain-less sign-in
 
-You can simplify the sign-in experience on Teams for iOS and Android by pre-filling the domain name on the sign-in screen for users on shared and managed devices. Users sign in by entering the first part of their UPN (without the domain name). For example, if the username is 123456@contoso.com or adelev@contoso.com, users can sign in by using only "123456" or "adelev", respectively, and their password.
+You can simplify the sign-in experience on Teams for iOS and Android by prefilling the domain name on the sign-in screen for users on shared and managed devices. Users sign in by entering the first part of their UPN (without the domain name). For example, if the username is 123456@contoso.com or adelev@contoso.com, users can sign in by using only "123456" or "adelev", respectively, and their password.
 
 Signing in to Teams is faster and easier, especially for employees such as frontline workers on shared devices, who sign in and out regularly.
 
 > [!NOTE]
 > For users to experience the sign-in experience described in this section, their devices must be running Teams for iOS version 6.6.0 or later, or Teams for Android version 1416/1.0.0.2024053003 or later.
 
-:::image type="content" source="media/teams-mobile-domainless-sign-in.png" alt-text="Screenshot of the sign-in screen showing the pre-filled domain name on Teams for iOS and Android." lightbox="media/teams-mobile-domainless-sign-in.png":::
+:::image type="content" source="media/teams-mobile-domainless-sign-in.png" alt-text="Screenshot of the sign-in screen showing the prefilled domain name on Teams for iOS and Android." lightbox="media/teams-mobile-domainless-sign-in.png":::
 
 | Name | Value |
 |---|---|
@@ -196,10 +196,16 @@ Follow these steps to implement domain-less sign-in in your app:
 
         Learn more about how to [read and apply managed configurations](https://developer.android.com/work/managed-configurations#read-configurations) and [configure and test setup using TestDPC](https://github.com/android/enterprise-samples/tree/main/ManagedConfigurations#testing).
 
-1. Customize your sign-in experience to collect the username and pre-fill the acquired domain_name on the screen. If you're using the Microsoft Authentication Library (MSAL), you can make the following call to acquire a token post collecting the username on your screen.
+1. Customize your sign-in experience to collect the username and prefill the acquired domain_name on the screen. If you're using the Microsoft Authentication Library (MSAL), you can make the following call to acquire a token post collecting the username on your screen.
 
     - iOS: [Microsoft Authentication Library for iOS and macOS](https://github.com/AzureAD/microsoft-authentication-library-for-objc?tab=readme-ov-file#quick-sample)
     - Android: [Microsoft Authentication Library (MSAL) for Android](https://github.com/AzureAD/microsoft-authentication-library-for-android/?tab=readme-ov-file#step-4-create-an-msal-publicclientapplication)
+
+## SMS sign in
+
+SMS-based authentication lets users sign in without providing, or even knowing, their user name and password. Users enter their phone number at the sign-in prompt and receive an SMS authentication code that they use to complete sign in. This authentication method simplifies access to apps and services, especially for frontline workers.
+
+To learn more, see [Configure and enable users for SMS-based authentication using Microsoft Entra ID](/entra/identity/authentication/howto-authentication-sms-signin#enable-the-sms-based-authentication-method).
 
 ## URLs and IP address ranges for Microsoft Teams
 
@@ -207,4 +213,4 @@ Teams requires connectivity to the Internet. To understand endpoints that should
 
 ## Related articles
 
-[Teams Troubleshooting](/MicrosoftTeams/troubleshoot/teams)
+[Teams troubleshooting](/MicrosoftTeams/troubleshoot/teams)

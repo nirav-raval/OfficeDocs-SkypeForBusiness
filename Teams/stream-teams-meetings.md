@@ -25,7 +25,7 @@ description: Learn how to set up and manage streaming for your Teams meetings.
 
 # Manage live streaming for Teams meetings and webinars
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 Live streaming allows organizers in your org to expand their reach and provide a unique experience for meeting and webinar attendees. As an admin, when you enable live streaming, your organizers can stream meetings and webinars to external endpoints by providing a Real-Time Messaging Protocol (RTMP) URL and key to the built-in Custom Streaming app in Teams.
 

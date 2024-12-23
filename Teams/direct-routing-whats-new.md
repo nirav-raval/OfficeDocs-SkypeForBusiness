@@ -1,9 +1,9 @@
 ---
 title: What's New Direct Routing
-ms.reviewer: CarolynRowe
-ms.date: 09/22/2023
-author: CarolynRowe
-ms.author: crowe
+ms.reviewer: teddygyabaah
+ms.date: 11/07/2024
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.topic: article
 audience: admin
@@ -22,6 +22,12 @@ ms.collection:
 # What's new for Direct Routing
 
 This article describes what's new in Direct Routing. Check back often for updates.
+
+## Network Effectiveness Ratio (NER) metric update
+
+To improve the experience with visibility of possible issues affecting your Direct Routing reliability, we are updating the formula to calculate the metric for Network Effectiveness Ratio (NER). Starting from November 11, 2024, you might notice a slight change in the reported NER for your trunks in the Teams Admin Center (TAC).
+If you notice a drop in the NER value, you can identify the cause of a call failure by looking at specific response codes. For a list of the most common errors and suggested actions to resolve them, see [Microsoft and SIP response codes](/microsoftteams/troubleshoot/phone-system/direct-routing/microsoft-sip-response-codes).
+
 ## New Survivable Branch Appliance version (v2024.8.15.1) is available
 New Survivable Branch Appliance (SBA) for Direct Routing version is available starting September 23, 2024. 
 Latest version supports following functionality:
@@ -34,17 +40,17 @@ Latest version supports following functionality:
 - Redirect of incoming PSTN call to a Call queue or Auto attendant number to a local agent.
 - Redirect of incoming PSTN call to a Call queue or Auto attendant number to an alternative Call queue or Auto attendant number.
 - VoIP Fallback. If a VoIP call can't be initiated and the receiving party has a PSTN number, a PSTN call is attempted.
-- VoIP calls between local users. If both users are registered behind the same SBA, a VoIP call can be initiated instead of PSTN call, and the SBA will support the call.
-To get the latest version please contact your SBC vendor. For the list of supported SBC vendors please refer to [Session Border Controller configuration](/microsoftteams/direct-routing-survivable-branch-appliance#session-border-controller-configuration).
-To learn more about about Survivable Branch Appliance (SBA), see [Survivable Branch Appliance (SBA) for Direct Routing](/microsoftteams/direct-routing-survivable-branch-appliance).
+- VoIP calls between local users. If both users are registered behind the same SBA, a VoIP call can be initiated instead of PSTN call, and the SBA supports the call.
+To get the latest version, contact your SBC vendor. For the list of supported SBC vendors, refer to [Session Border Controller configuration](/microsoftteams/direct-routing-survivable-branch-appliance#session-border-controller-configuration).
+To learn more about Survivable Branch Appliance (SBA), see [Survivable Branch Appliance (SBA) for Direct Routing](/microsoftteams/direct-routing-survivable-branch-appliance).
 
 ## SBC certificates EKU extensions test
 
 On March 5, 2024 (starting 9 AM UTC), Microsoft will conduct a 24-hour test of its infrastructure. During this time, Session Border Controllers (SBCs) certificates are required to include both Client and Server Authentication for their Extended Key Usage (EKU) extensions. We kindly ask that you ensure that the EKU extension of your certificate includes Server Authentication and Client Authentication to avoid any service degradation. 
 
-If your SBCs certificate EKU extension doesn't include both Server and Client Authentication, your SBCs will not be able to connect with Microsoft infrastructure.
+If your SBC's certificate EKU extension doesn't include both Server and Client Authentication, your SBCs won't connect with Microsoft infrastructure.
 
-Please note that the final switch to request both Server and Client authentication for EKU will be performed on March 19, 2024.
+Note that the final switch to request both Server and Client authentication for EKU will be performed on March 19, 2024.
 
 For more information, see [Public trusted certificate for the SBC](direct-routing-plan.md#public-trusted-certificate-for-the-sbc).
 
@@ -52,7 +58,7 @@ For more information, see [Public trusted certificate for the SBC](direct-routin
 
 Microsoft 365 is updating services powering messaging, meetings, telephony, voice, and video to use TLS certificates from a different set of Root Certificate Authorities (CAs). Affected endpoints include Microsoft Teams Direct Routing SIP endpoints used for PSTN traffic in Office 365 Government - GCC High (GCCH) and DoD deployments. The transition to certificates issued by the new CA for SIP endpoints begins in May 2024. This means that action needs to be taken before end of April 2024.
 
-The new Root CA "DigiCert Global Root G2" is widely trusted by operating systems including Windows, macOS, Android, and iOS and by browsers such as Microsoft Edge, Chrome, Safari, and Firefox. However, it's likely that your SBC has a certificate root store that is manually configured. If so, then the YOUR SBC CA STORE NEEDS TO BE UPDATED TO INCLUDE THE NEW CA TO AVOID SERVICE IMPACT. SBCs that don't have the new Root CA in their list of acceptable CAs receive certificate validation errors, which may impact the availability or function of the service. Both the old and the new CA MUST be trusted by the SBC – DON’T REMOVE THE OLD CA. Please refer to SBC vendor documentation on how to update the accepted certificate list on your SBC. Both the old and new root certificates need to be trusted by the SBC.
+The new Root CA "DigiCert Global Root G2" is widely trusted by operating systems including Windows, macOS, Android, and iOS and by browsers such as Microsoft Edge, Chrome, Safari, and Firefox. However, it's likely that your SBC has a certificate root store that is manually configured. If so, then the YOUR SBC CA STORE NEEDS TO BE UPDATED TO INCLUDE THE NEW CA TO AVOID SERVICE IMPACT. SBCs that don't have the new Root CA in their list of acceptable CAs receive certificate validation errors, which may impact the availability or function of the service. Both the old and the new CA MUST be trusted by the SBC – Do not remove the old CA. Refer to SBC vendor documentation on how to update the accepted certificate list on your SBC. Both the old and new root certificates need to be trusted by the SBC.
 Today, the TLS certificates used by Microsoft SIP interfaces chain up to the following Root CA:
 
 Common Name of the CA: DigiCert Global Root CA
@@ -64,7 +70,7 @@ Common Name of the CA: DigiCert Global Root G2
 Thumbprint (SHA1): df3c24f9bfd666761b268073fe06d1cc8d4f82a4
 The new CA certificate can be downloaded directly from DigiCert: https://cacerts.digicert.com/DigiCertGlobalRootG2.crt
 
-For more details, please refer to the technical guidance at https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-office-365-tls-certificates-changes?view=o365-worldwide
+For more details, refer to the technical guidance at [Azure Certificate Authority details](/microsoft-365/compliance/encryption-office-365-tls-certificates-changes?view=o365-worldwide).
 To test and confirm your SBCs certificate configuration prior to the change, Microsoft has prepared a testing endpoint that can be used to verify that SBC appliances trust certificates issued from the new root CA (DigiCert Global Root G2). If your SBC can establish a TLS connection to this endpoint, then your connectivity to Teams services shouldn't be affected by the change. These endpoints should be used only for SIP OPTIONS ping messages and not for voice traffic. They aren't production endpoints and aren't backed by redundant configuration. This means they'll experience downtime that lasts for several hours—expect about 95% availability.
 
 Test endpoint FQDN for GCCH: x.sip.pstnhub.infra.gov.teams.microsoft.us
@@ -78,11 +84,11 @@ Port: 5061
 
 Following two tests on September 5 and 19, Microsoft will perform the final switch to the new Certificate Authority (CA) on October 3, starting at 10 AM UTC. All Microsoft SIP endpoints are gradually switched over to use certificates where the certificate chain rolls up to “DigiCert Global Root G2” Certificate Authority (CA). 
 
-If your Session Border Controllers (SBCs) aren't properly configured with the new Certificate Authority (CA), your Direct Routing incoming and outgoing calls will fail after the switch. Please work with your SBC vendor directly for further guidance on SBC configuration.
+If your Session Border Controllers (SBCs) aren't properly configured with the new Certificate Authority (CA), your Direct Routing incoming and outgoing calls will fail after the switch. Work with your SBC vendor directly for further guidance on SBC configuration.
 
 The change requirement and test were communicated to Direct Routing customers through Message Center posts as well as Service Health Incidents in the Microsoft Admin Portal (MC540239, TM614271, MC663640, TM674073, MC674729).
 
-## SIP certificate to MSPKI Certificate Authority change additional testing
+## SIP certificate to MSPKI Certificate Authority change, extra testing
 
 On September 19 (starting at 4 PM UTC), Microsoft will perform a 24 hour test where all Microsoft SIP endpoints will be switched over to use certificates where the certificate chain will roll up to “DigiCert Global Root G2” Certificate Authority (CA). New Certificate Authority (CA) must be added in your SBC configuration and old Baltimore CA must be retained; don't replace the old CA.  If your SBC doesn’t trust this CA, you won't be able to connect to Teams SIP endpoints during the test. The final switch to the new Certificate Authority (CA) will be performed on October 3.
 
@@ -92,7 +98,7 @@ Test endpoint FQDN: sip.mspki.pstnhub.microsoft.com
 
 Port: 5061
 
-## SIP certificate to MSPKI Certificate Authority change test
+## SIP certificate to MSPKI Certificate Authority change, test
 
 On September 5 (starting at 9 AM UTC), Microsoft will perform a 24-hour test where all Microsoft SIP endpoints will be switched over to use certificates where the certificate chain will roll up to “DigiCert Global Root G2” Certificate Authority (CA). If your SBC doesn’t trust this CA, you might not be able to connect to Teams SIP endpoints.
 
@@ -123,7 +129,7 @@ The new CA certificate can be downloaded directly from DigiCert: DigiCert Global
 For more information, see [Office TLS Certificate Changes](/purview/encryption-office-365-tls-certificates-changes)
 ## New Direct Routing SIP endpoints 
 
-Microsoft will introduce new signaling IPs to Teams Direct Routing SIP endpoints. To ensure this change doesn’t affect your service availability, make sure your Session Border Controller and Firewall are configured to use the recommended subnets 52.112.0.0/14 and 52.122.0.0/15 for classification and ACL rules. For more information, see [Microsoft 365, Office 365, and Office 365 GCC environments](direct-routing-plan.md#microsoft-365-office-365-and-office-365-gcc-environments).  
+Microsoft introduces new signaling IPs to Teams Direct Routing SIP endpoints. To ensure this change doesn’t affect your service availability, make sure your Session Border Controller and Firewall are configured to use the recommended subnets 52.112.0.0/14 and 52.122.0.0/15 for classification and ACL rules. For more information, see [Microsoft 365, Office 365, and Office 365 GCC environments](direct-routing-plan.md#microsoft-365-office-365-and-office-365-gcc-environments).  
 
 ## Trunk demoting logic based on SIP Options
 

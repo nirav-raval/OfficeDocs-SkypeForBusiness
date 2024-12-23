@@ -1,7 +1,7 @@
 ---
 title: Allow users to block Microsoft Teams chat messages
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.reviewer: degoh
 ms.date: 07/29/2024

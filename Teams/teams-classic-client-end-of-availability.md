@@ -164,6 +164,4 @@ In the Teams admin center:
   - In mid-May, any users remaining on classic Teams will be switched to new Teams, and the toggle to return to classic Teams won't be available. We'll attempt to uninstall classic Teams after a period of time.
 
 > [!IMPORTANT]
-> A rare issue with the uninstall of classic Teams has been detected and to be cautious Microsoft has paused the automatic uninstallation of classic Teams for customers who haven't already completed this step. This issue could result in the Teams Meeting Addin in Outlook failing to schedule or join Teams meetings. We are actively investigating this issue and will update once it's resolved. If your users are experiencing this issue, a workaround is to use Teams to schedule or join meetings.
->
-> For customers who are experiencing this issue or who wish to perform the uninstall of classic Teams themselves and experience this issue, there are troubleshooting steps available here: [Teams meeting add-in missing from Outlook and new Teams](/microsoftteams/troubleshoot/meetings/teams-meeting-add-in-missing).
+> For customers who uninstall classic Teams themselves and experience a Teams meeting add-on issue, there are troubleshooting steps available here: [Teams meeting add-in missing from Outlook and new Teams](/microsoftteams/troubleshoot/meetings/teams-meeting-add-in-missing).

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot low-bandwidth scenarios for Teams
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: reference
 ms.service: msteams
 audience: admin

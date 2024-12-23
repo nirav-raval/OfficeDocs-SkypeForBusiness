@@ -1,7 +1,7 @@
 ---
 title: "Set up Teams Phone in your organization"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz
 ms.date: 03/07/2024
@@ -34,9 +34,18 @@ This article provides a roadmap to content for setting up Microsoft Teams Phone-
 
 If you're still planning your voice solution, start by reading [Plan your voice solution](cloud-voice-landing-page.md), which helps you decide which Microsoft voice solution is right for your organization.
 
-**License and voice enablement** - To use Teams Phone features, your organization must have a Teams Phone license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+### Licenses and voice enablement 
 
-Most features require you to assign the Teams Phone license, and ensure that users are "voice enabled." To assign the license, use the [Set-CsPhoneNumberAssignment cmdlet](/powershell/module/teams/set-csphonenumberassignment) and set the **EnterpriseVoiceEnabled** parameter to $true. A few features, such as Auto attendant, do not require a user to be voice enabled. 
+To use Teams Phone features, your users must have a Teams Phone Standard or E5 license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+
+In addition to licensing, the users must be "voice enabled."
+
+To voice enable your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+
+A few features, such as Auto attendant, do not require a user to be voice enabled. 
 
 To learn more about Teams Phone features and requirements, including which features require a user to be voice enabled, see [What is Teams Phone](what-is-phone-system-in-office-365.md) and [Teams Phone features](here-s-what-you-get-with-phone-system.md).
 

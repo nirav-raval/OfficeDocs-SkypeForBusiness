@@ -1,7 +1,7 @@
 ---
 title: Availability and use of Teams apps by different types of users from outside an organization
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 ms.reviewer: shmundra
 manager: prkosh
 ms.topic: article

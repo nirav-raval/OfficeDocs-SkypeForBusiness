@@ -1,7 +1,7 @@
 ---
 title: "Manage the usage of a phone number"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: garciadaniel
 ms.date: 01/29/2024

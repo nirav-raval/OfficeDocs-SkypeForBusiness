@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: msteams
 search.appverid: MET150
 ms.reviewer: 
-ms.date: 02/08/2024
+ms.date: 12/12/2024
 description: Learn how to sign out of Microsoft Teams.
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: high
@@ -47,7 +47,8 @@ On Windows, users may see an option to sign in to “this app only”. When this
 
 ![Screenshot: User interface of sign in to all apps with a link to only sign into this app only.](media/sign-in-to-all-apps.png)
 
-**Note:** when users select “this app only” when signing in to Teams, other apps on the PCs won’t be able to use this account. Practically, this means that links to files or websites clicked in Teams may not properly open in Microsoft 365 apps or in the browser, and users may be prompted to sign in again. In other words, “this app only” prevents SSO from working correctly between Windows, Teams and other applications, and as such isn't recommended when signing in to Teams.
+> [!Note]
+> When users select “this app only” when signing in to Teams, other apps on the PCs won’t be able to use this account. Practically, this means that links to files or websites clicked in Teams may not properly open in Microsoft 365 apps or in the browser, and users may be prompted to sign in again. In other words, “this app only” prevents SSO from working correctly between Windows, Teams and other applications, and as such isn't recommended when signing in to Teams.
 
 ### Best practices for multiple users on a shared desktop device
 

@@ -33,10 +33,12 @@ The following phases describe the process of a pool migration to Skype for Busin
 5. [Phase 5: Add Skype for Business Server 2019 Edge Server to pilot pool](phase-5-add-edge-server-to-pilot-pool.md)
     
 6. [Phase 6: Move from pilot deployment into production](phase-6-move-from-pilot-deployment-into-production.md)
+
+1. [Phase 7: Migrate Persistent Chat pool](migrate-persistent-chat-pool.md) 
     
-7. [Phase 7: Complete post-migration tasks](phase-7-complete-post-migration-tasks.md)
+7. [Phase 8: Complete post-migration tasks](phase-7-complete-post-migration-tasks.md)
     
-8. [Phase 8: Decommission legacy pools](phase-8-decommission-legacy-pools.md)
+8. [Phase 9: Decommission legacy pools](phase-8-decommission-legacy-pools.md)
     
 
 

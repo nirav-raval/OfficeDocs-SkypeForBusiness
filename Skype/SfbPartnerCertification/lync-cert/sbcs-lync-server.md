@@ -26,7 +26,7 @@ description: "Session border controllers qualified for Lync Server."
 
 The following session border controllers (SBCs) and relevant firmware combinations have been independently qualified with Lync Server.
 
-We that recommend you visit the vendor's web site for the latest information.
+We recommend you to visit the vendor's web site for the latest information.
 
 ## Qualified for Microsoft Lync Server 2013
 <table border="1" cellpadding="5" cellspacing="" class="grid" width="100%">

@@ -1,7 +1,7 @@
 ---
 title: "Teams languages for voicemail greetings and messages"
-author: CarolynRowe 
-ms.author: crowe 
+author: sfrancis206
+ms.author: scottfrancis 
 manager: pamgreen
 ms.reviewer: colongma
 ms.date: 05/19/2021
@@ -45,7 +45,7 @@ Teams supports the following languages for voicemail greetings.
 |Czech         |Czech Republic     |cs-CZ  |Yes                                          |Yes                                   |No  |
 |Danish        |Denmark            |da-DK  |Yes                                          |Yes                                   |No  |
 |Dutch         |Belgium            |nl-BE  |Yes, but Dutch (Netherlands) is used.        |Yes                                   |No  |
-|Dutch         |Netherlands        |nl-NL  |Yes                                          |Yes                                   |No  |
+|Dutch         |Netherlands        |nl-NL  |Yes                                          |Yes                                   |Yes |
 |English       |Australia          |en-AU  |Yes, but English (United States) is used.    |Yes                                   |Yes, but English (United States) is used. |
 |English       |Canada             |en-CA  |Yes, but English (United States) is used.    |Yes                                   |Yes, but English (United States) is used. |
 |English       |India              |en-IN  |Yes, but English (United States) is used.    |Yes                                   |Yes, but English (United States) is used. |
@@ -66,6 +66,8 @@ Teams supports the following languages for voicemail greetings.
 |Greek         |Greece             |el-GR  |Yes                                          |Yes                                   |No  |
 |Hebrew        |Israel             |he-IL  |Yes                                          |No                                    |No  |
 |Hindi         |India              |hi-IN  |Yes                                          |No                                    |No  |
+|Tamil         |India              |ta-IN  |Yes                                          |No                                    |No  |
+|Telugu        |India              |te-IN  |Yes                                          |No                                    |No  |
 |Hungarian     |Hungary            |hu-HU  |Yes                                          |No                                    |No  |
 |Indonesian    |Indonesia          |id-ID  |Yes                                          |Yes                                   |No  |
 |Italian       |Italy              |it-IT  |Yes                                          |Yes                                   |Yes |
@@ -73,6 +75,8 @@ Teams supports the following languages for voicemail greetings.
 |Korean        |Korean             |ko-KR  |Yes                                          |Yes                                   |No  |
 |Latvian       |Latvia             |lv-LV  |Yes                                          |Yes                                   |No  |
 |Lithuanian    |Lithuania          |lt-LT  |Yes                                          |Yes                                   |No  |
+|Malay         |Malaysia           |ms-MY  |Yes                                          |No                                    |No  |
+|Maltese       |Malta              |mt-MT  |Yes                                          |No                                    |No  |
 |Norwegian (Bokmal)   |Norway      |nb-NO  |Yes                                          |Yes                                   |No  |
 |Polish        |Poland             |pl-PL  |Yes                                          |Yes                                   |No  |
 |Portuguese    |Brazil             |pt-BR  |Yes, but Portuguese (Portugal) is used.      |Yes                                   |Yes |
@@ -86,6 +90,7 @@ Teams supports the following languages for voicemail greetings.
 |Swedish       |Sweden             |sv-SE  |Yes                                          |Yes                                   |No  |
 |Thai          |Thailand           |th-TH  |Yes                                          |Yes                                   |No  |
 |Turkish       |Türkiye            |tr-TR  |Yes                                          |Yes                                   |No  |
+|Urdu         |Pakistan             |ur-PK  |Yes                                          |No                                    |No  |
 |Vietnamese    |Vietnam            |vi-VN  |Yes                                          |Yes                                   |No  |
 |Welsh         |Wales              |cy-GB  |Yes                                          |Yes                                   |No  |
 

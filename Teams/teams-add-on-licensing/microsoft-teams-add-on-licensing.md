@@ -99,7 +99,6 @@ You can purchase additional licenses and assign them to your users so that they 
 - *Communication Credits* - Prepaid budget to support outgoing minutes. For more information on Communication Credits, see:
   - [What are Communication Credits](../what-are-communications-credits.md).
   - [Set up Communication Credits for your organization](../set-up-communications-credits-for-your-organization.md).
-  - [Add funds and manage Communications Credits](../add-funds-and-manage-communications-credits.md).
 - *Pay-As-You-Go* - Dial out and pay per user per minute for all outgoing calls.
 - *Pay per minute* - Pay for all of your Audio Conferencing usage on a per-minute basis without paying for a per-user monthly license. This option is only available to Volume and Licensing customers. For more information, see [Audio Conferencing pay-per-minute](../audio-conferencing-pay-per-minute.md).
 

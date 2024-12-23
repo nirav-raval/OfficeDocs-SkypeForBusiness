@@ -1,7 +1,7 @@
 ---
 title: Manage caller ID for users
-ms.author: crowe
-author: CarolynRowe
+ms.author: scottfrancis
+author: sfrancis206
 manager: pamgreen
 ms.reviewer: roykuntz
 ms.date: 03/26/2024
@@ -136,7 +136,7 @@ For more information on each policy, see [configure caller ID policies](#configu
 
       - **Resource account:** Set a resource account associated with an Auto Attendant or Call Queue.
 
-    If you choose **Resource account**, you're prompted to specify a resource account for the next field, called **Replace the caller ID with this resource account**. Only resource accounts with an assigned phone number will be displayed. If you just assigned a phone number to the resource account, it might take a few minutes before the resource account is available for selection.
+        If you choose **Resource account**, you're prompted to specify a resource account for the next field, called **Replace the caller ID with this resource account**. Only resource accounts with an assigned phone number will be displayed. If you just assigned a phone number to the resource account, it might take a few minutes before the resource account is available for selection.
 
 7. Select **Save**.
 

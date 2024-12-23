@@ -1,14 +1,14 @@
 ---
 title: Manage app permission policies in Microsoft Teams
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 ms.subservice: teams-apps
 audience: Admin
-ms.date: 09/03/2024
+ms.date: 11/13/2024
 ms.reviewer: mhayrapetyan
 ms.collection: 
   - M365-collaboration
@@ -35,18 +35,25 @@ ms.custom:
 
 As an admin, you can use app permission policies to control the apps that are available to each user in your organization. The permissions you set to allow or block all apps or specific apps are applicable to all [types of apps in Teams](apps-in-teams.md). To understand policies, see [app permission policies](app-policies.md). You must be a Teams Administrator or have a higher role to manage these policies.
 
-To allow an app, you must allow it in [Org-wide app settings](manage-apps.md#manage-org-wide-app-settings), [individual app's setting](manage-apps.md#allow-or-block-apps), and app permission policy. While the first two settings just allow an app for use in your organization, the permission policies allow you to control which users can use a specific app. You control the access on a per-user and per-app basis by creating and applying the policy to specific users.
+To let your org users use a Teams app or a copilot agent, you must allow it in:
+
+* [Org-wide app settings](manage-apps.md#manage-org-wide-app-settings).
+* [Individual app's setting](manage-apps.md#allow-or-block-apps).
+* In app permission policy.
+* In Teams admin center and Microsoft 365 admin center.
+
+The first two settings just allow an app for use in your organization, the permission policies lets you to control which users can use a specific app. You control the access on a per-user and per-app basis by creating and applying the policy to specific users. To make any apps or copilot agents available in your organization, ensure that the settings to allow these are the same in Teams admin center and in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps) in the Integrated Apps page.
 
 Teams admin center lets you create two types of permissions policies:
 
-* **Global (Org-wide default)** policy exists by default and applies to all users. Any changes made to this policy affect all users as this policy is applied to all users by default.
-* An admin-created policy applies only to the users that it's applied to. Create a new policy to allow apps for specific users.
+* **Global (Org-wide default)** policy exists by default and applies to all users. Any changes made to this policy affect all users.
+* **Custom policy** apply only to those users that you apply it to. You create and use custom policies to allow apps to specific users.
 
-   :::image type="content" source="media/app-permission-policy-trimmed.png" alt-text="Screenshot showing a new app permission policy being created.":::
+   :::image type="content" source="media/app-permission-policy-trimmed.png" alt-text="Screenshot showing custom and default app permission policies.":::
 
 If your organization is already on Teams, the app settings you configured in **Tenant-wide settings** in the Microsoft 365 admin center are reflected in **Org-wide app settings** on the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page in Teams admin center. If you're new to Teams and just getting started, by default, all apps are allowed in the org-wide global setting. It includes apps published by Microsoft, third-party software providers, and your organization.
 
-Alternately, you can use [app centric management](app-centric-management.md) to configure the access to apps on a per-app basis. It offers an easier method to configure access to apps. The app centric management functionality replaces app permissions policies by making it easier for admins to specify the users and group in their organization who can add or install Teams apps on a per-app basis. You can use only one method to define access to apps in your organization. If you choose to, you can migrate from app permission policies to app centric management using our migration UI.
+Alternately, you can use [app centric management](app-centric-management.md) to configure the access to apps on a per-app basis. It offers an easier method to configure access to apps. The app centric management functionality replaces app permissions policies. The feature makes it easier for you to specify the users in their organization who can add or install Teams apps on a per-app basis. You can use only one method to define access to apps in your organization. If you choose to, you can migrate from app permission policies to app centric management using our migration UI.
 
 > [!NOTE]
 > To know about third-party app settings in Microsoft 365 Government Community Cloud High (GCCH) and Department of Defense (DoD) environment, see [Manage org-wide app settings for Microsoft 365 Government](manage-apps.md#manage-org-wide-app-settings-for-microsoft-365-government).
@@ -60,10 +67,10 @@ Use one or more custom app permission policies, if you want to control the apps 
 1. Provide a name and description for the policy.
 1. Under **Microsoft apps**, **Third-party apps**, and **Custom apps**, select one of the following options:
 
-    * Allow all apps
-    * Allow specific apps and block all others
-    * Block specific apps and allow all others
-    * Block all apps
+    * Allow all apps or copilot agents
+    * Allow specific apps or copilot agents and block all others
+    * Block specific apps or copilot agents and allow all others
+    * Block all apps or copilot agents
 
 1. If you selected **Allow specific apps and block all others**, add the apps that you want to allow:
 

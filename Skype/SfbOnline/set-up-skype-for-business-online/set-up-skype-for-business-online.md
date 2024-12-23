@@ -167,8 +167,6 @@ The quality of audio, video, and application sharing in Skype for Business is gr
 
 [Make and receive a video call using Skype for Business](https://support.office.com/article/abf62493-670f-4b0d-b2cf-fe03b49caf42)
 
-[!INCLUDE [LinkedIn Learning Info](../../common/office/linkedin-learning-info.md)]
-
 ## Related topics
 <a name="bkmk_more"> </a>
 

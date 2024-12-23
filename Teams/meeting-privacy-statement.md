@@ -24,7 +24,7 @@ appliesto:
 
 # Customize and display your privacy statement in the meeting join experience
 
-**APPLIES TO:** ✔️Meetings ✖️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a x for no](/office/media/icons/cancel-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 Microsoft Teams enables businesses to schedule and conduct business-to-customer engagements with customers, clients, and other people outside your organization, as well as with employees within your organization. Organizations have a need to make their privacy statement available to attendees when they join a meeting, especially in engagements with external participants.
 

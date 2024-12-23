@@ -1,8 +1,8 @@
 ---
 title: Set up AI content recommendations for educators in an institution
-author: NiravRawell21
-ms.author: nirawell
-manager: michalgi
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: nirawell
 ms.date: 02/26/2024
 ms.topic: article
@@ -19,6 +19,7 @@ description: How to enable or disable AI content recommendations for educators i
 ms.collection: 
   - M365-collaboration
   - tier2
+  - magic-ai-copilot
 ---
 
 # Set up AI content recommendations in an institution

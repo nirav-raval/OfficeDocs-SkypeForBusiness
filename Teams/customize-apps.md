@@ -1,7 +1,7 @@
 ---
 title: Use app customization to brand the apps for your organization's needs
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.tgt.pltfrm: cloud

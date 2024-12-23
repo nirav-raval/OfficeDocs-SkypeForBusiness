@@ -25,17 +25,20 @@ description: Learn how to deploy features in Teams meetings to record audio, vid
 
 # Manage Teams recording policies for meetings and events
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+> [!NOTE]
+> When organizers turn off Microsoft 365 Copilot in Teams meetings and events, recording and transcription are also turned off. To learn more about Copilot, see [Manage Microsoft 365 Copilot in Teams meetings and events](copilot-teams-transcription.md).
 
-In Microsoft Teams, your users can record their Teams meetings, webinars, and town halls to capture audio, video, and screen sharing activity. This type of recording is called [convenience recording](teams-recording-policy.md#compliance-vs-convenience-recording). The recording happens in Microsoft 365 and is saved to OneDrive or SharePoint, which must be enabled for the user. For details on OneDrive and SharePoint recording storage, see [Use OneDrive and SharePoint for meeting recordings](tmr-meeting-recording-change.md).
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
 
-To learn about recording for live events, see [Live event recording policies in Teams](teams-live-events/live-events-recording-policies.md).
+In Microsoft Teams, your users can record their Teams meetings, webinars, and town halls to capture audio, video, and screen sharing activity. This type of recording is called [convenience recording](teams-recording-policy.md). The recording happens in Microsoft 365 and is saved to OneDrive or SharePoint, which must be turned on for the user. For details on OneDrive and SharePoint recording storage, see [Use OneDrive and SharePoint for meeting recordings](tmr-meeting-recording-change.md).
+
+To learn about recording for live events, see [Live event recording policies in Teams](teams-live-events/live-events-recording-policies.md).To learn about managing recording for PSTN calls, see [Configure call recording, transcription, and captions in Teams](call-recording-transcription-captions.md).
 
 When a meeting is recorded:
 
 - It gets uploaded to the meeting organizer's OneDrive (private meetings) or SharePoint (channel meetings). To learn more about recordings in OneDrive and SharePoint, see [Teams meeting recording storage and permissions in OneDrive and SharePoint](tmr-meeting-recording-change.md).
 - People invited to the meeting have permissions to view the recording (guests and external attendees can view the recording only if the recording is explicitly shared with them).
-- Microsoft Purview compliance, OneDrive file storage, and access permissions apply to the meeting recording files the same as with other files.
+- Microsoft Purview, OneDrive file storage, and access permissions apply to the meeting recording files the same as with other files.
 - It's linked in the chat for the meeting.
 - It's displayed in the **Recordings and Transcripts** tab for the meeting in Teams calendar.
 - It's added to various file lists across Microsoft 365: Shared with me, office.com, Recommended, Recent, etc.
@@ -67,8 +70,6 @@ You can use the Microsoft [Teams admin center](https://go.microsoft.com/fwlink/p
 
 Many users use meetings and calls interchangeably depending on their needs. We recommend that you check your call recording policy settings as well. If the settings are different for meetings and calls, it might cause confusion for your users.
 
-# [**Meeting policy**](#tab/meeting-policy)
-
 To allow or prevent meeting recordings:
 
 1. In the Microsoft [Teams admin center](https://admin.teams.microsoft.com/), expand **Meetings**.
@@ -77,23 +78,7 @@ To allow or prevent meeting recordings:
 1. Turn **Meeting recording** On or Off.
 1. Select **Save**.
 
-With PowerShell, you configure the `-AllowCloudRecording` parameter in [Set-CsTeamsMeetingPolicy](/powershell/module/teams/set-csteamsmeetingpolicy).
-
-# [**Calling policy**](#tab/calling-policy)
-
-To allow or prevent call recordings:
-
-1. In the Microsoft [Teams admin center](https://go.microsoft.com/fwlink/p/?linkid=2066851), expand **Voice**.
-1. Select **Calling policies**.
-1. Select the policy that you want to edit.
-1. Turn **Cloud recording for calling** On or Off.
-1. Select **Save**.
-
-With PowerShell, you configure the `-AllowCloudRecordingForCalls` parameter in [Set-CsTeamsCallingPolicy](/powershell/module/teams/set-csteamscallingpolicy).
-
-For more information on call recording, see [Configure call recording, transcription, and captions in Teams](call-recording-transcription-captions.md).
-
----
+With PowerShell, you configure the **`-AllowCloudRecording`** parameter in [Set-CsTeamsMeetingPolicy](/powershell/module/teams/set-csteamsmeetingpolicy).
 
 ## Require participant agreement for recording and transcription
 
@@ -290,6 +275,7 @@ You can use the following diagnostic tool to validate that the meeting recording
 - [Introduction to Microsoft Teams third party compliance recording](teams-recording-policy.md)
 - [Teams policy reference - Meetings](settings-policies-reference.md#meetings)
 - [Configure transcription and captions for Teams meetings](meeting-transcription-captions.md)
+- [Live event recording policies in Teams](teams-live-events/live-events-recording-policies.md)
 - [Roles in a Teams meeting](https://support.microsoft.com/office/c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 - [Block the download of Teams meeting recording files from SharePoint or OneDrive](block-download-meeting-recording.md)
-
+- [Configure call recording, transcription, and captions in Teams](call-recording-transcription-captions.md)

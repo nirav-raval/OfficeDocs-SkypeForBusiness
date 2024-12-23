@@ -4,7 +4,7 @@ author: mkbond007
 ms.author: mabond
 manager: pamgreen
 ms.reviewer: mikedav, siunies, gageames, jamp
-ms.date: 12/12/2023
+ms.date: 12/06/2024
 ms.topic: article
 ms.assetid: 553fa13c-92d2-4d5c-a3d5-41a073cb047c
 ms.tgt.pltfrm: cloud
@@ -16,8 +16,8 @@ ms.collection:
 search.appverid: MET150
 audience: Admin
 appliesto: 
-  - Skype for Business
   - Microsoft Teams
+  - Skype for Business
 ms.localizationpriority: medium
 f1.keywords: 
   - CSH
@@ -30,16 +30,15 @@ description: Learn about Call Quality Dashboard (CQD) and how to use it to  see 
 
 # What is Call Quality Dashboard (CQD)?
 
-The Microsoft Call Quality Dashboard (CQD) - [https://cqd.teams.microsoft.com](https://cqd.teams.microsoft.com) - shows call and meeting quality, at an **org-wide level**, for Microsoft Teams, and Skype for Business Server. 
+The Microsoft Call Quality Dashboard (CQD) - [https://cqd.teams.microsoft.com](https://cqd.teams.microsoft.com) - shows call and meeting quality, at an **org-wide level**, for Microsoft Teams, and Skype for Business Server.
 
-  
 The latest version of CQD features a [near-real-time (NRT) data feed](cqd-data-and-reports.md), which means that call records are available in CQD within 30 minutes of the end of a call.
 
 Wherever CQD includes [end-user identifiable information (EUII) data](cqd-data-and-reports.md#euii-data), it's managed in the same way as [EUII throughout Microsoft 365](/office365/Enterprise/office-365-data-retention-deletion-and-destruction-overview).
 
-CQD is designed to help Teams admins, Skype for Business admins, and network engineers monitor call and meeting quality at an org-wide level. You'll use CQD to help you **optimize your network** to drive performance quality. When you need to look into call and meeting information for a **specific user**, use CQD data in conjunction with per-user [call analytics](use-call-analytics-to-troubleshoot-poor-call-quality.md).
+CQD is designed to help Teams admins, Skype for Business admins, and network engineers monitor call and meeting quality at an org-wide level. You can use CQD to help you **optimize your network** to drive performance quality. When you need to look into call and meeting information for a **specific user**, use CQD data in alongside per-user [call analytics](use-call-analytics-to-troubleshoot-poor-call-quality.md).
 
-For example, using CQD, you can determine that a user's poor call quality (which you observed using per-user call analytics) is due to a network issue that also affects many other users. CQD captures both the individual call experience and the overall quality of calls made using Teams or Skype for Business. With CQD, overall patterns may become apparent, so network engineers can make informed assessments of call quality. CQD provides reports of call quality metrics that give you insight into overall call quality, server-client streams, client-client streams, and voice quality [SLA](https://go.microsoft.com/fwlink/p/?linkid=846252). 
+For example, using CQD, you can determine that a user's poor call quality (that you observed using per-user call analytics) is due to a network issue that also affects many other users. CQD captures both the individual call experience and the overall quality of calls made using Teams or Skype for Business. With CQD, overall patterns can become apparent, so network engineers can make informed assessments of call quality. CQD provides reports of call quality metrics that give you insight into overall call quality, server-client streams, client-client streams, and voice quality [SLA](https://go.microsoft.com/fwlink/p/?linkid=846252).
   
 ![Screenshot of Call Quality Dashboard.](media/teams-difference-between-call-analytics-and-call-quality-dashboard-image3.png)
 
@@ -49,14 +48,11 @@ In CQD, we encourage you to upload building and endpoint information, which lets
 
 Don't miss our [Manage call and meeting quality](quality-of-experience-review-guide.md) article, which offers in-depth guidance for the Teams admin or support engineer responsible for managing service quality in Teams.
 
-
 ## Use Power BI to analyze CQD data
 
-[Download Power BI query templates for CQD](https://download.microsoft.com/download/f/b/f/fbf2527c-f392-410e-aeb6-1a02ac1b5dd1/CQD-Power-BI-query-templates.zip). These are customizable Power BI templates you can use to analyze and report your CQD data.
+[Download Power BI query templates for CQD](https://download.microsoft.com/download/f/b/f/fbf2527c-f392-410e-aeb6-1a02ac1b5dd1/CQD-Power-BI-query-templates.zip). Use customizable Power BI templates to analyze and report your CQD data.
 
-Read [Use Power BI to analyze CQD data](CQD-Power-BI-query-templates.md) to learn more.
-
-
+For more information, see [Use Power BI to analyze CQD data](CQD-Power-BI-query-templates.md).
 
 ## Related topics
 
@@ -75,6 +71,5 @@ Read [Use Power BI to analyze CQD data](CQD-Power-BI-query-templates.md) to lear
 [Stream Classification in CQD](stream-classification-in-call-quality-dashboard.md)
 
 [Use Power BI to analyze CQD data](CQD-Power-BI-query-templates.md)
-
 
 [Teams Troubleshooting](/MicrosoftTeams/troubleshoot/teams)

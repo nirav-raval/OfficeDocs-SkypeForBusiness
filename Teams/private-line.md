@@ -38,7 +38,10 @@ Keep the following requirements for private lines in mind:
 - Internal or external reverse number lookup (RNL) works with private lines.
 - Private lines must be the same number type as the user’s primary line.
 - Private lines must have the same licensing requirements as the user’s primary phone number.
-- Users must be "voice enabled" for private lines
+- Users must be "voice enabled" for private lines. Before you can enable voice for your users, you must [assign a license](#licensing-requirements) to them first. To enable voice for your users, you can use the Teams admin center or PowerShell.
+
+  - In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+  - For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
 
 ### Licensing requirements
 

@@ -2,8 +2,8 @@
 title: Understand partner apps in Microsoft Teams
 description: Learn about partner apps for Teams created by app developers and by Microsoft partners.
 ms.topic: article
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 audience: admin
 ms.subservice: teams-apps

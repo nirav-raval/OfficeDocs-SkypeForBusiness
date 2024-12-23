@@ -1,7 +1,7 @@
 ---
 title: More information about porting
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: tonysmit,jastark
 ms.date: 10/23/2019

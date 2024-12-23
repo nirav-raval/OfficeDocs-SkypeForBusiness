@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "Teams/policy-packages-healthcare.md",
+      "redirect_url": "/microsoftteams/manage-policy-packages",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "Teams/auto-install-approved-apps.md",
       "redirect_url": "https://admin.microsoft.com/#/MessageCenter/:/messages/MC841224",
       "redirect_document_id": false
@@ -5286,8 +5291,8 @@
 	  "redirect_document_id": false
 	},
 	{
-	  "source_path": "Skype/SfbPartnerCertification/certification/devices-usb-devices.md",
-	  "redirect_url": "/microsoftteams/devices/usb-devices",
+	  "source_path": "Skype/SfbPartnerCertification/certification/archived/devices-usb-devices.md",
+	  "redirect_url": "/SkypeForBusiness/certification/devices-usb-devices",
 	  "redirect_document_id": false
 	},
 	{
@@ -5324,16 +5329,96 @@
 	  "source_path": "Skype/SfbPartnerCertification/lync-cert/pcs-optimized-for-lync.md",
 	  "redirect_url": "/microsoftteams/devices/certification-overview",
 	  "redirect_document_id": false
+  },
+	{
+	  "source_path": "Teams/devices/phones-for-teams.md",
+	  "redirect_url": "/microsoftteams/phones/phones-for-teams",
+	  "redirect_document_id": false
+  },
+	{
+	  "source_path": "Teams/devices/plan-device-deployment.md",
+	  "redirect_url": "/microsoftteams/phones/plan-device-deployment",
+	  "redirect_document_id": false
 	},
-    {
-      "source_path": "Teams/devices/teams-ip-phones.md",
-      "redirect_url": "/microsoftteams/devices/certified-devices-overview",
-      "redirect_document_id": false
+  {
+    "source_path": "Teams/devices/teams-ip-phones.md",
+    "redirect_url": "/microsoftteams/devices/certified-devices-overview",
+    "redirect_document_id": false
   },
   {
     "source_path": "Teams/rooms/android-app-firmware.md",
     "redirect_url": "/microsoftteams/devices/certified-hardware-android",
     "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/devices/phones-panels-deploy.md",
+    "redirect_url": "/microsoftteams/devices/mtra-panels-deploy",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/set-up-common-area-phones.md",
+    "redirect_url": "/microsoftteams/phones/set-up-common-area-phones",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/devices/common-area-mobile-phones.md",
+    "redirect_url": "/microsoftteams/phones/common-area-mobile-phones",
+    "redirect_document_id": false
+  },
+  {
+   "source_path": "Teams/sip-gateway-configure.md",
+    "redirect_url": "/microsoftteams/devices/sip-gateway-configure",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/sip-gateway-plan.md",
+    "redirect_url": "/microsoftteams/devices/sip-gateway-plan",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/sip-gateway-dynamic-filters.md",
+    "redirect_url": "/microsoftteams/devices/sip-gateway-dynamic-filters",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/flw-realwear.md",
+    "redirect_url": "/microsoftteams/devices/usb-devices",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/devices/collab-bar-deploy.md",
+    "redirect_url": "/microsoftteams/rooms/rooms-deploy",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/devices/teams-android-devices-user-interface.md",
+    "redirect_url": "/microsoftteams/phones/teams-android-devices-user-interface",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/rooms/admin-center-license-overview.md",
+    "redirect_url": "/microsoftteams/rooms/rooms-licensing",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/manage-sensitive-events.md",
+    "redirect_url": "/microsoftteams/meeting-webinar-town-hall-feature-comparison",
+    "redirect_document_id": false
+  },
+  {
+    "source_path": "Teams/devices/smartvision-admin.md",
+    "redirect_url": "/microsoftteams/devices/multistream-intelliframe",
+    "redirect_document_id": false
+  },
+  {
+"source_path": "Teams/delete-exchange-online-transcripts.md",
+    "redirect_url": "/microsoftteams/tmr-meeting-recording-change",
+    "redirect_document_id": true
+  },
+  {
+    "source_path": "Teams/add-funds-and-manage-communications-credits.md",
+    "redirect_url": "/microsoftteams/turn-off-communication-credits-auto-recharge-mca-customers",
+    "redirect_document_id": true
   }
   ]
 }

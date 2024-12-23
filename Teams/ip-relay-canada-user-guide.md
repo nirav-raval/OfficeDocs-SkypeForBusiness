@@ -1,7 +1,7 @@
 ---
 title: "IP Relay in Canada - user guide"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: 
 ms.date: 11/17/2023

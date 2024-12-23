@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams call flows
-ms.author: crowe
-author: CarolynRowe
+ms.author: scottfrancis
+author: sfrancis206
 manager: pamgreen
 ms.date: 06/08/2018
 ms.topic: conceptual

@@ -36,7 +36,7 @@ This section walks you through creating a basic Windows Server file share. A bas
   
 Watch the video steps for **create a file share**:
   
-> [!video https://www.microsoft.com/videoplayer/embed/dbef31be-e899-4a32-a1ca-370053284f56?autoplay=false]
+> [!video 42871483-b644-4bee-a2ef-0e8a725aaaba]
   
 ### Create a basic file share
 

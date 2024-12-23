@@ -1,7 +1,7 @@
 ---
 title: Grant and manage consent to Teams app permissions
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: how-to
 audience: admin

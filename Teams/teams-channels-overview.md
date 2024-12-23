@@ -1,7 +1,7 @@
 ---
 title: Overview of teams and channels in Microsoft Teams
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.date: 05/22/2024
 ms.topic: conceptual

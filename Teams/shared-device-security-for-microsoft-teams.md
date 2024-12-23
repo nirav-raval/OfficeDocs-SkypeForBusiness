@@ -7,7 +7,7 @@ ms.topic: reference
 ms.service: msteams
 audience: admin
 ms.reviewer: pawa
-ms.date: 08/21/2020
+ms.date: 10/30/2024
 description: Zero Trust guidance for using Microsoft Teams securely from a shared computer in the workplace.
 ms.localizationpriority: high
 search.appverid: MET150
@@ -39,18 +39,18 @@ Recognizing that this might not be possible or practical in all scenarios, it's 
 
 Plans should be developed to adhere to guidelines as promptly as is possible.
 
-1. Make use of Operating System platform security capabilities.
+1. Use Operating System platform security capabilities.
     1. Ensure that the operating system is configured to install automatic updates from the Operating System provider (for Microsoft systems, this can be accomplished via [**Windows Update**](https://support.microsoft.com/help/12373/windows-update-faq)). 
     1. Ensure that any device encryption capabilities such as [**bitlocker**](/windows/security/information-protection/bitlocker/bitlocker-overview) are enabled, and the key used to access the device is secured.  Note that most modern [**Windows 10 devices support bitlocker**](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
     1. Use anti-virus capabilities such as those offered by [**Windows Defender**](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-in-windows-10) on your devices.
     1. Use of [separate user accounts](https://support.microsoft.com/help/4026923/windows-10-create-a-local-user-or-administrator-account) for each user of the system is highly recommended.
     1. *Don't* grant, or use, administrator privileges for nonadministrative functions (such as browsing the web, running Teams, et cetera).
 
-If the above guidance can't be met, we recommend making use of other browser security best practices:
+If the guidance above can't be met, we recommend using other browser security best practices:
 
-1. Apply browser security capabilities.
-    1. Use private browsing sessions to minimize data and history that persists to disk. For example, use [inPrivate browsing in Microsoft Edge](https://support.microsoft.com/help/4533513/microsoft-edge-browse-inprivate), [Incognito browsing in Google Chrome](https://support.google.com/chrome/answer/95464?co=GENIE.Platform%3DDesktop&hl=en), or the capabilities your specific browser for browsing privately.
-    1. Changing the system behavior to engage private browsing *by default* is recommended.
+1. Automatically delete browser data.
+    1. Configure your browser to automatically delete the browser history and data regularly, or whenever the browser is closed. This protects privacy without affecting how Microsoft Teams works. You can find instructions on how to set this up in the documentation for [Google Chrome](https://support.google.com/chrome/community-guide/245444314/how-to-automatically-clear-browsing-data-when-closing-google-chrome-window-a-step-by-step-guide), [Microsoft Edge](https://support.microsoft.com/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd), [Mozilla Firefox](https://support.mozilla.org/en-US/kb/delete-browsing-search-download-history-firefox), and [Apple Safari](https://support.apple.com/guide/safari/clear-your-browsing-history-sfri47acf5d6/mac). 
+    1. Private browsing sessions, such as inPrivate browsing in Microsoft Edge or Incognito Mode in Google Chrome, can help minimize the data and history that's saved to your device. However, using Microsoft Teams on the web in private browsing sessions may lead to performance issues if cookies or services used by Microsoft or third-party apps in Teams are blocked.
 
 2. Browse to and use the [Teams web app](https://teams.microsoft.com) (sometimes called the *web* client) not the downloadable Teams client.
 

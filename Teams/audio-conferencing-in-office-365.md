@@ -1,10 +1,10 @@
 ---
 title: Plan Audio Conferencing for Teams meetings
 ms.reviewer: 
-description: 
+description: Learn how to plan your Audio Conferencing service for Teams meetings.
 ms.topic: article
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 audience: admin
 ms.date: 2/21/2024
@@ -90,7 +90,7 @@ For example, you might want to change the PIN that meeting organizers use to sta
 
 ### Phone numbers for Audio Conferencing bridges
 
-With Audio Conferencing, your users can use toll and toll-free servive numbers to dial in to meetings. 
+With Audio Conferencing, your users can use toll and toll-free service numbers to dial in to meetings. 
 
 - With toll numbers, invitees pay when calling the number.
 - With toll-free numbers, invitees don't pay when calling the number.
@@ -146,7 +146,7 @@ To provide toll-free conference bridge phone numbers, and to support conferencin
 |Ask yourself|Action |
 |------------|-------|
 |Are Communications Credits required for my Audio Conferencing implementation? |To find out if you need to set up Communications Credits, see [Set up Communications Credits for your organization](set-up-communications-credits-for-your-organization.md).|
-|If they're required, how much should I purchase?|To determine the Communications Credits amount, see [Recommended funding amounts](what-are-communications-credits.md#recommended-funding-amounts).|
+|If they're required, how much should I purchase?|To determine the Communications Credits amount, see [Determine how many Communication Credits to purchase](what-are-communications-credits.md#determine-how-many-communication-credits-to-purchase).|
 |Do I want to configure an auto-recharge amount?|To configure an auto-recharge amount, see [Set up Communications Credits for your organization](set-up-communications-credits-for-your-organization.md).|
 
 

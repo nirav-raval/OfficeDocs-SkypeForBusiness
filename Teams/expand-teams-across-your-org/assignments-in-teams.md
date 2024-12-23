@@ -1,8 +1,8 @@
 ---
 title: Assignments for Teams
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: article
 ms.service: msteams
 audience: admin
@@ -38,32 +38,35 @@ The Assignments and Grades features in Teams for Education allow educators to as
 
 Using the admin settings in the Microsoft Teams admin center, you can turn features on or off for educators within your organization and their students.
 
-To view and manage Assignment settings, go to <a href="https://admin.teams.microsoft.com/education/assignments-settings" target="_blank">**Education** > **Assignment settings**</a> in the Teams admin center.
-
 The following are settings related to Assignments:
 
 <a name="#bkemaildigest"> </a>
 
 ### Weekly guardian email digest
 
-Guardian emails are sent each weekend to parents or guardians. The email contains information about assignments from the previous week and for the upcoming week. The Parent and Guardian Sync can be setup using [School Data Sync](/schooldatasync/parent-contact-sync).
+Guardian emails are sent each weekend to parents or guardians. The email contains information about assignments from the previous week and for the upcoming week.
 
-1. Import parent contact information via Parent and Guardian Sync in SDS. For instructions on how to enable Parent and Guardian Sync, see [Enabling Parent and Guardian Sync](/schooldatasync/parent-contact-sync#enabling-parent-and-guardian-sync).
+1. There are three ways in which you can populate each student's guardian contact information. You can select any one of the following:
+    1. **School Data Sync**: You can ingest contact information via CSV files or via API sync. To learn how to do this, see [Sync Parents and Guardian Contacts in SDS](/schooldatasync/parents-and-guardians-in-sds). If you want to leverage CSV files for populating the contacts, V2.1 is the preferred CSV file format in SDS, and you will need four CSV files: _orgs.csv_, _users.csv_, _roles.csv_, and _relationships.csv_. For more information, see [SDS V2.1 CSV File Format](/schooldatasync/sds-v2.1-csv-file-format). If you'd like to first get an overview of SDS instead, see [School Data Sync Overview](/schooldatasync/school-data-sync-overview).
+    1. **Parents App**: You can select this method if you’ve not set up SDS. An educator can add or edit parent/guardian contact information through a form-based input for each student and request their school admin for approval. Once the admin approves the request, the contact details are updated. For more information, see [Manually Update Parent Contact Information](../edu-parents-app.md#manually-update-parent-contact-information).
+    1. **Microsoft Graph**: The contact information can be updated in the ‘relatedContact resource type’, and the ‘Update’ API can be used to populate parent/guardian contact information for each student. Learn more [here](/graph/api/resources/relatedcontact?view=graph-rest-beta&preserve-view=true).  
 
-2. Turn on the Guardian Setting in the Microsoft Teams admin center, as the setting is turned off by default. This will enable teachers to send out a weekly digest.
+2. Turn on the Guardian Setting in the Microsoft Teams admin center navigating to [Education > Parent and guardian settings](https://admin.teams.microsoft.com/education/parent-settings), as the setting is turned off by default. This will enable teachers to send out a weekly digest.
 
    > [!NOTE]
    > Teachers can opt-out of the digest by deselecting the setting inside their own personal class team (**Assignment Settings > Parent/Guardian Emails**).
 
 To verify that Parents will get the email, the following three items must be true:
 
-- Email address attached to the student profile in SDS and tagged as _Parent_ or _Guardian_. For details, see [Parent and Guardian Sync File Format](/schooldatasync/parent-contact-sync-file-format).
+- Email address attached to the student profile in SDS and tagged as _Parent_ or _Guardian_. For details, see [Parents and Guardian Sync File Format.](/schooldatasync/sds-v2.1-csv-file-format) If you’re using Graph API, the relationship should be tagged as *Parent or Guardian*. 
 
 - Students belong to at least one class in which e-mail isn't disabled by the teacher in [assignment settings](https://support.microsoft.com/office/adjust-assignment-settings-in-your-class-team-05bb3b89-1cdf-415a-b6c7-44add0376a77).
 
 - The emails will contain information about assignments that have a due date from the previous week or in the upcoming week.
 
 Default setting for this feature is - **Off**.
+> [!TIP]
+> If you want to learn about School Connection, which empowers parents and guardians to stay informed about their child’s assignments, grades, and insights in real-time with no extra work required from educators, see  [Set up School Connection](/microsoft-365/education/deploy/school-connection-app). 
 
 <a name="bkmakecode"> </a>
 
@@ -72,6 +75,8 @@ Default setting for this feature is - **Off**.
 Microsoft MakeCode is a block-based coding platform that brings computer science to life for all students.
 
 MakeCode is a Microsoft product that is subject to the Microsoft [terms of use](https://go.microsoft.com/fwlink/?LinkID=206977) and [privacy](https://go.microsoft.com/fwlink/?LinkId=521839) policies.
+
+To view and manage this setting, navigate to [Education > Assignment settings](https://admin.teams.microsoft.com/education/assignments-settings) in the Teams admin center. 
 
 Default setting for this feature is - **Off**.
 
@@ -86,6 +91,8 @@ For more information on how this feature works, watch this [video demonstration]
 ### Turnitin
 
 [Turnitin](https://www.turnitin.com/) is an academic integrity service. This is a third-party service that is subject to its own terms and privacy policy. You're responsible for your use of any third-party products and services.
+
+To view and manage this setting, navigate to [Education > Assignment settings](https://admin.teams.microsoft.com/education/assignments-settings) in the Teams admin center. 
 
 Default setting for this feature is - **Off**.
 

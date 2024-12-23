@@ -2,8 +2,8 @@
 title: Outbound call restrictions - Audio Conferencing & PSTN calls
 ms.reviewer: 
 ms.date: 02/22/2024
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.topic: article
 ms.service: msteams

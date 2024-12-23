@@ -1,7 +1,7 @@
 ---
 title: Customize your app store in Teams
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.reviewer: prem
 ms.date: 12/15/2023

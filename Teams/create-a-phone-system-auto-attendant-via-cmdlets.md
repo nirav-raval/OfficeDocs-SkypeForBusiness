@@ -1,10 +1,10 @@
 ---
-title: Create an auto attendant via cmdlets
-author: DaniEASmith
-ms.author: danismith
+title: Create an Auto attendant via cmdlets
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 01/20/2022
+ms.date: 10/29/2024
 ms.topic: article
 ms.assetid: 6fc2687c-0abf-43b8-aa54-7c3b2a84b67c
 ms.tgt.pltfrm: cloud
@@ -16,8 +16,8 @@ ms.collection:
   - tier1
 audience: Admin
 appliesto: 
-  - Skype for Business
   - Microsoft Teams
+  - Skype for Business
 ms.localizationpriority: medium
 f1.keywords: 
   - CSH
@@ -28,11 +28,11 @@ ms.custom:
 description: Learn how to configure auto attendants via cmdlets
 ---
 
-# Create an auto attendant via cmdlets
+# Create an Auto attendant via cmdlets
 
-## Assumptions
+## Prerequisites
 
-1. PowerShell is installed on your computer
+1. Install PowerShell on your computer.
 
    - Set up your computer for [Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell)
    - MSTeams Module Installed
@@ -47,12 +47,12 @@ description: Learn how to configure auto attendants via cmdlets
      Install-Module -Name Microsoft.Graph -Force -AllowClobber
      ```
 
-2. You have tenant administration rights
-3. You purchased Microsoft Teams Phone
-4. The following call queues were set up using the [Creating Call Queues with PowerShell cmdlets](create-a-phone-system-call-queue-via-cmdlets.md) guide.
+2. Ensure you have tenant administration rights.
+3. Purchase Microsoft Teams Phone.
+4. The call queues mentioned in this article were set up using the [Creating Call Queues with PowerShell cmdlets](create-a-phone-system-call-queue-via-cmdlets.md) guide.
 
 > [!NOTE]
-> Some of the following cmdlets may be part of the Public Preview version of Teams PowerShell Module. For more information, see [Install Teams PowerShell public preview](teams-powershell-install.md) and also see [Microsoft Teams PowerShell Release Notes](teams-powershell-release-notes.md).
+> Some of the cmdlets mentioned in this article may be part of the Public Preview version of Teams PowerShell Module. For more information, see [Install Teams PowerShell public preview](teams-powershell-install.md) and also see [Microsoft Teams PowerShell Release Notes](teams-powershell-release-notes.md).
 
 Users who already have the MicrosoftTeams module installed should `Update-Module MicrosoftTeams` to ensure the most up-to-date version is installed.
 
@@ -85,7 +85,7 @@ Useful configuration information:
 
 ## Login
 
-You will be prompted to enter your Teams administrator credentials.
+When prompted, enter your Teams administrator credentials.
 
 ```PowerShell
 $credential = Get-Credential
@@ -103,7 +103,7 @@ $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorID -Type 
 
 ## Dial By Name Auto Attendant - Resource Account Creation
 
-**Note**: Creating resource account here so it can be referenced on the main auto attendant. The actual Dial By Name auto attendant is created later.
+Create a resource account here so it can be referenced on the main auto attendant. You can create the actual Dial By Name auto attendant later.
 
 ### Get license types
 
@@ -113,7 +113,7 @@ Get-MgSubscribedSku
 
 ### Create and assign Resource Account
 
-**Note**: Phone number not required here as call queue is front ended by an Auto Attendant
+A phone number isn't required here as the call queue is nested behind an auto attendant.
 
 - ApplicationID
   - Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
@@ -298,7 +298,7 @@ Get-CsPhoneNumberAssignment -PstnAssignmentStatus Unassigned -CapabilitiesContai
 
 #### Assign available phone number
 
-**Note:** Usage location assigned to the phone number must match the usage location assigned to the Resource Account.
+The usage location assigned to the phone number must match the usage location assigned to the Resource Account.
 
 ```PowerShell
 Set-CsPhoneNumberAssignment -Identity ContosoMainAA-RA@contoso.com -PhoneNumber +{spare number from output of above command} -PhoneNumberType CallingPlan
@@ -341,3 +341,11 @@ $dialByNameAutoAttendant = New-CsAutoAttendant -Name "Contoso Dial By Name" -Def
 ```PowerShell
 New-CsOnlineApplicationInstanceAssociation -Identities @($dialByNameApplicationInstanceID) -ConfigurationID $dialByNameAutoAttendant.Id -ConfigurationType AutoAttendant
 ```
+
+## Related articles
+
+[Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md)
+
+[Here's what you get with Microsoft Teams Phone](here-s-what-you-get-with-phone-system.md)
+
+[Create a Call queue via cmdlets](create-a-phone-system-call-queue-via-cmdlets.md)

@@ -91,13 +91,13 @@ The following limitations also apply:
 
 Users who participate in conversations that are part of the chat list in Teams must have an Exchange Online (cloud-based) mailbox for an admin to search chat conversations. That's because conversations that are part of the chat list are stored in the cloud-based mailboxes of the chat participants. If a chat participant doesn't have an Exchange Online mailbox, the admin can't search or place a hold on chat conversations. For example, in an Exchange hybrid deployment, users with on-premises mailboxes might be able to participate in conversations that are part of the chat list in Teams. However, in this case, content from these conversations isn't searchable and can't be placed on hold because the users don't have cloud-based mailboxes. (For more, see [How Exchange and Microsoft Teams interact](exchange-teams-interact.md).)
 
-
-|Feature  | Maximum limit  |
-|---------|---------|
-|Number of people in a private chat<sup>1</sup>  | 250<sup>2</sup> |
-|Number of people in a video or audio call from chat | 20 |
-|Number of file attachments<sup>3</sup>  |10     |
-|Chat size | Approximately 28 KB per post<sup>4</sup> |
+|Feature                                             | Maximum limit                            |
+|----------------------------------------------------|------------------------------------------|
+|Number of people in a private chat<sup>1</sup>      | 250<sup>2</sup>                          |
+|Number of people in a video or audio call from chat | 20                                       |
+|Number of file attachments<sup>3</sup>              |10                                        |
+|File size limitation                                |100 MB                                    |
+|Chat size                                           | Approximately 28 KB per post<sup>4</sup> |
 
 <sup>1</sup> If you have more than 20 people in a chat, the following chat features are turned off: Outlook automatic replies and Teams status messages; typing indicator; video and audio calling; sharing; read receipts. The "Set Delivery Options" button (!) is also removed when private group chats contain more than 20 members.
 
@@ -145,11 +145,11 @@ Channel names also can't start with an underscore (_) or period (.), or end with
 
 |Feature     | Maximum limit |
 |------------|---------------|
-|Number of people in a meeting (can chat and call in)  | With Microsoft 365 Business Basic, Microsoft 365 Business Standard, Microsoft 365 Business Premium, and Microsoft 365 A1 plans, you can host online meetings and video calls for up to 300 people using Microsoft Teams. With Microsoft 365 E3/E5, Microsoft 365 A3/A5, and Microsoft 365 Government G3/G5 plans, this limit increases up to 1,000 people.|
+|Number of people in a meeting (can chat and call in)  | With Microsoft 365 Business Basic, Microsoft 365 Business Standard, Microsoft 365 Business Premium, Microsoft Teams Essentials, and Microsoft 365 A1 plans, you can host online meetings and video calls for up to 300 people using Microsoft Teams. With Microsoft 365 F1/F3/E3/E5/A3/A5/G3/G5, Office 365 E1/E3/E5/A3/A5/G1/G3/G5, and Microsoft Teams EEA plans, this limit increases up to 1,000 people.|
 |Number of people in a video or audio call from chat | 20 |
 |Max PowerPoint File Size | 2 GB|
 |Teams keeps [meeting recordings](meeting-recording.md) that don't get uploaded to Microsoft Stream, available for local download | 20 days |
-| Meeting recording maximum length | 4 hours or 1.5 GB. When this limit is reached, the recording ends and automatically restarts.
+| Meeting recording maximum length | 4 hours or 1.5 GB. When this limit is reached, the recording ends and automatically restarts.|
 
 For more information, see [Meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).  
   

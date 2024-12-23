@@ -128,7 +128,4 @@ The specific VDI client terminals tested by the VDI client manufacturers and val
 |HP     |  t510, t5740e, t610 |
 |      |         |
 
-
-
 For additional information about specific thin clients, contact the client hardware manufacturer.
-

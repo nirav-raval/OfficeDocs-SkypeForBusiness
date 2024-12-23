@@ -1,7 +1,7 @@
 ---
 title: Manage channel policies in Microsoft Teams
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.reviewer: jastark
 ms.date: 06/20/2024

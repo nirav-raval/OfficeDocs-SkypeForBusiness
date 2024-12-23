@@ -25,7 +25,7 @@ description: Using approved corporate branding assets like images and logos to c
 
 # Create and manage meeting themes for Teams meetings
 
-**APPLIES TO:** ✔️Meetings ✖️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a x for no](/office/media/icons/cancel-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 [!INCLUDE[Teams Premium](includes/teams-premium-ecm.md)]
 

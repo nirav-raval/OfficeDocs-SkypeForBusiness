@@ -36,7 +36,7 @@ The installation media for Skype for Business Server provides a flexible experie
   
 Watch the video steps for **Install administrative tools**:
   
-> [!video https://www.microsoft.com/videoplayer/embed/99a5c436-963b-4eed-b423-651568c87cb1?autoplay=false]
+> [!video 0298612d-8426-4374-9347-e3257b3ab519]
   
 ### Install Skype for Business Server administrative tools from the Deployment Wizard
 

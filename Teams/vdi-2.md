@@ -4,7 +4,7 @@ author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
 ms.topic: article
-ms.date: 07/09/2024
+ms.date: 12/06/2024
 ms.service: msteams
 audience: admin
 ms.collection: 
@@ -25,7 +25,7 @@ ms.localizationpriority: high
 New VDI solution for Teams is a new architecture for optimizing the delivery of multimedia workloads in virtual desktops.
 
 > [!IMPORTANT]
-> The rollout to General Availability is now complete for Azure Virtual Desktops and Windows 365. For Citrix customers, in order to participate on the public preview, administrators must move users to the public preview channel as described [in this article](public-preview-doc-updates.md).
+> Microsoft has completed the General Availability rollout for Citrix customers. The new optimization requires Microsoft Teams version 24295.605.3225.8804, and client version 24110115722, as seen in **Settings** > **About Teams**.
 
 ## Components
 
@@ -40,16 +40,16 @@ New VDI solution for Teams is a new architecture for optimizing the delivery of 
 
 |Requirement                       |Minimum version |
 |----------------------------------|----------------|
-|New Teams                         |24193.1805.3040.8975 (for Azure Virtual Desktop/Windows 365) </br>24165.1410.2974.6689 (for Citrix single session VDAs) </br>24243.1309.3132.617 (for Citrix multi-session VDAs) |
+|New Teams                         |24193.1805.3040.8975 (for Azure Virtual Desktop/Windows 365) </br>24295.605.3225.8804 (for Citrix) |
 |Azure Virtual Desktop/Windows 365 |Windows App: 1.3.252</br>Remote Desktop Client: 1.2.5405.0 |
-|Citrix                            |VDA: 2203 LTSR CU3 or 2305 CR</br>Citrix Workspace app: 2203 LTSR (any CU), 2402 LTSR, or 2302 CR |
+|Citrix                            |VDA: 2203 LTSR CU3 or 2305 CR</br>Citrix Workspace app: 2203 LTSR (any CU), 2402 LTSR, or 2302 CR </br>MsTeamsPluginCitrix: 2024.41.1.1 |
 |Endpoint                          |Windows 10 1809 (SlimCore minimum requirement)</br>GPOs must not block MSIX installations (see [Step 3: SlimCore MSIX staging and registration on the endpoint](#step-3-slimcore-msix-staging-and-registration-on-the-endpoint))</br>Minimum CPU: Intel Celeron (or equivalent) @ 1.10 GHz, 4 Cores, Minimum RAM: 4 GB |
 
 ## Optimizing with new VDI solution for Teams
 
 ### Step 1: Confirm prerequisites
 
-1. Make sure you have the new Microsoft Teams version 24193.1805.3040.8975 or higher (for Azure Virtual Desktop/Windows 365), and 24165.1410.2974.6689 or higher for Citrix.
+1. Make sure you have the new Microsoft Teams version 24193.1805.3040.8975 or higher (for Azure Virtual Desktop/Windows 365), and 24295.605.3225.8804 or higher for Citrix.
 1. [Enable the new Teams policy](#microsoft-teams-powershell-policy-for-optimization) **if necessary** for a specific user group (it's enabled by default at a Global org-wide level).
 1. For Citrix, you must configure the **Virtual channel allow list** as described in the [Citrix Virtual channel allow list](#citrix-virtual-channel-allow-list) section of this article.
 
@@ -154,7 +154,7 @@ PowerShellCopy
 Get-AppxPackage Microsoft.Teams.SlimCore*
 ```
 
-A sample of the results that can be returned from running this Powershell is:
+A sample of the results that can be returned from running this PowerShell is:
 
 ```powershell
 Name              : Microsoft.Teams.SlimCoreVdi.win-x64.2024.32
@@ -206,8 +206,8 @@ Make sure the user's device has network connectivity (UDP and TCP) to endpoint I
 
 |ID  |Category          |ER  |Addresses    |Ports                       |Notes |
 |----|------------------|----|-------------|----------------------------|------|
-|11  |Optimize required |Yes |13.107.64.0/18, 52.112.0.0/14, 52.122.0.0/15, 2603:1063::/38 |UDP: 3478, 3479, 3480, 3481 |Media Processors and Transport Relay 3478 (STUN), 3479 (Audio), 3480 (Video), 3481 (Screenshare) |
-|12  |Allow required    |Yes |`*.lync.com`, `*.teams.microsoft.com`, `teams.microsoft.com` 13.107.64.0/18, 52.112.0.0/14, 52.122.0.0/15, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2603:1063::/38, 2620:1ec:6::/48, 2620:1ec:40::/42 |TCP: 443, 80                |      |
+|11  |Optimize required |Yes |52.112.0.0/14, 52.122.0.0/15, 2603:1063::/38 |UDP: 3478, 3479, 3480, 3481 |Media Processors and Transport Relay 3478 (STUN), 3479 (Audio), 3480 (Video), 3481 (Screenshare) |
+|12  |Allow required    |Yes |`*.lync.com`, `*.teams.microsoft.com`, `teams.microsoft.com` 52.112.0.0/14, 52.122.0.0/15, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2603:1063::/38, 2620:1ec:6::/48, 2620:1ec:40::/42 |TCP: 443, 80                |      |
 |47  |Default required  |No  |*.office.net |TCP: 443, 80                |Used for SlimCore downloads and background effects |
 |127 |Default required  |No  |*.skype.com  |TCP: 443, 80                |      |
 
@@ -236,13 +236,13 @@ IP blocks for signaling, media, background effects, and other options are descri
 
 1. Teams media flows connectivity is implemented using standard IETF Interactive Connectivity Establishment (ICE) for STUN and TURN procedures.
 1. Real-time media. Data encapsulated within Real-time Transport Protocol (RTP) that supports audio, video, and screen sharing workloads. In general, media traffic is highly latency sensitive. This traffic must take the most direct path possible and use UDP versus TCP as the transport layer protocol, which is the best transport for interactive real-time media from a quality perspective.
-  - As a last resort, media can use TCP/IP and also be tunneled within the HTTP protocol, but it's not recommended due to bad quality implications.
-  - RTP flow is secured using SRTP, in which only the payload is encrypted.
+    - As a last resort, media can use TCP/IP and also be tunneled within the HTTP protocol, but it's not recommended due to bad quality implications.
+    - RTP flow is secured using SRTP, in which only the payload is encrypted.
 1. Signaling. The communication link between the endpoint and Teams servers, or other clients, used to control activities (for example, when a call is initiated). Most signaling traffic uses UDP 3478 with fallback to HTTPS, though in some scenarios (for example, the connection between Microsoft 365 and a Session Border Controller) it uses SIP protocol. It's important to understand that this traffic is much less sensitive to latency but may cause service outages or call timeouts if latency between the endpoints exceeds several seconds.
 
 ### Bandwidth consumption
 
-Teams is designed to give the best audio, video, and content sharing experience regardless of your network conditions. When bandwidth is insufficient, Teams prioritizes audio quality over video quality. Where bandwidth isn't limited, Teams optimizes media quality, including high-fidelity audio, up to 1080p video resolution, and up to 30 fps (frames per second) for video and content. To learn more, read [Bandwidth requirements](prepare-network.md#bandwidth-requirements)
+Teams is designed to give the best audio, video, and content sharing experience regardless of your network conditions. When bandwidth is insufficient, Teams prioritizes audio quality over video quality. Where bandwidth isn't limited, Teams optimizes media quality, including high-fidelity audio, up to 1080p video resolution, and up to 30 fps (frames per second) for video and content. To learn more, read [Bandwidth requirements](prepare-network.md#bandwidth-requirements).
 
 ### Quality of services (QoS)
 
@@ -297,18 +297,30 @@ This policy is now expanded with an additional argument as the only configuratio
 
 ### Feature list with the new optimization
 
-|Feature                           |Available                                                       |
-|----------------------------------|----------------------------------------------------------------|
-|1080p                             |Yes                                                             |
-|Hardware acceleration on endpoint |Yes                                                             |
-|Gallery View 3x3 and 7x7          |Yes                                                             |
-|Quality of Service                |Yes                                                             |
-|Noise suppression                 |Yes                                                             |
-|HID                               |Yes                                                             |
-|Presenter mode                    |Yes                                                             |
-|Teams Premium                     |Yes</br>(Pending: Watermark, Townhalls, Decorate my Background) |
-|User-uploaded background effect   |Coming soon                                                     |
-|Zoom +/-                          |Coming soon                                                     |
+|Feature                           |Available on SlimCore (Windows)                                 |Available on WebRTC (Windows) |
+|----------------------------------|----------------------------------------------------------------|------------------------------|
+|1080p                             |Yes                                                             |No                            |
+|Hardware acceleration on endpoint |Yes                                                             |No                            |
+|Gallery View 3x3 and 7x7          |Yes                                                             |No                            |
+|Quality of Service                |Yes                                                             |No                            |
+|Noise suppression                 |Yes                                                             |Yes (AVD)                     |
+|Voice isolation                   |Yes                                                             |No                            |
+|HID                               |Yes                                                             |Yes (AVD and Omnissa)         |
+|Presenter mode                    |Yes                                                             |No                            |
+|Teams Premium                     |Yes</br>(Pending: Watermark, Townhalls, Decorate my Background) |No                            |
+|Organizational custom backgrounds |Yes (Teams Premium license required)                            |No                            |
+|User-uploaded background effect   |Coming soon                                                     |No                            |
+|Zoom +/-                          |Yes                                                             |No                            |
+|Media bypass, Location-based routing, Operator connect |Yes                                        |No                            |
+|Call quality dashboard and Teams admin center          |Yes                                        |Limited                       |
+|Published app/Remote app          |No                                                              |Yes                           |
+|Give/Take control                 |Yes                                                             |Yes                           |
+|App sharing                       |Yes                                                             |Yes                           |
+|e911                              |Yes                                                             |Yes                           |
+|Simulcast                         |Yes                                                             |Yes                           |
+|Share system audio                |Yes                                                             |Yes                           |
+|Secondary ringer                  |Yes                                                             |Yes                           |
+|Background blurring               |Yes                                                             |Yes                           |
 
 ## SlimCore user profile on the endpoint
 
@@ -366,6 +378,15 @@ By default, the MsTeamsPlugin automatically downloads and installs the right Sli
 - Screen Capture Protection (SCP) causes the presenter's screen to show as a black screen with only the mouse cursor on top it (as seen by the receiving side).
 - Calls drop on Teams running on the local machine that has an HID peripheral connected if a user launches a virtual desktop from that same local machine and logs into Teams.
 - Camera self preview isn't supported at this time (either under Settings/Devices, or while on a call when selecting the down arrow on the camera icon).
+- In the Control Panel/Apps/Installed apps of the endpoint, users will see multiple "Microsoft Teams VDI" entries (one for every Slimcore package installed).
+- When doing full monitor screen sharing, the call monitor window is visible for the other participants (without any video content inside).
+- In Citrix, app sharing sessions might freeze for the other participants if the presenter is on both VDA version 2402 and CWA for Windows 2309.1 (or higher versions).
+  - The issue happens when a video element is destroyed.
+       - For example, a participant turns off their camera in the middle of the app sharing session.
+       - If someone turns their camera **on** only, there's no issue because the video element is created, not destroyed.
+       - If the presenter maximizes the call monitor (which destroys the self preview of what the presenter is sharing).
+  - Stopping and resharing the window should resolve the issue.
+  - This issue has been resolved in new Teams 24335.206.X.X or higher versions.
 
 #### Citrix virtual channel allow list
 
@@ -385,11 +406,19 @@ The new Teams client requires three custom virtual channels to function: MSTEAMS
 
 2. The VDA machines must be rebooted for the policy to take effect.
 
-#### Citrix App Protection and Microsoft Teams compatibility
+#### Screen sharing
+
+Both outgoing screensharing and appsharing behave differently in optimized VDI when compared to the non-optimized Teams desktop client.
+As such, these activities require encoding that leverages the user's device resources (for example CPU, GPU, RAM, network, and so on).
+From a network perspective, sharing is done directly between the user's device and the other peer or conference server.
+
+When doing a full monitor screenshare, the Teams call monitor is captured and visible to the other participants (although the video elements inside aren't visible and instead are seen as blank squares). When doing app sharing, only the application being shared is visible to the other participants and the call monitor isn't captured.
+
+##### Citrix App Protection and Microsoft Teams compatibility
 
 Users who have App Protection enabled can still share their screen and apps while using the new optimization. Sharing requires VDA version 2402 or higher, and CWA for Windows 2309.1 or higher. Users on lower versions end up sharing a black screen instead when the App Protection module is installed and enabled.
 
-#### AVD Screen Capture Protection and Microsoft Teams compatibility
+##### AVD Screen Capture Protection and Microsoft Teams compatibility
 
 Users who have [Screen Capture Protection](/azure/virtual-desktop/screen-capture-protection?tabs=intune) (SCP) enabled can't share their screens or apps. Other people on the call can only see a black screen. If you want to allow users to share their screen even with SCP enabled, you need to disable SlimCore optimization in the Teams Admin Center policy (so the user is optimized with WebRTC), and set the SCP policy to **Block screen capture on client**.
 
@@ -398,6 +427,9 @@ Users who have [Screen Capture Protection](/azure/virtual-desktop/screen-capture
 Call Quality Dashboard (CQD) allows IT Pros to use aggregate data to identify problems creating media quality issues by comparing statistics for groups of users to identify trends and patterns. CQD isn't focused on solving individual call issues, but on identifying problems and solutions that apply to many users.
 
 VDI user information is now exposed through numerous dimensions and filters. Check [this page](dimensions-and-measures-available-in-call-quality-dashboard.md) for more information about each dimension.
+
+> [!NOTE]
+> The new Quality of Experience (QER) template is available in the Power BI query templates for CQD download. Version 8 now includes templates for reviewing VDI client-focused metrics.
 
 ##### Query fundamentals
 
@@ -460,7 +492,7 @@ Teams logs can be collected by selecting Ctrl+Alt+Shift+1 while running Teams on
 - **vdiVersionInfo** provides useful information for the Teams client and the endpoint.
   - **bridgeVersion** is tied to the version of the Teams desktop client running on the VM.
   - **remoteSlimcroreVersion** is the version of the SlimCore VDI that's available on the endpoint.
-  - **nodeId** is a unique id tied to the endpoint.
+  - **nodeId** is a unique ID tied to the endpoint.
   - **clientOsVersion** is the OS version for the endpoint.
   - **rdClientVersion** is the version of the remote desktop client running on the endpoint, which is used to connect to the VM.
   - **rdClientProductName** is the name of the remote desktop client running on the endpoint.
@@ -498,6 +530,8 @@ The code logged here needs to be mapped using this table:
 |1722       |           |RPC_S_SERVER_UNAVAILABLE           |'The RPC server is unavailable' MsTeamsVdi.exe related error. |
 |2000       |16002      |No Plugin                          |Endpoint doesn't have the MsTeamsPlugin, or if it has it, it didn't load (check with Process Explorer). |
 |2001       |           |Virtual Channel Not Available      |Error on Citrix VDA WFAPI. |
+|2003       |16026      |Custom Virtual Channels (MSTEAMS, MSTEAM1 and MSTEAM2) are blocked due to a Citrix Studio policy |Review the [Citrix virtual channel allow list](#citrix-virtual-channel-allow-list) section of this article. |
+|2005       |16043      |Teams is running as a Published App (Citrix) or RemoteApp (AVD/Windows 365) |This mode is currently not supported - Teams won't load SlimCore in this case, and users will always be optimized with WebRTC. |
 |3000       |24002      |SlimCore Deployment not needed     |This code isn't really an error. It's a good indicator that the user is on the new optimization architecture with SlimCore. |
 |3001       |24010      |SlimCore already loaded            |This code isn't really an error. It's a good indicator that the user is on the new optimization architecture with SlimCore. |
 |3004       |24035      |Plugin irresponsive                |Try restarting RDP or ICA session. |

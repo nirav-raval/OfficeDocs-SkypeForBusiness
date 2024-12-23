@@ -5,8 +5,8 @@ author: wlibebe
 manager: pamgreen
 ms.topic: article
 ms.service: msteams
-ms.reviewer: janineco
-ms.date: 01/08/2024
+ms.reviewer: idilates
+ms.date: 11/19/2024
 audience: admin
 ms.localizationpriority: medium
 f1.keywords:
@@ -25,9 +25,9 @@ description: Learn how Microsoft Teams administrators can create a custom meetin
 
 [!INCLUDE[Teams Premium ECM](includes/teams-premium-ecm.md)]
 
-Microsoft Teams custom meeting templates (a Teams Premium feature) allow you to specify values for many of the meeting options available to meeting organizers. Templates can be used to configure options that meeting organizers can change or can be used to lock options so that meeting organizers can't change them. For more information about custom meeting templates, see [Overview of custom meeting templates in Microsoft Teams](custom-meeting-templates-overview.md).
+Microsoft Teams Premium's custom meeting templates allow you to specify values for many of the meeting options available to meeting organizers. Templates can be used to configure options that meeting organizers can change or can be used to lock options so that meeting organizers can't change them. For more information about custom meeting templates, see [Overview of custom meeting templates in Microsoft Teams](custom-meeting-templates-overview.md).
 
-You can create up to 50 custom templates. See [Manage meeting templates in Microsoft Teams](manage-meeting-templates.md) for information on how to manage which templates are available to your users.
+You can create up to 50 custom templates. For information on how to manage which templates are available to your user, see [Manage meeting templates in Microsoft Teams](manage-meeting-templates.md).
 
 For each option in the template, you can define the following:
 
@@ -50,17 +50,17 @@ To create a custom meeting template
 
 1. In the Teams admin center, expand **Meetings** and select **Meeting templates**.
 1. Select **Add**.
-1. Type a name and description for the template. Note that the name and description will truncate after 40 characters when viewed in Teams, but the full name and description are viewable on hover.
+1. Enter a name and description for the template. The name and description truncates after 40 characters when viewed in Teams, but the full name and description are viewable on hover.
 1. Choose the options that you want to use for this template. (See the sections below for descriptions of each option.)
 1. To prevent the meeting organizer from changing an option, select the option and then select **lock**.
 1. To prevent the meeting organizer from seeing an option, select the option and then select **Hide**.
 1. Select **Save**.
 
-Once the template has been created, it may take up to 24 hours to be available to your users.
+    Once you create the template, it may take up to 24 hours for your users to see it.
 
-Note that if you change the options of an existing template, the changes affect new meetings scheduled using that template as well as any meetings that have already been scheduled with that template.
+    If you change the options of an existing template, the changes affect new meetings scheduled using that template, as well as any meetings that are already scheduled with that template.
 
-#### Security
+### Security
 
 |Option|Description|
 |:------|:----------|
@@ -72,28 +72,28 @@ Note that if you change the options of an existing template, the changes affect 
 |Enable watermark for video|Specifies if a watermark is overlaid on attendees' video feeds in the meeting.|
 |Restrict participants from copying or forwarding meeting chat messages|Prevents participants from copying or forwarding content in the meeting chat.|
 
-#### Audio & video
+### Audio & video
 
 |Option|Description|
 |:------|:----------|
 |Allow mic for attendees|When **On**, attendees can unmute.|
 |Allow camera for attendees|When **On**, attendees can turn on their cameras.|
 
-#### Recording & transcription
+### Recording & transcription
 
 |Option|Description|
 |:------|:----------|
 |Record meetings automatically|When **On** meetings are recorded automatically.|
 |Who can record|Specifies whether meetings can be recorded by organizers and co-organizers only or by organizers, co-organizers, and presenters.|
-|Copilot|Specifies if Copilot uses a meeting transcript.|
+|Allow Copilot|Specifies when Copilot is available and how Copilot uses meeting transcripts.|
 
-#### Roles
+### Roles
 
 |Option|Description|
 |:------|:----------|
 |Announce when people dialing in join or leave|Specifies if a sound is played when people calling in by phone join or leave the meeting.|
 
-#### Meeting engagement
+### Meeting engagement
 
 |Option|Description|
 |:------|:----------|
@@ -104,8 +104,7 @@ Note that if you change the options of an existing template, the changes affect 
 
 ## Related topics
 
-[Overview of custom meeting templates in Microsoft Teams](custom-meeting-templates-overview.md)
-
-[Use Teams meeting templates, sensitivity labels, and admin policies together](meeting-templates-sensitivity-labels-policies.md)
-
-[Configure Teams meetings with three tiers of protection](configure-meetings-three-tiers-protection.md)
+- [Overview of custom meeting templates in Microsoft Teams](custom-meeting-templates-overview.md)
+- [Use Teams meeting templates, sensitivity labels, and admin policies together](meeting-templates-sensitivity-labels-policies.md)
+- [Configure Teams meetings with three tiers of protection](configure-meetings-three-tiers-protection.md)
+- [Predefined meeting templates in Microsoft Teams](predefined-meeting-template-reference.md)

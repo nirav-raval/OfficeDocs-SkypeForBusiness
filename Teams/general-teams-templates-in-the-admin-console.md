@@ -1,7 +1,7 @@
 ---
 title: Use general team templates in the admin center
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 audience: Admin
 ms.topic: article

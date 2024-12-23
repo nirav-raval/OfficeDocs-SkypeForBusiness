@@ -1,7 +1,7 @@
 ---
 title: "What are dial plans?"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: mikedav, roykuntz
 ms.date: 09/27/2023

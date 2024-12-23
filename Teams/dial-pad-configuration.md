@@ -1,7 +1,7 @@
 ---
 title: Teams dial pad configuration
-author: CarolynRowe
-ms.author: crowe
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
 ms.reviewer: cbland
 ms.date: 05/21/2024
@@ -87,12 +87,18 @@ OnlineVoiceRoutingPolicy
 ------------------------
 Test_Policy
 ```
+
  > [!NOTE]
 > If your tenant is configured with a Global OnlineVoiceRoutingPolicy that applies to all users, then a user assigned policy is not required.
 
 ## User has Enterprise Voice enabled
 
-To check if the user has Enterprise Voice enabled, use the following command:
+Before you can enable voice for your users, you must assign a license to them first. To enable voice for your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+
+To check if the user has Enterprise Voice enabled, use the following PowerShell command:
 
 ```PowerShell
 Get-CsOnlineUser -Identity $user|Select EnterpriseVoiceEnabled
@@ -105,8 +111,9 @@ EnterpriseVoiceEnabled
 ----------------------
                   True
 ```
+
  > [!NOTE]
-> When assigning a phone number, Enterprise Voice enabled is automatically set to True. If a phone number is assigned and the value is False, you must use the [Set-CsPhoneNumber](/powershell/module/teams/set-csphonenumberassignment) cmdlet to set the value to True. 
+> When assigning a phone number, Enterprise Voice enabled is automatically set to True. If a phone number is assigned and the value is False, you must use the [Set-CsPhoneNumber](/powershell/module/teams/set-csphonenumberassignment) cmdlet to set the value to True.
 
 ## User is homed online and not in Skype for Business on premises
 

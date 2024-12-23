@@ -1,7 +1,7 @@
 ---
 title: Set up Microsoft Calling Plans
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz, jastark
 ms.date: 09/24/2024

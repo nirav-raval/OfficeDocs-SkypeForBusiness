@@ -40,6 +40,7 @@ There are two main tabs under **Inventory**: **Rooms** and **Devices**.
 ### Rooms view
 
 :::image type="content" source="../media/byod/inventory-rooms-tab.png" alt-text="Screenshot of Inventory rooms tab." lightbox="../media/byod/inventory-rooms-tab.png"::: 
+
 This page provides a comprehensive summary of your rooms, featuring the following key insights:
 
 - The total number of rooms in your tenant categorized by type (Microsoft Teams Rooms, Bring Your Own Device).
@@ -51,7 +52,7 @@ This page provides a comprehensive summary of your rooms, featuring the followin
 
   The following table describes the columns in the **Rooms** view of Inventory. 
 
-  | **Column** | **Description** |
+  | Column | Description |
   | --- | --- |
   | Display name | Name of the room |
   | Capacity | Illustrate the room's capacity number |
@@ -75,7 +76,7 @@ When you select a specific room, you'll see a new pane with two different pages,
 
 - **The Inventory page** displays detailed information about the room's devices:
 
-  | **Column** | **Description** |
+  | Column | Description |
   | --- | --- |
   | Name | Name of the device |
   | Type | Type of device (for example, Microsoft Teams Rooms, TeamsPanel, camera.) |
@@ -94,7 +95,7 @@ Select the device to view more details.<br>
 
 In the **Device group details** panel that opens up, a table displays all the devices in the group, allowing you to associate them with the specific room at once.
 
-| **Column** | **Description** |
+| Column | Description |
 | --- | --- |
 | Device display name | Name of the device |
 | Device type | The category of the device (for example, panel, speaker) |
@@ -116,27 +117,35 @@ To associate a device with a room, the following two methods are available:
 
 - **Use Import/Export function:** You can use this function to export the inventory list via an Excel file and construct Bring Your Own Device rooms.
 
-    1. In the **Devices** page, click **Export** to download the device inventory.
-    2. Open the Excel file and verify that it contains all the devices and room information.
-    3. In the Excel file, select the **PERIPHERALS** tab and fill out the Account or Display Name column for the devices listed.
-    4. Save the file after associating the device with the specific room information.
-    5. Go back to the Inventory Devices page and click **Import** to upload the modified file.
-    6. Verify that the device-room association is updated successfully.
+  1. In the **Devices** page, click **Export** to download the device inventory.
+  2. Open the Excel file and verify that it contains all the devices and room information.
+  3. In the Excel file, select the **PERIPHERALS** tab and fill out the Account or Display Name column for the devices listed.
+  4. Save the file after associating the device with the specific room information.
+  5. Go back to the Inventory Devices page and click **Import** to upload the modified file.
+  6. Verify that the device-room association is updated successfully.
 
-     > [!NOTE]
-     > In cases where the devices were not discovered or reported by Pro Management portal, admins can add those new devices using the import function. Device information such as the Product ID, Vendor ID, Serial Number, and Account information are required for the association to be done.
+  > [!NOTE]
+  > In cases where the devices were not discovered or reported by Pro Management portal, admins can add those new devices using the import function. Device information such as the Product ID, Vendor ID, Serial Number, and Account information are required for the association to be done.
 
 - **Manually associate discovered devices using Pro Management UI:** 
 
-   1. Go to the device table.
-   1. Select the specific device group with the **Need Action** banner. 
-   1. Click **Add a room to this device**.
-   1. Select the desired room from the list to associate the devices with.
-   1. Click **Save**.
+  1. Go to the device table.
+  1. Select the specific device group with the **Need Action** banner. 
+  1. Click **Add a room to this device**.
+  1. Select the desired room from the list to associate the devices with.
+  1. Click **Save**.
 
      :::image type="content" source="../media/byod/device-discovery.png" alt-text="Screenshot of device room association." lightbox="../media/byod/device-discovery.png":::
 
-## Devices automatically discovered by the Pro Management Portal
+### Using the PowerShell script to collect peripheral information
+
+To ensure seamless end-to-end user experience, peripherals such as audio-video bars located in rooms need to be associated or linked to a room account. To do this, you need to identify peripherals based on unique information such as product ID, vendor ID, and serial number.
+
+You can use a custom script to get peripheral details from rooms to locate peripherals correctly and ensure they're mapped to the corresponding room resource account. The PowerShell script located [here](https://www.microsoft.com/en-us/download/details.aspx?id=106063) must be run with administrator permissions.
+
+For detailed step-by-step instructions, see [Get information for connected peripherals](../rooms/get-peripheral-information.md). After uploading information on peripherals, use the Teams Pro Management portal to confirm if they are associated to the correct rooms.
+  
+## Peripherals automatically discovered by the Pro Management Portal
 
 Devices are automatically discovered using your users' Teams client to send device data to Pro Management Portal. When a user enters the prejoin screen of a meeting, any connected displays and USB audio/video peripherals are scanned and transmitted to the cloud. These devices populate your Devices tab within the Inventory navigation.
 
@@ -144,12 +153,17 @@ At launch, only displays are supported, but USB audio/video peripherals will fol
 
 Be aware that Microsoft can't guarantee that devices provide unique data like serial numbers, and this may cause errors or overcounting of usage. We recommend working with your OEM partners to ensure that their devices are providing unique serial numbers to the operating system via the USB descriptor or EDID.
 
-## Bring Your Own Device Usage Report 
+### Enabling automatic work location updates
+
+You have the option to [enable the automatic work location update policy](/powershell/module/teams/new-csteamsworklocationdetectionpolicy) for your organization or for a group of users. Automatic work location updates are designed to enhance the end user experience by making it easier to keep their work location up-to-date and connect with others when they are in the office. With the policy enabled, users will have the option to enable automatic work location updates. They can do so in Teams desktop client under **Settings** > **Privacy** > **Sharing your work location**. After users have opted-in, their work location will automatically update to **In the office** when they connect to a BYOD room, provided their work location was previously set to unknown or remote. The detected location will last until the end of their working hours. If they plug in after work hours, the location will be set until 11:59pm that day. This feature allows for a seamless transition between remote and in-office work, which enhances collaboration and communication within your team and other users.
+
+## Bring Your Own Device Usage Report
 
 > [!IMPORTANT]
 > A Teams Shared Device license is required to unlock the Bring Your Own Device room usage report. For more information about the Teams Shared Device, see [Microsoft Teams Shared Devices licensing - Microsoft Teams | Microsoft Learn](../teams-add-on-licensing/teams-shared-device-license.md).
 
 To view the Usage report for your Bring Your Own Device rooms:
+
 1. In the left navigation menu, select **Reports**.
 1. In the Reports page, select the **BYOD Usage** tab.  
 
@@ -169,7 +183,7 @@ To view the Usage report for your Bring Your Own Device rooms:
 
    Below the headline metrics, there's a table that provides a granular breakdown of individual Bring Your Own Device rooms, accompanied by specific metrics that illuminate each room’s usage and performance during the period selected. 
 
-   | **Column** | **Description** |
+   | Column | Description |
    |---|---|
    | **Display room name** | The designated name of the Bring Your Own Device room |
    | **Room Type** | Will show as “Bring Your Own Device Room” as room type |
@@ -183,7 +197,8 @@ To see the call utilization view for each room, select the specific Bring Your O
 
 > [!NOTE]
 > Only rooms with Teams Shared Devices or Pro licenses and which are associated with their peripherals are shown in the Bring Your Own Device usage report.
-> > Great news! for this first release, customers can utilize the Bring Your Own Device usage data without an additional Teams shared device license until April 8th, 2024.
+> 
+> Great news! for this first release, customers can utilize the Bring Your Own Device usage data without an additional Teams shared device license until April 8th, 2024.
 
 ## Settings
 
@@ -196,7 +211,7 @@ The Teams BYOD solution uses peripheral data crowdsourced from the Teams client 
 > [!WARNING]
 > Disabling this policy setting for certain users will cause BYOD and desk usage information to cease flowing to the service. The Teams BYOD and Desk solution requires peripheral data sent from users to calculate usage reports for peripherals, BYOD rooms, and desks.
 
-```
+```powershell
 Get-CsTeamsBYODAndDesksPolicy
 New-CsTeamsBYODAndDesksPolicy -Identity "Test"
 Set-CsTeamsBYODAndDesksPolicy -Identity "Test" -DeviceDataCollection Disabled

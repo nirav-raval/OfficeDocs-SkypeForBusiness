@@ -1,8 +1,8 @@
 ---
 title: Guest access in Microsoft Teams
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: conceptual
 ms.service: msteams
 ms.reviewer: rafarhi

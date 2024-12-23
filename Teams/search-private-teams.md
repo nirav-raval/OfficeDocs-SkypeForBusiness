@@ -1,8 +1,8 @@
 ---
 title: Allow users to search for private teams
-ms.author: jtremper
-author: jacktremper
-manager: serdars
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: shubjain
 ms.date: 11/01/2023
 ms.topic: article

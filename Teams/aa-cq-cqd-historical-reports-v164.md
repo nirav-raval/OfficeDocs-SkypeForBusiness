@@ -4,7 +4,7 @@ author: mkbond007
 ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 08/22/2023
+ms.date: 10/31/2024
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -25,7 +25,7 @@ ms.custom:
   - ms.teamsadmincenter.directrouting.cqd
   - ms.lync.lac.ToolsCallQualityDashboard
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn about how to use the Teams Auto Attendant & Call Queue Historical Report Power BI report to view Auto Attendant and Call Queue historical data for GCC High and DoD customers.
+description: Learn about how to use the Teams Auto Attendant & Call Queue Historical Report Power BI report to view Auto attendant and Call queue historical data for GCC High and DoD customers.
 ---
 
 # Auto attendant and call queue historical reports for GCC High and DoD
@@ -67,15 +67,15 @@ Perform the following steps:
 
 1. Open the zip file.
 
-1. Navigate to the AACQ sub-folder
+1. Navigate to the AACQ subfolder.
 
 1. Open the `CQD Teams Auto Attendant & Call Queue Historical Report V1.64.pbit` template file. Power BI Desktop should launch.
 
-1. You'll be prompted to select the CQD data pipeline region. Select the region where your tenant is located.
+1. Once prompted to select the CQD data pipeline region, choose the region where your tenant is located.
 
      :::image type="content" source="media/aa-cq-historical-report-01-v164.png" alt-text="Screenshot selecting the CQD data pipeline region.":::
 
-    Public Cloud Customers (Not supported but will work):
+    Public Cloud Customers (not supported but works):
 
 1. The region where your tenant is located can be obtained by using the [Get-CsTenant](/powershell/module/teams/get-cstenant) cmdlet.
 
@@ -85,7 +85,7 @@ Perform the following steps:
     microsoftcommunicationsonline/noam-4a-s7
     ```
 
-    The region will be displayed after the **/** as in the above example where the region is `noam`.
+    The region is displayed after the **/** as in the above example where the region is `noam`.
 
     GCC High and DoD Customers:
 
@@ -94,23 +94,23 @@ Perform the following steps:
    - GCCH: `cqd.gov.teams.microsoft.us/data`
    - DoD: `cqd.dod.teams.microsoft.us/data`
 
-1. The report will launch with sample data.
+1. The report launches with sample data.
 
 1. To see your own data, select **Refresh** on the **Home** tab under **Queries** in Power BI Desktop.
 
    :::image type="content" source="media/aa-cq-historical-report-02-v164.png" alt-text="Screenshot selecting the refresh option.":::
 
-1. You'll be prompted to sign in. Select **Organizational account**, and then select **Sign in**.
+1. When prompted to sign in, select **Organizational account**, and then select **Sign in**.
 
    :::image type="content" source="media/aa-cq-historical-report-03-v164.png" alt-text="Screenshot showing login for V1.63.":::
 
-1. Select **Connect**, and the data will refresh.
+1. After you select **Connect**, the data refreshes.
 
 ## Data latency for AA and CQ analytics
 
-Data is typically available within 30 minutes of the call completing; however, there are occasions where it may take several hours for data to appear.
+Data is typically available within 30 minutes of the call completing; however, there are occasions where it might take several hours for data to appear.
 
-You'll have to refresh the data to see any new data.
+You have to refresh the data to see any new data.
 
 ## Customization
 
@@ -171,27 +171,27 @@ Perform the following steps:
 
 |Name                                    |Data Type                |Description                            |
 |:---------------------------------------|:------------------------|:--------------------------------------|
-|AA Name                                 |Text                     |Name of resource account attached to Auto Attendant<br><br>If the full Resource Account name is **aa_test@microsoft.com**, then this value will be: **aa_test** |
+|AA Name                                 |Text                     |Name of resource account attached to Auto Attendant<br><br>If the full Resource Account name is **aa_test@microsoft.com**, then this value is: **aa_test** |
 |AACallerActionCount                     |Whole number             |Summarize: Sum<br>Count of actions selected by caller in Auto Attendant during the call  |
-|AACallerActionCount  (Measure)          |Whole number             |Same as above except will be 0 if no calls instead of blank                              |
-|AACallFlow                              |Text                     |Encapsulates the different states of Auto Attendant Call--possible values:<br><br>§ abs_search<br>§ announcement<br>§ automatic_menu<br>§ call_termination<br>§ call_transfer<br>§ first_level_menu<br>§ main_menu<br>§ speech_input_confirmation<br>§ user_selection |
-|AACallResult                            |Text                     |Final call result--possible values:<br><br>§ failed_to_establish_media (the media portion of the call couldn't be established)<br>§ failover_to_operator (call transferred to operator typically due to a system error)<br>§ oaa_chain_too_long (too many legs in the AA)<br>§ oaa_session_too_long (AA session has lasted too long)<br>§ service_declined (AA didn't accept the call)<br>§ service_terminated (AA configuration disconnects the call or call hung up)<br>§ terminated_automatic_selection (AA configuration disconnects the calls)<br>§ terminated_no_operator (call terminated due to error no operator defined) <br>§ terminated_transfer_failed (call terminated as transfer failed - typically to external number)<br>§ transfer_in_progress (AA->AA transfer)<br>§ transferred_to_operator (call was transferred to operator - typically due to user error)<br>§ transferred_to_receptionist (same as transferred_to_operator)<br>§ transferred_to_self (call was returned to the start of the AA - typically from a menu announcement option)<br>§ transferred_to_shared_voicemail (call was transferred to shared voicemail)<br>§ transferred_to_user (call was transferred to a user - includes call queues)<br>§ unknown (an unknown condition has occurred)<br>§ user_terminated (caller hung up) |
+|AACallerActionCount  (Measure)          |Whole number             |Same as above except this displays as 0 instead of being blank if there are no calls                              |
+|AACallFlow                              |Text                     |Encapsulates the different states of Auto Attendant Call--possible values:<br><br>- abs_search<br>- announcement<br>- automatic_menu<br>- call_termination<br>- call_transfer<br>- first_level_menu<br>- main_menu<br>- speech_input_confirmation<br>- user_selection |
+|AACallResult                            |Text                     |Final call result--possible values:<br><br>- failed_to_establish_media (the media portion of the call couldn't be established)<br>- failover_to_operator (call transferred to operator typically due to a system error)<br>- oaa_chain_too_long (too many legs in the AA)<br>- oaa_session_too_long (AA session lasted too long)<br>- service_declined (AA didn't accept the call)<br>- service_terminated (AA configuration disconnects the call or call hung up)<br>- terminated_automatic_selection (AA configuration disconnects the calls)<br>- terminated_no_operator (call terminated due to error no operator defined) <br>- terminated_transfer_failed (call terminated as transfer failed - typically to external number)<br>- transfer_in_progress (AA->AA transfer)<br>- transferred_to_operator (call was transferred to operator - typically due to user error)<br>- transferred_to_receptionist (same as transferred_to_operator)<br>- transferred_to_self (call was returned to the start of the AA - typically from a menu announcement option)<br>- transferred_to_shared_voicemail (call was transferred to shared voicemail)<br>- transferred_to_user (call was transferred to a user - includes call queues)<br>- unknown (an unknown condition occurred)<br>- user_terminated (caller hung up) |
 |AA Call Legend                          |Text                     |Sets up legend items based on AACallResult                               |
 |AAChainDuration                         |Decimal number           |Summarize: Sum<br>Duration of call in Auto Attendant                     |
-|AAChainDuration (Measure)               |Decimal number           |Same as above except will be 0 if no calls instead of blank              |
+|AAChainDuration (Measure)               |Decimal number           |Same as above except displays as 0 instead of blank if there are no calls              |
 |AAChainIndex                            |Text                     |                                                                         |
-|AAConnectivityType                      |Text                     |Type of call--possible values:<br><br>§ ExternalCall<br>§ InternalCall |
+|AAConnectivityType                      |Text                     |Type of call--possible values:<br><br>- ExternalCall<br>- InternalCall |
 |AACount                                 |Text                     |Number of Auto Attendants involved in call                               |
-|AADirectorySearchMethod                 |Text                     |Last address book search method--possible values:<br><br>§ abs_search_dtmf<br>§ abs_search_extension_x<br>§ abs_search_name |
+|AADirectorySearchMethod                 |Text                     |Last address book search method--possible values:<br><br>- abs_search_dtmf<br>- abs_search_extension_x<br>- abs_search_name |
 |AAStartHour                             |Decimal number           |Auto Attendant call start hour                                           |
 |AAStartTime                             |Date/time                |Auto Attendant call start time                                           |
-|AATransferAction                        |Text                     |Call transfer target type--possible values:<br><br>§ application - voice application entity<br>§ external_pstn<br>§ hunt_group - Call Queue entity<br>§ orgaa - Auto Attendant entity<br>§ shared_voicemail<br>§ unknown<br>§ user |
-|Call Type<sup>1</sup>                   |Text                     |Type of call--possible values:<br><br>§ External<br>§ Internal           |
+|AATransferAction                        |Text                     |Call transfer target type--possible values:<br><br>- application - voice application entity<br>- external_pstn<br>- hunt_group - Call Queue entity<br>- orgaa - Auto Attendant entity<br>- shared_voicemail<br>- unknown<br>- user |
+|Call Type<sup>1</sup>                   |Text                     |Type of call--possible values:<br><br>- External<br>- Internal           |
 |IsAAInvolved                            |Text                     |Always 1                                                                 |
 |MM-DD                                   |Text                     |Auto Attendant call month-day                                            |
 |PSTNMinutes                             |Whole number             |Summarize: Sum<br>Total minute usage                                     |
 |TotalCallCount                          |Whole number             |Summarize: Sum<br>Always 1 - used to provide sum of all calls            |
-|Sum of TotalCallCount (Measure)         |Whole number             |Same as above except will be 0 if no calls instead of blank              |
+|Sum of TotalCallCount (Measure)         |Whole number             |Same as above except displays as 0 instead of blank if there are no calls              |
 
 ### Cloud Call Queue Analytics report
 
@@ -233,20 +233,19 @@ Perform the following steps:
 |Call Count                              |Whole number             |Summarize: Sum<br>Number of calls                                          |
 |Call Queue Agent Count                  |Whole number             |Summarize: Sum<br>Number of agents configured in the call queue            |
 |Call Queue Agent Opt In Count           |Whole number             |Summarize: Sum<br>Number of agents opted-in to the call queue              |
-|Call Queue Call Result                  |Text                     |Call queue call final state--possible values:<br><br>§ agent_joined_conference (answered conference mode calls)<br>§ declined<br>§ disconnected<br>§ error<br>§ failed<br>§ invalid<br>§ overflown (overflow condition met)<br>§ timed_out (timeout condition met)<br>§ transferred_to_agent (answered transfer mode calls {default}) |
+|Call Queue Call Result                  |Text                     |Call queue call final state--possible values:<br><br>- agent_joined_conference (answered conference mode calls)<br>- declined<br>- disconnected<br>- error<br>- failed<br>- invalid<br>- overflown (overflow condition met)<br>- timed_out (timeout condition met)<br>- transferred_to_agent (answered transfer mode calls {default}) |
 |Call Queue Call Result Legend           |Text                     |Sets up legend items based on Call Queue Result                             |
-|Call Queue Target Type                  |Text                     |***Call redirection target type--possible values:***<br><br>§ ApplicationEndpoint<br>§ Mailbox<br>§ Other<br>§ User |
+|Call Queue Target Type                  |Text                     |***Call redirection target type--possible values:***<br><br>- ApplicationEndpoint<br>- Mailbox<br>- Other<br>- User |
 |Call Queue Target Type Legend           |Text                     |Sets up legend items based on Call Queue Target Type                        |
-|Call Type<sup>1</sup>                   |Text                     |Type of call--possible values:<br><br>§ External<br>§ Internal             |
-|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value will be: **cq_test** |
+|Call Type<sup>1</sup>                   |Text                     |Type of call--possible values:<br><br>- External<br>- Internal             |
+|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value is: **cq_test** |
 |CQ Hour                                 |Whole Number             |Call queue call start hour                                                 |
-|Date                                    |Date/time                |Call queue call start date and time (hour)                                 | 
+|Date                                    |Date/time                |Call queue call start date and time (hour)                                 |
 |DateTimeCQName                          |Text                     |Unique key for filtering on fCallQueueFinalStateAction                     |
-|PSTN Connectivity Type                  |Text                     |Type of call--possible values:<br><br>§ ExternalCall<br>§ InternalCall     |
+|PSTN Connectivity Type                  |Text                     |Type of call--possible values:<br><br>- ExternalCall<br>- InternalCall     |
 |PSTN Total Minutes                      |Whole number             |Summarize: Sum<br>Total minutes usage for PSTN calls                       |
-|Sum of Call Count (Measure)             |Whole number             |Same as Call Count however will be 0 when no call                          |
+|Sum of Call Count (Measure)             |Whole number             |Same as Call Count except displays as 0 if there are no calls                          |
 |TotalCallCount (Measure)                |Whole Number             |Summarize: Sum<br>Call Count                                                |
-
 
 #### fCallQueueFinalStateAction CQD fields description
 
@@ -254,16 +253,16 @@ Perform the following steps:
 |:---------------------------------------|:------------------------|:--------------------------------------------------|
 |Average Call Duration (Seconds)         |Decimal number           |Summarize: Sum<br>Average call duration in seconds for abandoned calls    |
 |Average Call Queue Duration (Sec)       |Decimal number           |Summarize: Sum<br>Average waiting in seconds for answered calls           |
-|Avg of Average Call Duration (Measure)  |Whole number             |Same as Average Call Duration (Seconds) however will be 0 when no calls   |
-|Avg of Average CQ Duration (Measure)    |Whole number             |Same as Average Call Queue Duration (Sec) however will be 0 when no calls |
+|Avg of Average Call Duration (Measure)  |Whole number             |Same as Average Call Duration (Seconds) however displays as 0 if there are no calls  |
+|Avg of Average CQ Duration (Measure)    |Whole number             |Same as Average Call Queue Duration (Sec) however displays as 0 if there are no calls |
 |Call Count                              |Whole number             |Summarize: Sum<br>Number of calls                                         |
-|Call Queue Call Result                  |Text                     |Call queue call final state--possible values:<br><br>§ agent_joined_conference (answered conference mode calls)<br>§ declined<br>§ disconnected<br>§ error<br>§ failed<br>§ invalid<br>§ overflown (overflow condition met)<br>§ timed_out (timeout condition met)<br>§ transferred_to_agent (answered transfer mode calls {default} |
+|Call Queue Call Result                  |Text                     |Call queue call final state--possible values:<br><br>- agent_joined_conference (answered conference mode calls)<br>- declined<br>- disconnected<br>- error<br>- failed<br>- invalid<br>- overflown (overflow condition met)<br>- timed_out (timeout condition met)<br>- transferred_to_agent (answered transfer mode calls {default}) |
 |Call Queue Call Result Legend           |Text                     |Sets up legend items based on Call Queue Call Result                      |
-|Call Queue Final State Action           |Text                     |Call queue final action--possible values:<br><br>§ disconnect (timed_out calls)<br>§ disconnect_with_busy (overflown calls)<br>§ failed_to_accept_call<br>§ forward<br>§ shared_voicemail<br>§ other<br>§ voicemail                |
-|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value will be: **cq_test** |
+|Call Queue Final State Action           |Text                     |Call queue final action--possible values:<br><br>- disconnect (timed_out calls)<br>- disconnect_with_busy (overflown calls)<br>- failed_to_accept_call<br>- forward<br>- shared_voicemail<br>- other<br>- voicemail                |
+|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value is **cq_test** |
 |Date                                    |Date/time                |Call Queue call start date and time (hour)                                 |
 |DateTimeCQName                          |Text                     |Unique key for filtering on fCallQueueFinalStateAction                     |
-|IsAbandoned                             |True/false               |True if call isn't answered by an agent                                   |
+|IsAbandoned                             |True/false               |True if agent doesn't answer a call                                  |
 
 ### Cloud Call Queue Agent Timeline report
 
@@ -296,37 +295,33 @@ Perform the following steps:
 
 |Name                                    |Data Type                |Description                                         |
 |:---------------------------------------|:------------------------|:---------------------------------------------------|
-|Agent Name                              |Text                     |User UPN<br>If the full username is **user@microsoft.com**, then this value will be: **user** |
+|Agent Name                              |Text                     |User UPN<br>If the full username is **user@microsoft.com**, then this value is **user** |
 |Average Call Duration (Seconds)         |Decimal number           |Summarize: Sum<br>The average duration of answered call queue calls in seconds |
 |Call Count                              |Whole number             |Summarize: Sum<br>Number of calls answered by the agent     |
 |Call Duration (Minutes)                 |Whole number             |Summarize: Sum<br>Total call duration of answered call queue calls in minutes (rounded down to nearest minute)  |
-|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value will be: **cq_test** |
+|CQ Name                                 |Text                     |Name of resource account attached to Call Queue<br><br>If the full Resource Account name is **cq_test@microsoft.com**, then this value is **cq_test** |
 |Date                                    |Date                     |Date of call                                             |
 |DateTime                                |DateTime                 |Date of call                                             |
 |Hour                                    |Whole number             |Hour of call                                             |
 |MM-DD                                   |Text                     |Month and day of call                                    |
 
 > [!NOTE]
-> When a call arrives at the first call queue, if the number of calls already waiting in that queue has reached the **Call overflow handling** limit and if the redirect option sends new calls to a second call queue, then the agents in the second call queue will be shown as being in the first call queue on this report.
+> When a call arrives at the first call queue, if the number of calls already waiting in that queue has reached the **Call overflow handling** limit and if the redirect option sends new calls to a second call queue, then the agents in the second call queue show as being in the first call queue on this report.
 
 ## Known issues
 
 - Auto attendant resource account IDs are being masked which prevents reporting by individual auto attendants.  Support is investigating.
-
-- Call queue and auto attendants are shown by the resource account's ID instead of call queue/auto attendant names.  To show all the traffic for an auto attendant or call queue, you must select all the resource accounts assigned to the auto attendant or call queue.
-
+- Call queue and auto attendants are shown by the resource account's ID instead of call queue/auto attendant names. To show all the traffic for an auto attendant or call queue, you must select all the resource accounts assigned to the auto attendant or call queue.
 - Only 28 days of history are available in the dashboard as call queue/auto attendant data is considered personal data and is subject to data privacy retention policies.
-
-- In some scenarios, the agent answered call count on the **Cloud Call Queue Agent Timeline** report may be different than the number of calls shown in the Teams client call history. The Teams client call history is correct. Support is investigating, but there's no estimated time to repair available at this time.
-
-- <sup>1</sup> **Incoming call source** in the auto attendant and call queue graphs show the final call leg source rather than the initial call leg source. For example, if an auto attendant receives an external call and transfers the call to another auto attendant or call queue, the **Incoming call source** will be reported as Internal.
+- In some scenarios, the agent answered call count on the **Cloud Call Queue Agent Timeline** report might be different than the number of calls shown in the Teams client call history. The Teams client call history is correct. Support is investigating, but there's no estimated time to repair available at this time.
+- <sup>1</sup> **Incoming call source** in the auto attendant and call queue graphs show the final call leg source rather than the initial call leg source. For example, if an auto attendant receives an external call and transfers the call to another auto attendant or call queue, the **Incoming call source** is reported as Internal.
 
 ## Version 1.xx history
 
-Refer to: CQD Teams Auto Attendant & Call Queue Historical Reports - Change Log.docx in the downloaded zip file for a detailed list of changes
+Refer to **CQD Teams Auto Attendant & Call Queue Historical Reports - Change Log.docx** in the downloaded zip file for a detailed list of changes
 
 |Version  |Date Published     |Filename                                                           |Description                                         |
-|:--------|:------------------|:------------------------------------------------------------------|:---------------------------------------------------
+|:--------|:------------------|:------------------------------------------------------------------|:---------------------------------------------------|
 |1.64     |July 14, 2023      |CQD Teams Auto Attendant & Call Queue Historical Report V1.64.pbit |Support for GCC High and DoD clouds                 |
 |1.63     |August 24, 2022    |CQD Teams Auto Attendant & Call Queue Historical Report V1.63.pbit |                                                    |
 |1.60     |July 22, 2022      |CQD Teams Auto Attendant & Call Queue Historical Report V1.60.pbit |                                                    |

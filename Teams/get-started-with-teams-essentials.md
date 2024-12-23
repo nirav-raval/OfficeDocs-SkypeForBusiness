@@ -40,53 +40,9 @@ If you purchased Teams Essentials through a Microsoft Certified Partner, you own
 
 ## How does Microsoft Teams Essentials compare to other Microsoft Teams plans?
 
-The following table lists the major Microsoft Teams features available across plans. Certain caveats apply. For more information, see the footnotes. This table may change without notice. For the most up-to-date, complete list of features, visit  [Microsoft Teams service description](/office365/servicedescriptions/teams-service-description).
+To purchase the right Teams subscription for your organization, compare Teams features between Teams Essentials, Microsoft 365 Business Basic, and Microsoft 365 Business Standard at [Find the right Microsoft Teams for your needs - Business Plans](https://www.microsoft.com/microsoft-teams/compare-microsoft-teams-business-options).
 
-|Microsoft Teams Plan | **Microsoft Teams (free)** | [**Microsoft Teams Essentials** ](#get-microsoft-teams-essentials) | **Microsoft Teams Essentials (Microsoft Entra identity)** | [**Microsoft 365 Business Basic**](/microsoft-365/admin/setup/setup-business-basic?)  |
-|---------|---------|---------|---------|---------|
-|***Feature***     |         |         |         |         |
-| **Meeting and Calling** | Yes| Yes| Yes |   Yes    |
-| Unlimited group meetings |     Yes    |   Yes      |   Yes      |
-| Unlimited 1:1 calls |    Yes     |    Yes     |   Yes      | Yes |
-| Group meeting participant capacity |  100       |     300    |   300      |  300  |
-| Group meeting duration |    60 minutes     |    30 hours     |    30 hours     | 30 hours |
-| Screen sharing |   Yes      |    Yes     |    Yes     | Yes |
-| Customized Backgrounds |    Yes     |    Yes     |    Yes     | Yes |
-| Live transcription |    Yes     |    Yes     |   Yes      |     Yes    |
-| Schedule meetings |    Yes     |   Yes      |     Yes    |     Yes    |
-| Calendar app |    Yes     |      Yes   |     Yes    |     Yes    |
-| Together mode |     Yes   |      Yes   |     Yes    |     Yes    |
-| Live reaction |   Yes      |    Yes     |   Yes      |     Yes    |
-| Noise suppression |    Yes     |    Yes     |   Yes      |     Yes    |
-| Meeting attendees can join meetings without an account | Yes  |    Yes     |     Yes    |     Yes    |
-| Send meeting invites to a phone number |   Yes     |  Yes      |         |    |
-| Meeting recordings & transcripts |         |         |   Yes       |     Yes    |
-| Breakout rooms |         |         |   Yes      |     Yes    |
-| Whiteboard |         |         |  Yes       |     Yes    |
-| Host webinars that include attendee registration pages, email confirmations, and reporting. |     |     |      | Available in Business Standard|
-| **Chat and collaboration**     |         |         |         |         |
-| Unlimited chat (one-to-one & group) |     Yes    |   Yes      |   Yes      |    Yes      |
-| Real-time collaboration in Office apps |     Yes    |   Yes      |   Yes      |  Yes      |
-| Guest access: Chat w/anyone inside & outside your company|     Yes    |   Yes      |   Yes      |  Yes      |
-| Polls |     Yes    |   Yes      |   Yes      |  Yes      |
-| Teams and Channels |     |   |   Yes      |  Yes      |
-| **Productivity apps and services** |         |         |         ||
-| File & document cloud storage (per user) |     5 GB    |   10 GB      |   10 GB     | 1 TB | 
-| Word, Excel, PowerPoint web & mobile apps |     Yes   |   Yes      |   Yes      | Yes | 
-| Google calendar sync |     Yes    |   Yes      |   Yes&sup1;      | Yes&sup1; | 
-| App Extensibility (250+ integrated apps & services) |     |        |   Yes      | Yes | 
-| Exchange email hosting with customer email domain address |    |   | 2 GB&sup2; |    50 GB|
-|**Security and compliance**     |         |         |         | | 
-| Microsoft Teams data encryption at rest and in transit |     Yes    |   Yes      |   Yes      | Yes | 
-| Single sign-on to all services |         |     |   Yes      | Yes | 
-|**Administration and support**     |         |         |         | | 
-| Administration tools for managing users, apps, settings & policies  |     |   | Yes |   Yes      |
-| Migrate existing data & users to Microsoft 365  |     |   | Yes  | Yes|
-| Ability to add-on services including Audio Conferencing & Teams Phone |     |   |   Yes      | Yes |
-
-<sup>1</sup> Provides connection to Google Calendar and other third-party calendars with the following configuration: [Microsoft Teams Essentials (Microsoft Entra identity) Configuration Guide](connect-teams-essentials-to-email.md)
-
-<sup>2</sup> Teams Essentials (Microsoft Entra identity) through partner includes 2 GB Exchange mailbox and no archiving, allowing users to sync with third-party email providers.
+To view Microsoft Teams (free) features, see [Find the right Microsoft Teams for your needs - Home Plans](https://www.microsoft.com/microsoft-teams/compare-microsoft-teams-home-options).
 
 ## Administration limits and specifications for Microsoft Teams Essentials
 
@@ -114,7 +70,7 @@ To do that, complete these three steps:
 
 4. **Manage Microsoft Teams Essentials.** Any Teams (free) users who upgraded to Microsoft Teams Essentials can manage it.
 
-Managing Microsoft Teams Essentials refers to assigning Microsoft Teams Essentials seats to other users - on whose behalf you purchased - in the intended proportions. You can manage Microsoft Teams Essentials through the Microsoft admin center.
+    Managing Microsoft Teams Essentials refers to assigning Microsoft Teams Essentials seats to other users - on whose behalf you purchased - in the intended proportions. You can manage Microsoft Teams Essentials through the Microsoft admin center.
 
 ### Upgrade from Teams (free) to Microsoft Teams Essentials
 
@@ -150,6 +106,6 @@ To get started, visit [**Connect Microsoft Teams Essentials (Microsoft Entra ide
 
 ## More information
 
-- Visit [Configuration Guide](connect-teams-essentials-to-email.md) for configuration steps on connecting Microsoft Teams Essentials (Microsoft Entra identity) to an existing email system with calendar
+- Visit [Configuration Guide](connect-teams-essentials-to-email.md) for configuration steps on connecting Microsoft Teams Essentials (Microsoft Entra identity) to an existing email system with calendar.
 
-- To find out more about Teams versions and their capabilities, visit [Compare Teams plans](https://www.microsoft.com/microsoft-teams/compare-microsoft-teams-options)
+- To find out more about Teams versions and their capabilities, visit [Compare Teams plans](https://www.microsoft.com/microsoft-teams/compare-microsoft-teams-options).

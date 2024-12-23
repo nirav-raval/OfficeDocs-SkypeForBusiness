@@ -1,7 +1,7 @@
 ---
 title: Configure Teams Phone Mobile
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 07/08/2024
 ms.topic: article
@@ -12,7 +12,7 @@ ms.collection:
   - m365initiative-voice
   - highpri
   - Tier1
-ms.reviewer: crowe
+ms.reviewer: scottfrancis
 search.appverid: MET150
 
 description: Learn how to configure Teams Phone Mobile.
@@ -31,12 +31,16 @@ For a list of operators participating in the Teams Phone Mobile program, and the
 
 This article describes the following steps to configure Teams Phone Mobile:
 
-- [Step 1: Enable an operator](#step-1-enable-an-operator)
-- [Step 2: Manage phone numbers and assign licenses](#step-2-manage-phone-numbers-and-assign-licenses)
-- [Step 3: Assign numbers to emergency addresses](#step-3-assign-numbers-to-emergency-addresses)
-- [Step 4: Manage your operators](#step-4-manage-your-operators)
-- [Step 5: Release numbers](#step-5-release-numbers)
-- [Step 6: Manage user incoming calling policies](#step-6-manage-user-incoming-calling-policies)
+- [Configure Teams Phone Mobile](#configure-teams-phone-mobile)
+  - [Step 1: Enable an operator](#step-1-enable-an-operator)
+  - [Step 2: Manage phone numbers and assign licenses](#step-2-manage-phone-numbers-and-assign-licenses)
+  - [Step 3: Assign numbers to emergency addresses](#step-3-assign-numbers-to-emergency-addresses)
+  - [Step 4: Manage your operators](#step-4-manage-your-operators)
+  - [Step 5: Release numbers](#step-5-release-numbers)
+  - [Step 6: Manage user incoming calling policies](#step-6-manage-user-incoming-calling-policies)
+    - [Use the Teams admin center](#use-the-teams-admin-center)
+    - [Use PowerShell](#use-powershell)
+  - [Related articles](#related-articles)
 
 ## Step 1: Enable an operator
 
@@ -187,14 +191,5 @@ For administrators:
 
 For users in your organization:
 
-- [Get started with Teams Phone Mobile](https://prod.support.services.microsoft.com/en-us/office/getting-started-with-teams-phone-mobile-c37a6764-6c4f-4685-a26f-b84c12a71697)
-- [Manage call settings in Teams Phone Mobile](https://prod.support.services.microsoft.com/en-us/office/manage-call-settings-in-microsoft-teams-phone-mobile-dbe4098a-198f-4101-b769-ecf0da9b33e2)
-
-
-
-
-
-
-
-
-
+- [Get started with Teams Phone Mobile](https://support.microsoft.com/en-us/office/getting-started-with-microsoft-teams-phone-mobile-c37a6764-6c4f-4685-a26f-b84c12a71697)
+- [Manage call settings in Teams Phone Mobile](https://support.microsoft.com/en-us/office/manage-call-settings-in-microsoft-teams-phone-mobile-dbe4098a-198f-4101-b769-ecf0da9b33e2)

@@ -199,13 +199,10 @@ To add the Teams Premium trial to Microsoft 365
 
 For information about how to assign the licenses to your users, see [Assign Microsoft 365 licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 
-Note that it may take up to 72 hours for Teams Premium sensitivity label settings to be available in the Microsoft Purview compliance portal.
+It might take up to 72 hours for Teams Premium sensitivity label settings to be available in the Microsoft Purview portal.
 
 ## Related topics
 
-[Use sensitivity labels to protect calendar items, Teams meetings and chat](/microsoft-365/compliance/sensitivity-labels-meetings)
-
-[Teams Premium deployment guide](https://aka.ms/TeamsPremiumDeployment)
-
-[Teams Premium user guide](https://adoption.microsoft.com/files/microsoft-teams/Microsoft-Teams-Premium-user-guide.pptx)
-
+- [Use sensitivity labels to protect calendar items, Teams meetings and chat](/microsoft-365/compliance/sensitivity-labels-meetings)
+- [Teams Premium deployment guide](https://aka.ms/TeamsPremiumDeployment)
+- [Teams Premium user guide](https://adoption.microsoft.com/files/microsoft-teams/Microsoft-Teams-Premium-user-guide.pptx)

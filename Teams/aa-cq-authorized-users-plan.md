@@ -8,7 +8,7 @@ ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 audience: admin
-ms.date: 03/25/2024
+ms.date: 10/22/2024
 ms.collection: 
 - M365-voice
 - m365initiative-voice
@@ -25,9 +25,6 @@ description: Learn the requirements needed to set up authorized users for Auto a
 
 # Plan for Auto attendant and Call queue authorized users
 
-> [!NOTE]
-> Some of these features are in limited public preview. For more information, contact your Microsoft customer success manager. Information in this article is subject to change.
-
 This article is for IT Pros and administrators who want to delegate certain Auto attendant or Call queue configuration capabilities to the users in their organization. This article describes benefits and licensing requirements. After reading this article, see [Set up authorized users](aa-cq-authorized-users.md) and [Manage voice applications policies](manage-voice-applications-policies.md) for more information.
 
 ## Benefits
@@ -40,11 +37,14 @@ For a complete list of features, see [Manage voice applications policies](manage
 
 ## Licensing requirements
 
-All Authorized users must have a Teams Phone license and must be "voice enabled." To assign the Teams Phone license, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to $true.
+All Authorized users must have a Teams Phone license and must be "voice enabled." For more information about assigning licenses, see [Set up Auto attendant and Call queue authorized users](aa-cq-authorized-users.md).
+
+Before you can enable voice for your users, you must assign a license to them first. To enable voice for your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
 
 For some configuration features, such as those available only in the Queues app, users must also have a Teams Premium license. For information about which features require Teams Premium, see [Manage voice applications policies](manage-voice-applications-policies.md).
-
-For more information about assigning licenses, see [Set up Auto attendant and Call queue authorized users](aa-cq-authorized-users.md).
 
 ## Overview of steps for setting up authorized users
 

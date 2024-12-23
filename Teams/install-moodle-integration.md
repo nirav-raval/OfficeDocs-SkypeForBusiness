@@ -1,8 +1,8 @@
 ---
 title: Install Moodle integration with Microsoft Teams
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: article
 ms.service: msteams
 audience: admin

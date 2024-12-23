@@ -1,5 +1,5 @@
 ---
-title: Enable Teams Rooms devices to join third-party meetings
+title: Third-party meetings on Teams Rooms
 author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
@@ -21,137 +21,153 @@ ms.localizationpriority: medium
 description: This article discusses how to configure your organization and Teams Rooms devices to support third-party meeting joining to Cisco Webex and Zoom.
 ---
 
-# Enable Teams Rooms devices to join third-party meetings
+# Third-party meetings on Teams Rooms
 
-Microsoft Teams Rooms devices support a one-touch experience for joining third-party online meetings, also referred to as Direct Guest Join. When enabled, you can use Teams Rooms to join meetings hosted on Cisco Webex and Zoom just as easily as you can join meetings hosted in Microsoft Teams. Keep in mind that in this case, the experience in Teams Rooms of the third-party online meeting is driven by the third-party online meeting provider.
+Microsoft Teams Rooms devices support a one-touch and join by ID experiences for connecting to third-party online meetings. This capability comes in two forms: Direct Guest Join (DGJ) or Cross-Platform meetings via SIP (Session Initiation Protocol) join. When third-party join is enabled, you can use Teams Rooms to join meetings hosted on other meeting platforms as easily as you can join meetings hosted on Microsoft Teams. Third-party meeting providers drive the experience of their platform on the Teams Room device.
 
-Supported devices and services:
+Before you can join third-party meetings from Teams Rooms, you need to do the following steps:
+1.	Understand which third-party meeting join solution is right for your organization.
+2.	Configure the Teams Rooms' resource accounts Exchange mailbox to process invites for third-party and externally scheduled meetings. 
+3.	Ensure no tenant policies are blocking devices from connecting to third-party meeting services.
+4.	Configure Teams Rooms devices to allow third-party meetings.
 
-- Teams Rooms on Windows, all certified models – Zoom, Cisco Webex, BlueJeans by Verizon
+## Step 1: Determine which third-party meeting join solution is right for your Teams Rooms
 
-- Teams Rooms on Android, all certified models – Zoom, Cisco Webex
+Teams Rooms offer two ways for connecting to third-party meetings: a SIP video based solution known as cross-platform meeting via SIP join and a WebRTC based solution known as Direct Guest Join. These solutions have different requirements and capabilities which are noted in the table. Review the table and determine which is right for your organization.
 
-    > [!NOTE]
-    > Microsoft releases new features for Teams Rooms on Android on a regular basis. However, there can be a delay between when features are released and when they become available on a device. If a feature isn't available on your device, check with your device's manufacturer for information on when it might become available.
+| Supported Functionality | Cross-Platform Meetings via SIP | Direct Guest Join
+|--------|----------|---------|---------|
+| Join Button &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; | Amazon Chime <br>Cisco Webex <br>Google Meet <br>GoToMeeting <br>RingCentral <br>Zoom <br>Other SIP services &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; | Cisco Webex <br>Zoom &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; |
+| Join by ID | Amazon Chime <br>Cisco Webex <br>Google Meet <br>GoToMeeting <br>RingCentral <br>Zoom <br>Other SIP services via SIP URI | Zoom |
+| Events & Webinars | Cisco Webex* <br>Zoom* | Not available |
+| Receive video quality | Up to 1080p / 30 fps | Up to 720p / 30 fps |
+| Send video quality | Up to 1080p / 30 fps | Up to 720p / 30 fps |
+| Receive content | Available | Available |
+| Send content with HDMI | Available | Not available |
+| Send content with [content camera](content-camera.md) | Available | Not available |
+| Maximum front of room displays | Two displays | One display |
+| Layout controls | Available* | Available* |
+| List participant | Available* | Available* |
+| View chat | Available* | Available* |
+| Breakout rooms | Available* | Available* |
+| View reactions | Available* | Available* |
+| Send reactions | Not available | Not available |
+| View content annotations | Not available | Not available |
+| View transcript | Not available | Not available |
+| Recording notification | Available | Available |
+| Whiteboard view | Available* | Available* |
+| Whiteboard interaction | Not available | Not available |
+| Lobby control | Available* | Not available |
+| Lobby authentication / bypass | Not available | Not available |
+| Microphone mute sync | Not available | Not available |
+| Teams Rooms coordinated join | Not available | Not available |
+| SIP paid dialing plan required | Yes | No |
+| Direct internet access required | No | Yes |
+| Teams Rooms license | Teams Rooms Pro | Teams Rooms Basic <br>Teams Rooms Pro |
+| Teams Rooms platform | Teams Rooms on Windows | Teams Rooms on Windows <br>Teams Rooms on Android |
 
 > [!NOTE]
-> To join a Cisco Webex meeting from a Teams Rooms device, the Cisco meeting needs to be hosted in Webex Meetings Pro using Cisco Webex web application version WBS 40.7 or later.
+> *Third party platform features listed were available at the time this article was last updated and may vary from platform to platform. Microsoft periodically reviews these features to keep this document current but other platforms may make changes which can impact these features.<br>
 
 > [!NOTE]
-> Joining a Zoom meeting from a Teams Rooms console is supported. However, you can't join Zoom Webinars and Zoom Events from a Teams Rooms console. Those aren't supported at this time.
+> To join a Cisco Webex meeting from a Teams Rooms device using Direct Guest Join, the Cisco meeting needs to be hosted in Webex Meetings Pro using Cisco Webex web application version WBS 40.7 or later.
 
-Before you can join third-party meetings from Teams Rooms, you need to do the following:
+## Step 2: Allow Exchange to process third-party meetings and externally created invites
 
-1. Configure the Teams Rooms' Exchange mailbox to process invites for third-party meetings.
-2. Make sure your organization doesn't have any policies that would prevent you from connecting to third-party meeting services.
-3. Configure Teams Rooms to allow third-party meetings.
+When a Teams Room joins a Teams Meeting, it utilizes hidden properties in the Outlook meeting invite to know the meeting link to join. But when joining third-party meetings, Teams Rooms read the calendar invite message body so you need to retain the meeting invite body to ensure a join button can be generated for third-party meeting platforms. Similarly, a typical use case for third-party meeting join is for meetings created outside of your organization, in which case, you want users to be able to forward the externally scheduled meeting invite to their preferred meeting space and have the room accept the invite. 
 
-The following sections show you how to complete each of these steps.
+To enable these scenarios, you need to modify the Exchange calendar processing rules on the room resource account. To set these room mailbox options using the [Set-CalendarProcessing](/powershell/module/exchange/set-calendarprocessing) cmdlet, do the following steps:
 
-## Step 1: Allow calendar invite processing for third-party meetings
+1. Connect to Exchange Online PowerShell. For more information, [Connect to Exchange Online PowerShell](/powershell/exchange/mfa-connect-to-exchange-online-powershell).
 
-The first thing you need to do to enable a one-touch join experience from Team Rooms is set the calendar processing rules for the device's Exchange Online room mailbox. The room mailbox needs to allow external meetings and keep the message body and subject so it can see the URL needed to join the third-party meeting. To set these room mailbox options using the [Set-CalendarProcessing](/powershell/module/exchange/set-calendarprocessing) cmdlet, do the following:
-
-1. Connect to Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell with Basic authentication](/powershell/exchange/connect-to-exchange-online-powershell) or [Connect to Exchange Online PowerShell using multi-factor authentication](/powershell/exchange/mfa-connect-to-exchange-online-powershell), depending on your authentication method.
-
-2. Get the User Principal Name (UPN) of the room mailbox if you don't know it by running the following command:
+2. Using the resource account mailbox's user principal name (UPN), run the following command. Replace `<UserPrincipalName>` with the room mailbox's UPN:
 
     ```powershell
-    Get-Mailbox | Where {$_.RoomMailboxAccountEnabled -eq $True} | Format-Table Name, UserPrincipalName
+    Set-CalendarProcessing <UserPrincipalName> -ProcessExternalMeetingMessages $True -DeleteComments $False
     ```
 
-3. Find the name of the room mailbox associated with your Teams Rooms device and make note of its UPN.
+## Step 3A: Configure URL rewrite policies to not modify third party meeting links
 
-4. After you find the room mailbox's UPN, run the following command. Replace `<UserPrincipalName>` with the room mailbox's UPN:
+To enable the one-touch join experience, meeting join link information from the third-party meeting needs to be present and readable in the meeting invite by the Teams Room device. If your organization uses [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/safe-links) safe links, or if you use a third-party solution that scans all URLs for threats, it may change the meeting join URLs and make the meeting unrecognizable by the Teams Rooms device. To ensure invites work, you need to add the third-party meeting service's URLs to the [Defender for Office 365 Safe Links **Don't rewrite** list](/microsoft-365/security/office-365-security/safe-links), or the third-party URL rewrite exception list. If you use a third-party solution, refer to the instructions for that solution to add URLs to its URL rewrite exception list.
 
-    ```powershell
-    Set-CalendarProcessing <UserPrincipalName> -ProcessExternalMeetingMessages $True -DeleteComments $False -DeleteSubject $False
-    ```
-
-Learn more about [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell).
-
-## Step 2: Configure Office 365 Threat Protection and link rewrite
-
-To enable the one-touch join experience, meeting join link information from the third-party meeting needs to be present and readable in the meeting invite. If your organization uses the [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/safe-links) safe links feature, or if you use a third-party solution that scans all incoming and outgoing URLs for threats, it may change the meeting join URLs and make the meeting unrecognizable by the Teams Rooms device. To make sure this doesn't happen, you need to add the third-party meeting service's URLs to the Defender for [Office 365 Safe Links **Do not rewrite** list](/microsoft-365/security/office-365-security/safe-links) or the third-party URL rewrite exception list.
-
- If you use a third-party solution, refer to the instructions for that solution to add URLs to its URL rewrite exception list.
-
-Here are some example entries that you may need to add to your Defender for Office 365 Safe Links *Do not rewrite* list or third-party URL rewrite exception list:
+Here are some example entries that you may need to add to a rewrite exception list:
 
 - **Cisco Webex** `*.webex.com/*`
 - **Zoom** `*.zoom.us/*`, `*.zoom.com/*`, `*.zoomgov.com/*`
-- **BlueJeans** `*.bluejeans.com/*`
-
-For a complete list of URLs to add to your Defender for Office 365 Safe Links *Do not rewrite* list or third-party URL rewrite exception list, contact the third-party meeting service provider you want to accept meeting invites from.
 
 > [!CAUTION]
-> Only add URLs that you trust to your Microsoft Defender for Office 365 Safe Links *Do not rewrite* list or third-party URL rewrite exception list.
+> Only add URLs that you trust to your *don't rewrite* exception list.
 
-## Step 3a: Enable third-party meetings on Teams Rooms on Windows
+## Step 3B: If you're utilizing Direct Guest Join, ensure your network connections are optimized to connect to your desired platform
 
-The last step you need to do is allow Teams Rooms to join third-party meetings. Third-party meetings require a username and email address to join them. If the username and email address that you need to use is different than the device's room mailbox, you need to add them to your device. You can do this in the Teams Rooms settings or in the XML config file. You can do this in the Teams Rooms settings on any capable Teams Rooms or in the XML config file for Teams Rooms on Windows.
+When using Direct Guest Join, Teams Rooms devices connect directly to the website of that third-party platform. Because of this direct connection, your Teams Rooms devices need to be able to connect to that third party website. Ensure your organization’s firewalls or web filters allow the traffic without authentication and that the web traffic is in an appropriate QoS class (if applicable). Refer to the third-party meeting platforms documentation for the correct URLs and IPs to allow.
 
-### Use device settings
+## Step 4: Enable third-party meetings on your Teams Rooms devices 
 
-To configure Teams Rooms on Windows using the touchscreen console, do the following:
+The last step you need to take is to allow Teams Rooms to join third-party meetings with Teams Rooms device settings. If the username and email address that you wish to use to join meetings is different than the device's resource account, you can configure that while enabling third-party meeting join.
+
+## [Teams Rooms on Windows](#tab/MTRW)
+
+If you wish to utilize the cross-platform SIP join capability, you need to enable SIP video calling on your Teams Rooms following these instructions: [SIP and H.323 Dilaing](meetings-with-sip-h323-devices.md). Once SIP calling is enabled, the Teams Room automatically uses SIP instead of WebRTC to join the enabled third-party meetings. To ensure SIP calling enabled Teams Rooms can always join a meeting, Teams Rooms will automatically use Direct Guest Join over WebRTC if the third party meeting invite doesn't contain a SIP dial string. Lastly, if SIP calling isn't enabled, Teams Rooms on Windows devices will only utilize Direct Guest Join over WebRTC for third-party meetings.
+
+> [!NOTE]
+> Automatic fallback to WebRTC DGJ works for meetings using the calendar join button. If users attempt to use join by ID and the meeting does not have SIP capabilities, the call will fail. Only enable SIP dialing in your organization if third-party meetings you join have SIP capabilities or educate your users on the fall back options with the calendar join buttons.
+
+#### Using the Pro Management Portal
+
+1. Log in to the [Teams Pro Management Portal](enrolling-mtrp-managed-service.md)
+2. Select **Rooms**
+3. Select your desired room
+4. Select **Settings**
+5. Select **Meetings**
+6. Toggle your desired meeting platforms
+7. Select **Apply**
+
+#### Using the local device settings
+
+To configure Teams Rooms on Windows using the touchscreen console, do the following steps:
 
 1. On the Microsoft Teams Rooms console, select **More**.
 2. Select **Settings**, and then enter the device administrator username and password.
-3. Go to the **Meetings** tab and select a third-party meeting provider you wish to enable (e.g., **Webex**, **Zoom**, etc.).
+3. Go to the **Meetings** tab and select a third-party meeting provider you wish to enable (for example, **Cisco Webex**, **Zoom**, etc.).
 
-:::image type="content" source="../media/use-device-settings.png" alt-text="Turning on and off third party providers.":::
+     :::image type="content" source="../media/use-device-settings.png" alt-text="Turning on and off third party providers.":::
 
-1. If you want to join meetings with the username and email address associated with the room mailbox, select **Join with room info**.
-1. If you want to join meetings with an alternate username and email address, select **Join with custom info** and enter username and email address you'd like to use.
-1. Select **Save and exit**. Your device will restart.
+4. If you want to join meetings with the username and email address associated with the room mailbox, select **Join with room info**.
+5. If you want to join meetings with an alternate username and email address, select **Join with custom info** and enter username and email address you'd like to use.
+6. Select **Save and exit**. Your device restarts.
 
      ![Meetings](https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness/assets/63427703/6503b72c-4482-4ec4-9492-610503d02c36)
 
-### Use the SkypeSettings.xml configuration file
+#### Use the SkypeSettings.xml configuration file
 
-The following settings can be added to the `SkypeSettings.xml` file located in `C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState`. For more information about the `SkypeSettings.xml` file, see [Manage a Microsoft Teams Rooms console settings remotely with an XML configuration file](xml-config-file.md).
+For more information about the `SkypeSettings.xml` file, see [Manage Microsoft Teams Rooms settings with an XML configuration file](xml-config-file.md).
 
-To enable Zoom meetings, set the `ZoomMeetingsEnabled` XML element to **True**, as follows.
+To enable the various platforms, set the XML element to **True**, as follows.
 
-```xml
-<ZoomMeetingsEnabled>True</ZoomMeetingsEnabled>
-```
+  ```xml
+  <WebexMeetingsEnabled>True</WebexMeetingsEnabled>
+  <ZoomMeetingsEnabled>True</ZoomMeetingsEnabled>
+  ```
 
-To enable Cisco Webex meetings, set the `WebexMeetingsEnabled` XML element to **True**, as follows.
+You can optionally specify a custom username and email address to join third-party meetings using the following XML elements. If the values you provide aren't valid, the Teams Rooms device defaults to use room mailbox username and email address.
 
-```xml
-<WebexMeetingsEnabled>True</WebexMeetingsEnabled>
-```
+  ```xml
+  <UseCustomInfoForThirdPartyMeetings>true</UseCustomInfoForThirdPartyMeetings>
+  <CustomDisplayNameForThirdPartyMeetings>guestname</CustomDisplayNameForThirdPartyMeetings>
+  <CustomDisplayEmailForThirdPartyMeetings>guest@contoso.com</CustomDisplayEmailForThirdPartyMeetings>
+  ```
 
-To enable BlueJeans meetings, set the `BlueJeansMeetingsEnabled` XML element to **True**, as follows.
+## [Teams Rooms on Android](#tab/MTRA)
 
-```xml
-<BlueJeansMeetingsEnabled>True</BlueJeansMeetingsEnabled>
-```
+To configure Teams Rooms on Android locally on the device, do the following steps:
 
-You can optionally specify a custom username and email address to join third-party meetings using the following XML elements. If the values you provide aren't valid, the Teams Rooms device will default to use room mailbox username and email address.
-
-```xml
-<UseCustomInfoForThirdPartyMeetings>true</UseCustomInfoForThirdPartyMeetings>
-
-<CustomDisplayNameForThirdPartyMeetings>guestname</CustomDisplayNameForThirdPartyMeetings>
-
-<CustomDisplayEmailForThirdPartyMeetings>guest@contoso.com</CustomDisplayEmailForThirdPartyMeetings>
-```
-
-## Step 3b: Enable third-party meetings on Teams Rooms on Android
-
-To configure Teams Rooms on Android using the touchscreen console or front-of-room display, do the following:
-
-1. On the Microsoft Teams Rooms console or front-of-room display, select **More**.
-2. Select **Settings**, and:
-   - If using a personal account (for example, an account with an E5 license), choose **Meetings** option.
-   - If using a shared account (for example, a resource account with a Teams Rooms license), choose **Device settings**, locate **Teams Admin settings**, enter an admin password, and choose a **Meetings** option.
-
-      > [!NOTE]
-      > Some device manufacturers require an admin password before **Device settings** can be accessed.
+1. On the Microsoft Teams Rooms device, select **More**.
+2. Select **Settings**.
+3. Open **Teams admin settings**. Enter the device administrative credentials
+4. Select **Meetings**.
 
     ![Meetings settings for MTR on Android](..\media\step-3b-enable-third-party-meetings-on-teams-rooms-on-android.png)
 
-3. Select the third-party meeting provider you want to enable.
-4. If you want to join meetings with a custom username and email address, select **Join with custom name and email**. To update custom personal info, press **Edit custom info** and input your preferred name and email address.
+5. Select the toggle next to the third-party meeting providers you want to enable.
+6. If you want to join meetings with a custom username and email address, select **Join with custom name and email**. To update custom personal info, press **Edit custom info** and input your preferred name and email address.

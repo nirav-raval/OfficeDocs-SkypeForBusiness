@@ -1,10 +1,10 @@
 ---
-title: Create a call queue via cmdlets
-author: DaniEASmith
-ms.author: danismith
+title: Create a Call queue via cmdlets
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 01/17/2022
+ms.date: 10/29/2024
 ms.topic: article
 ms.assetid: 67ccda94-1210-43fb-a25b-7b9785f8a061
 ms.tgt.pltfrm: cloud
@@ -15,9 +15,9 @@ ms.collection:
   - m365initiative-voice
   - tier1
 audience: Admin
-appliesto: 
+appliesto:
+  - Microsoft Teams 
   - Skype for Business
-  - Microsoft Teams
 ms.localizationpriority: medium
 f1.keywords: 
   - CSH
@@ -29,11 +29,11 @@ ms.custom:
   - azure-ad-ref-level-one-done
 description: Learn how to configure call queues via cmdlets
 ---
-# Create a call queue via cmdlets
+# Create a Call queue via cmdlets
 
-## Assumptions
+## Prerequisites
 
-1. PowerShell is installed on your computer
+1. Install PowerShell on your computer.
    - Set up your computer for [Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell)
    - MSTeams Module Installed
 
@@ -47,21 +47,26 @@ description: Learn how to configure call queues via cmdlets
      Install-Module -Name Microsoft.Graph -Force -AllowClobber
      ```
 
-2. You have tenant administration rights
-3. You have purchased Microsoft Teams Phone
-4. The agents, distribution lists, and Teams channels referred to below have already been created
+2. Ensure you have tenant administration rights.
+3. Purchase Microsoft Teams Phone.
+4. The agents, distribution lists, and Teams channels mentioned in this article have already been created.
 
-Note: The Teams Channel cmdlet used below is part of the Public Preview version of Teams PowerShell Module.  For more information, see [Install Teams PowerShell public preview](teams-powershell-install.md) and also see [Microsoft Teams PowerShell Release Notes](teams-powershell-release-notes.md).
+> [!NOTE]
+> The Teams Channel cmdlet used in this scenario is part of the Public Preview version of Teams PowerShell Module. For more information, see [Install Teams PowerShell public preview](teams-powershell-install.md) and also see [Microsoft Teams PowerShell Release Notes](teams-powershell-release-notes.md).
 
 Users who already have the MicrosoftTeams module installed should `Update-Module MicrosoftTeams` to ensure the most up-to-date version is installed.
 
 ## Scenario
 
-The following three call queues will be created:
+In this scenario, you create the following three call queues:
+
+- Sales Call Queue
+- Support Call Queue
+- Facilities Collaborative Calling Queue
 
 Sales Call Queue information:
 
-- Fronted by Auto Attendant: Yes
+- Nested behind Auto Attendant: Yes
 - Direct calling from PSTN: No
 - Language: English US
 - Greeting: None
@@ -82,7 +87,7 @@ Sales Call Queue information:
 
 Support Call Queue information:
 
-- Fronted by Auto Attendant: Yes
+- Nested behind Auto Attendant: Yes
 - Direct calling from PSTN: No
 - Language: English UK
 - Greeting: Play an audio file
@@ -107,7 +112,7 @@ Support Call Queue information:
 
 Facilities Collaborative Calling Queue information:
 
-- Fronted by Auto Attendant: No
+- Nested behind Auto Attendant: No
 - Direct calling from PSTN: No (internal calling only)
 - Language: French FR
 - Greeting: None
@@ -127,7 +132,7 @@ Facilities Collaborative Calling Queue information:
 
 ## Login
 
-You will be prompted to enter your Teams administrator credentials.
+When prompted, enter your Teams administrator credentials.
 
 ```powershell
 $credential = Get-Credential
@@ -139,7 +144,7 @@ Connect-MgGraph -Credential $credential
 
 ### Create Audio Files
 
-Replace "d:\\" with the path to where the wav files are stored on your computer.
+Replace `d:\\` with the path to where the wav files are stored on your computer.
 
 ```powershell
 $content = [System.IO.File]::ReadAllBytes('d:\sales-hold-in-queue-music.wav')
@@ -160,7 +165,7 @@ $userSalesMaryID = (Get-CsOnlineUser -Identity "sip:mary@contoso.com").Identity
 Get-CsAutoAttendantSupportedLanguage
 ```
 
-### Create Call Queue
+### Create Call queue
 
 ```powershell
 New-CsCallQueue -Name "Sales" -AgentAlertTime 15 -AllowOptOut $true -MusicOnHoldAudioFileID $audioFileSalesHoldInQueueMusicID -OverflowAction Forward -OverflowActionTarget $userAdeleID -OverflowThreshold 200 -TimeoutAction Forward -TimeoutActionTarget $userAdeleID -TimeoutThreshold 120 -RoutingMethod Attendant -ConferenceMode $true -User @($userSalesBillID, $userSalesMaryID) -LanguageID "en-US"
@@ -172,15 +177,15 @@ New-CsCallQueue -Name "Sales" -AgentAlertTime 15 -AllowOptOut $true -MusicOnHold
 Get-MgSubscribedSku
 ```
 
-### Create and Assign Resource Account
+### Create and assign resource account
 
-Note: Phone number not required here as call queue is front ended by an Auto Attendant
+A phone number isn't required here as the call queue is nested behind an auto attendant.
 
 - ApplicationID
   - Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
   - Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
-Note: The license type shown below (PHONESYSTEM_VIRTUALUSER) must be one that is listed by the `Get-MgSubscribedSku` cmdlet above.
+The license type shown after `(PHONESYSTEM_VIRTUALUSER)` must be one that's listed by the `Get-MgSubscribedSku` cmdlet.
 
 ```powershell
 New-CsOnlineApplicationInstance -UserPrincipalName Sales-RA@contoso.com -DisplayName "Sales" -ApplicationID "11cd3e2e-fccb-42ad-ad00-878b93575e07"
@@ -199,7 +204,7 @@ New-CsOnlineApplicationInstanceAssociation -Identities @($applicationInstanceID)
 
 ### Create audio files
 
-Replace "d:\\" with the path to where the wav files are stored on your computer.
+Replace `d:\\` with the path to where the wav files are stored on your computer.
 
 ```powershell
 $content1 = [System.IO.File]::ReadAllBytes('d:\support-greeting.wav')
@@ -224,7 +229,7 @@ $teamSupportID = (Get-Team -DisplayName "Support").GroupID
 Get-CsAutoAttendantSupportedLanguage
 ```
 
-### Create Call Queue
+### Create Call queue
 
 ```powershell
 New-CsCallQueue -Name "Support" -AgentAlertTime 15 -AllowOptOut $false -DistributionLists $teamSupportID -WelcomeMusicAudioFileID $audioFileSupportGreetingID -MusicOnHoldAudioFileID $audioFileSupportHoldInQueueMusicID -OverflowAction SharedVoicemail -OverflowActionTarget $teamSupportID -OverflowThreshold 200 -OverflowSharedVoicemailAudioFilePrompt $audioFileSupportSharedVoicemailGreetingID -EnableOverflowSharedVoicemailTranscription $true -TimeoutAction SharedVoicemail -TimeoutActionTarget $teamSupportID -TimeoutThreshold 2700 -TimeoutSharedVoicemailTextToSpeechPrompt "We're sorry to have kept you waiting and are now transferring your call to voicemail." -EnableTimeoutSharedVoicemailTranscription $true -RoutingMethod LongestIdle -ConferenceMode $true -LanguageID "en-US"
@@ -238,13 +243,13 @@ Get-MgSubscribedSku
 
 ### Create and Assign Resource Account
 
-Note: Phone number not required here as call queue is front-ended by an Auto Attendant
+A phone number isn't required here as the call queue is nested behind an auto attendant.
 
 - ApplicationID
   - Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
   - Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
-Note: The license type shown below (PHONESYSTEM_VIRTUALUSER) must be one that is listed by the `Get-MgSubscribedSku` cmdlet above.
+The license type shown after `(PHONESYSTEM_VIRTUALUSER)` must be one that's listed by the `Get-MgSubscribedSku` cmdlet.
 
 ```powershell
 New-CsOnlineApplicationInstance -UserPrincipalName Support-RA@contoso.com -DisplayName "Support" -ApplicationID "11cd3e2e-fccb-42ad-ad00-878b93575e07"
@@ -280,7 +285,7 @@ $teamFacilitiesHelpDeskChannelID = "{assign ID from output of above command}"
 $teamFacilitiesHelpDeskChannelUserID = (Get-TeamChannelUser -GroupId $teamFacilitiesGroupID -DisplayName "Help Desk" -Role Owner).UserId
 ```
 
-### Get On Behalf Of Calling Resource Account ID
+### Get on behalf of Calling Resource Account ID
 
 ```powershell
 $oboResourceAccountID = (Get-CsOnlineUser -Identity "MainAA-RA@contoso.com").Identity
@@ -292,7 +297,7 @@ $oboResourceAccountID = (Get-CsOnlineUser -Identity "MainAA-RA@contoso.com").Ide
 Get-CsAutoAttendantSupportedLanguage
 ```
 
-### Create Call Queue
+### Create Call queue
 
 ```powershell
 New-CsCallQueue -Name "Facilities" -AgentAlertTime 15 -AllowOptOut $false -ChannelId $teamFacilitiesHelpDeskChannelID -ChannelUserObjectId $teamFacilitiesHelpDeskChannelUserID  -ConferenceMode $true -DistributionList $teamFacilitiesGroupID -LanguageID "fr-FR" -OboResourceAccountIds $oboResourceAccountID -OverflowAction DisconnectWithBusy -OverflowThreshold 200 -RoutingMethod RoundRobin -TimeoutAction Disconnect -TimeoutThreshold 2700 -UseDefaultMusicOnHold $true 
@@ -304,15 +309,15 @@ New-CsCallQueue -Name "Facilities" -AgentAlertTime 15 -AllowOptOut $false -Chann
 Get-MgSubscribedSku
 ```
 
-### Create and Assign Resource Account
+### Create and assign Resource Account
 
-**Note**: Phone number not required here as call queue is front-ended by an Auto Attendant
+A phone number isn't required here as the call queue is nested behind an auto attendant.
 
 - ApplicationID
   - Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
   - Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
 
-Note: The license type shown below (PHONESYSTEM_VIRTUALUSER) must be one that is listed by the `Get-MgSubscribedSku` cmdlet above.
+The license type shown after `(PHONESYSTEM_VIRTUALUSER)` must be one that's listed by the `Get-MgSubscribedSku` cmdlet.
 
 ```powershell
 New-CsOnlineApplicationInstance -UserPrincipalName Facilities-RA@contoso.com -DisplayName "Facilities" -ApplicationID "11cd3e2e-fccb-42ad-ad00-878b93575e07"
@@ -326,3 +331,11 @@ $callQueueID = (Get-CsCallQueue -NameFilter "Facilities").Identity
 
 New-CsOnlineApplicationInstanceAssociation -Identities @($applicationInstanceID) -ConfigurationID $callQueueID -ConfigurationType CallQueue
 ```
+
+## Related articles
+
+[Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md)
+
+[Here's what you get with Microsoft Teams Phone](here-s-what-you-get-with-phone-system.md)
+
+[Create an Auto attendant via cmdlets](create-a-phone-system-auto-attendant-via-cmdlets.md)

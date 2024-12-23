@@ -3,8 +3,8 @@ title: Call Quality Dashboard (CQD) Frequently asked questions (FAQ)
 author: mkbond007
 ms.author: mabond
 manager: pamgreen
-ms.reviewer: mikedav, siunies, gageames
-ms.date: 06/23/2020
+ms.reviewer: mikedav, siunies, gageames, jamp
+ms.date: 12/06/2024
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -15,8 +15,8 @@ ms.collection:
 search.appverid: MET150
 audience: Admin
 appliesto: 
-  - Skype for Business
   - Microsoft Teams
+  - Skype for Business
 ms.localizationpriority: medium
 f1.keywords: 
   - NOCSH
@@ -38,7 +38,7 @@ description: Read frequently asked questions (FAQ) and answers about Microsoft T
 
 [I'm trying to use CQD for usage-type reports and find that some of the data is incomplete--why is that?](#im-trying-to-use-cqd-for-usage-type-reports-and-find-that-some-of-the-data-is-incomplete----why-is-that)
 
-[Why am I seeing Skype for Business information in CQD when I've filtered for Teams only?](#why-am-i-seeing-skype-for-business-information-in-cqd-when-ive-filtered-for-teams-only)
+[Why am I seeing Skype for Business information in CQD when I filtered for Teams only?](#why-am-i-seeing-skype-for-business-information-in-cqd-when-i-filtered-for-teams-only)
 
 [Why do my custom reports only return a maximum of 10,000 rows when I know there should be more entries?](#why-do-my-custom-reports-only-return-a-maximum-of-10000-rows-when-i-know-there-should-be-more-entries)
 
@@ -50,7 +50,7 @@ description: Read frequently asked questions (FAQ) and answers about Microsoft T
 
 Check out the rules CQD uses for [stream classification](stream-classification-in-call-quality-dashboard.md).
 
-For audio streams, any of the five classifiers (which are calculated for the average based on the length of the call) could be within "good" parameters. It doesn't mean the users didn't experience something that contributed to an audio drop out, static, or glitch. 
+For audio streams, any of the five classifiers (which are calculated for the average based on the length of the call) could be within "good" parameters. It doesn't mean the users didn't experience something that contributed to an audio drop out, static, or glitch.
 
 To determine if it was a network problem, look at the delta between the average values for the session and the max values. Max values are the maximum detected and reported during the session.
 
@@ -64,17 +64,17 @@ If network metrics look good in the averages and max values, then look to other 
 - Check the Device Glitches and Microphone glitches event ratios. Was the device itself functioning properly?  
 - Check the Capture and Render Device Not Functioning Event Ratios.
 
-For more on dimensions and measures available in CQD telemetry, read [Dimensions and measurements available in Call Quality Dashboard](dimensions-and-measures-available-in-call-quality-dashboard.md).
+For more on dimensions and measures available in CQD, read [Dimensions and measurements available in Call Quality Dashboard](dimensions-and-measures-available-in-call-quality-dashboard.md).
 
-For background noise, check mute event ratio to see the length of time participants were muted.
+For background noise, check the mute event ratio to see the length of time participants were muted.
 
-Create detailed reports in CQD and filter on Meeting ID to look at all users and streams in a meeting and add the fields you're interested in. A user reporting the issue may not be the one that was having the issue. They're just reporting the experience.
+Create detailed reports in CQD and filter on Meeting ID to look at all users and streams in a meeting and add the fields you're interested in. A user reporting the issue might not be the one that was having the issue. They're just reporting the experience.
 
-The telemetry won't necessarily call out the issue, but it can help you better understand where to look and inform your decisions. Is it network, device, driver or firmware updates, usage, or user?
+The telemetry doesn't necessarily call out the issue, but it can help you better understand where to look and inform your decisions. Is it network, device, driver or firmware updates, usage, or user?
 
 ### Why do I see up to 0.2% difference in call and user count values on measures and how to get most accurate volumes?
 
-To compute call count and user count measures, a distinct count if operation is performed against the call or user identifiers in the data set. On large data sets, there's an up to 0.2% error inherent with the distinct countif operation. For the most accurate volume, you should rely on stream count measures since they don't rely on this distinct countif operation. Filtering to reduce the data volume may reduce the error but may not eliminate this source of error in distinct call and user counts. Refer to [Dimensions and measurements available in Call Quality Dashboard](dimensions-and-measures-available-in-call-quality-dashboard.md).
+To compute call count and user count measures, a distinct count if operation is performed against the call or user identifiers in the data set. On large data sets, there's an up to 0.2% error inherent with the distinct countif operation. For the most accurate volume, you should rely on stream count measures since they don't rely on this distinct countif operation. Filtering to reduce the data volume can reduce the error but it may not eliminate this source of error in distinct call and user counts. For more information, see [Dimensions and measurements available in Call Quality Dashboard](dimensions-and-measures-available-in-call-quality-dashboard.md).
 
 ### Why can't I see EUII in CQD?
 
@@ -83,19 +83,19 @@ These admin roles can access CQD, but they can't view EUII (end-user identifiabl
 - Microsoft 365 Reports Reader
 - Teams Communications Support Specialist
 
-Additionally, users assigned to one or more [Administrative Units](/azure/active-directory/roles/administrative-units) will not see EUII, even if their role would ordinarily allow it.
+Additionally, users assigned to one or more [Administrative Units](/azure/active-directory/roles/administrative-units) don't see EUII, even if their role ordinarily allows it.
 
 To learn more about roles that can access CQD - including EUII - read [Assign roles for accessing CQD](turning-on-and-using-call-quality-dashboard.md#assign-admin-roles-for-access-to-cqd).
 
 ### I'm trying to use CQD for usage-type reports and find that some of the data is incomplete -- why is that?
 
-Call quality management tools like CQD, Call Analytics, CallRecord Graph API, and Real-time Analytics are based on diagnostic telemetry. The information we show in Teams call quality management tools is only as complete as the telemetry data we receive from clients participating in a call. There are several reasons why we may not receive complete telemetry such as network outages, or [firewall or proxy misconfigurations](/microsoft-365/enterprise/urls-and-ip-address-ranges). We're continuing to work to improve the reliability and resiliency with which Teams clients deliver telemetry to the service.
+Call quality management tools like CQD, Call Analytics, CallRecord Graph API, and Real-time Analytics are based on diagnostic telemetry. The information we show in Teams call quality management tools is only as complete as the telemetry data we receive from clients participating in a call. There are several reasons why we might not receive complete telemetry such as network outages, or [firewall or proxy misconfigurations](/microsoft-365/enterprise/urls-and-ip-address-ranges). We're continuing to work to improve the reliability and resiliency with which Teams clients deliver telemetry to the service.
 
-With that in mind, we don't support the use of call quality management tools for usage reporting. They aren't designed to accommodate nor intended for these types of reporting scenarios, and many usage statistics aren't and won't be available within these tools. Teams Admin Center offers a series of [Usage Reports](teams-analytics-and-reports/teams-reporting-reference.md), and a [Meeting Attendance Report](teams-analytics-and-reports/meeting-attendance-report.md) is available directly from the Teams client.
+With that in mind, we don't support the use of call quality management tools for usage reporting. They aren't designed to accommodate nor are they intended for these types of reporting scenarios. Many usage statistics aren't and won't be available within these tools. Teams Admin Center offers a series of [Usage Reports](teams-analytics-and-reports/teams-reporting-reference.md), and a [Meeting Attendance Report](teams-analytics-and-reports/meeting-attendance-report.md) is available directly from the Teams client.
 
-### Why am I seeing Skype for Business information in CQD when I've filtered for Teams only?
+### Why am I seeing Skype for Business information in CQD when I filtered for Teams only?
 
-When you filter for Teams only in CQD reports (isTeams = 1), you're filtering for all calls where the *first endpoint* is Teams. If the *second endpoint* is Skype for Business, that information will show up in your CQD report. Depending on customers’ scenarios, CQD may include Skype for Business Server 2019 calls when [Call Data Connector](/skypeforbusiness/hybrid/plan-call-data-connector) is configured. It may also include Skype Bot calls (AA, CVI, VDI), Live Events, and PSTN calls.
+When you filter for Teams only in CQD reports (isTeams = 1), you're filtering for all calls where the *first endpoint* is Teams. If the *second endpoint* is Skype for Business, that information shows up in your CQD report. Depending on customers’ scenarios, CQD might include Skype for Business Server 2019 calls when [Call Data Connector](/skypeforbusiness/hybrid/plan-call-data-connector) is configured. It might also include Skype Bot calls (AA, CVI, VDI), Live Events, and Public Switched Telephone Network (PSTN) calls.
 
 It's possible to remove Skype for Business information from your queries by filtering on dimensions such as *First User Agent Category* and *Second User Agent Category*. You can also use *User Agent Category Pair, which combines the First and Second dimensions into a single filter.
 
@@ -105,11 +105,11 @@ CQD is designed for summarized data queries, and isn't designed for data export.
 
 ### Why do Wi-Fi VPN connections show as Wired instead of Wi-Fi?
 
-This is expected behavior. The VPN vendor created a virtual ethernet adapter that is treated like a wired connection. Since it's not properly labeled, the operating system doesn't know it's a Wi-Fi connection and reports it as wired.
+This behavior is expected. The VPN vendor created a virtual ethernet adapter that is treated like a wired connection. Since it's not properly labeled, the operating system doesn't know it's a Wi-Fi connection and reports it as wired.
 
 ### I turned on Policy-based Recording in Teams and now Peer-to-Peer calls are marked as Conferences--what happened?
 
-This is expected behavior when Policy-based Recording is enabled in Microsoft Teams. Policy-based Recording uses a Teams Recorder Bot deployed in Microsoft Azure to capture meeting contents for compliance purposes. In call quality management, "peer-to-peer" is a description of the flow of media traffic, not the interaction between the users. Because a Recorder Bot is itself a party to the call, the call is no longer peer-to-peer, but a multi-party call. Microsoft Teams classifies Multi-party calls as Conferences. Therefore CQD and other call quality tools indicate as such calls as Conferences. 
+This behavior is expected when Policy-based Recording is enabled in Microsoft Teams. Policy-based Recording uses a Teams Recorder Bot deployed in Microsoft Azure to capture meeting contents for compliance purposes. In call quality management, "peer-to-peer" is a description of the flow of media traffic, not the interaction between the users. Because a Recorder Bot is itself a party to the call, the call is no longer peer-to-peer, but a multi-party call. Microsoft Teams classifies Multi-party calls as Conferences. Therefore CQD and other call quality tools indicate as such calls as Conferences.
 
 ## Related articles
 

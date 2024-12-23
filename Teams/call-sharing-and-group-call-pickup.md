@@ -4,7 +4,7 @@ author: mkbond007
 ms.author: mabond
 manager: pamgreen
 ms.date: 12/12/2023
-ms.reviewer: jenstr
+ms.reviewer: jastark
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -42,9 +42,12 @@ Users must be assigned a Microsoft Teams Phone license to set up and use call sh
 
 ## Limitations
 
-A user can only be the owner of one call group. Each configured call group can have a maximum of 25 users or 32,768 characters. A user can be a member of maximum 25 call groups.
+- A user can only own one call group.
+- Each call group can have up to 25 users.
+- A user can be a member of up to 25 call groups.
+- If you add more than five members to a call group, the ring order automatically switches to "Everyone at once."
 
-Note that mobile devices will only get notified if they're set for banner and ringtone.
+Mobile devices are only notified if they're set for banner and ringtone.
 
 ## Enable the use of group call pickup
 
@@ -69,7 +72,7 @@ To configure immediate call forward settings:
 
 1. Select **Manage call group** and select **Add people** to add the appropriate users to the call group.
 
-1. For each user in the call group, select the type of notification that the user will see when they get an incoming call. **Ring** is the default notification type.
+1. For each user in the call group, select the type of notification that you want the user to see when they get an incoming call. **Ring** is the default notification type.
 
 1. From the dropdown, select the appropriate call group order.
 

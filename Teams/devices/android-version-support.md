@@ -46,13 +46,13 @@ You can learn more about end of certification of Teams devices by visiting [Devi
 
 ## Microsoft Teams Devices Applications Support
 
-Microsoft Teams applications running  on Android Teams devices and other Microsoft applications present on Teams on Android devices (as needed for authentication and device management) are governed by [Modern Lifecycle Policy](/lifecycle/policies/modern).
+Microsoft Teams applications running on Android Teams devices and other Microsoft applications present on Teams on Android devices (as needed for authentication and device management) are governed by [Modern Lifecycle Policy](/lifecycle/policies/modern).
 
-Microsoft applications are updated from Microsoft Teams Admin Center (TAC) or Teams Rooms Pro management portal (PMP), where device admins can configure policies for automatic or manual updates of these applications. Microsoft recommends customers to use auto-update setting to ensure Teams on Android devices stays up to date and functional. In cases where customers may need to set up manual updates, customers must make sure to stay current on Microsoft applications. Microsoft tests and supports the latest and latest-1 versions of Microsoft applications on the device. Keeping devices on older versions of the application can leave your Teams Rooms devices unstable and unusable.
+Microsoft applications are updated from Microsoft Teams Admin Center (TAC) or Teams Rooms Pro management portal (PMP), where device admins can configure policies for automatic or manual updates of these applications. Microsoft recommends customers to use auto-update setting to ensure Teams on Android devices stays up to date and functional. In cases where customers may need to set up manual updates, customers must make sure to stay current on Microsoft applications. Microsoft tests and supports the latest and latest-1 versions of Microsoft applications on the device. Keeping devices on older versions of the application can leave your Teams devices unstable and unusable.
 
-Teams on Android devices customers should follow Modern Lifecycle Policy guidelines to receive Teams  device applications on Android device support from Microsoft. While the latest and latest-1 versions of Microsoft applications on the device, the support structure for Teams Rooms devices applications is dynamic and depends on the availability of the latest version. When you encounter a code defect in a version of the application that's not the latest, you must install the latest version to receive a fix.
+Teams on Android devices customers should follow Modern Lifecycle Policy guidelines to receive Teams device applications on Android device support from Microsoft. While the latest and latest-1 versions of Microsoft applications on the device, the support structure for Teams Rooms devices applications is dynamic and depends on the availability of the latest version. When you encounter a code defect in a version of the application that's not the latest, you must install the latest version to receive a fix.
 
-All Teams rooms devices applications Android releases are listed at [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2).
+All Teams devices applications Android releases are listed at [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2).
 
 > [!IMPORTANT]
 >If you are installing Teams devices applications from a device Original Equipment Manufacturers (OEM) provided service, make sure to validate that Microsoft applications provided by the device OEMs are listed and supported in Teams Admin Center, Teams Rooms Pro management portal or listed at [Devices for Teams](/microsoftteams/devices/teams-ip-phones#product-release-information-for-teams-phones) or [Teams Rooms on Android app and firmware versions](/microsoftteams/rooms/android-app-firmware).
@@ -65,9 +65,9 @@ Android operating system and firmware updates installed through device hardware 
 
 Microsoft applications running on this Android operating system provided by Original Equipment Manufacturers (OEM) partners are bound to Google’s support cycle for the Android OS operating system versions.
 
-The following Android operating systems that are supported on Teams Rooms on Android:
+The following Android operating systems versions are supported on Teams devices:
 
-|**Android OS version**|**Android OS Google release date**|**Microsoft Teams Certification end date**|**Microsoft ‘best effort’ support end date**|
+|**Android OS version**|**Android OS Google release date**|**Microsoft Teams Certification end date**|**Microsoft support end date**|
 |:-----|:-----|:-----|:-----|
 |Android 9|August 6, 2018|August 5, 2023|August 5, 2025|
 |Android 10|September 3, 2019|September 3, 2025|September 3, 2027|
@@ -75,3 +75,4 @@ The following Android operating systems that are supported on Teams Rooms on And
 |Android 12|October 4, 2021|August 15, 2027|August 15, 2029|
 |Android 13|August 15, 2022|August 15, 2027|August 15, 2029|
 |Android 14|October 4, 2023|October 4, 2028|October 4, 2030|
+|Android 15|October 15, 2024|October 15, 2029|October 15, 2031|

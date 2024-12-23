@@ -76,6 +76,10 @@ To turn on check-in notifications,
 
 **Answer:** Yes, there are. At this time, the user will be automatically checked in if the room is the organizer of the meeting, the room was invited after the meeting start time, it's a 3P meeting such as Zoom meeting, or it's an in-person meeting as in there is no online Teams link. We'll be requiring check-in for 3P and in-person meetings in the future.  
 
+**Question: Does this feature support on-premises mailboxes?**
+
+**Answer:** No, this feature is only available for room mailboxes created in Exchange Online after Teams app 1449/1.0.97.2024061108. To learn more about how to manage room mailboxes, see [Manage resource mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/manage-resource-mailboxes).
+
 ## Related topics
 
 - [How to use Microsoft Teams panels](use-teams-panels.md)

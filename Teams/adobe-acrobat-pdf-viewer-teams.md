@@ -1,7 +1,7 @@
 ---
 title: Adobe Acrobat as a default PDF viewer in Teams
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.service: msteams

@@ -23,6 +23,9 @@ appliesto:
 
 # Hardware decoder and encoder driver recommendations
 
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
+
 Microsoft supports all decoders and encoders except those listed in this article.
 
 ## Hardware decoder driver recommendations - Intel

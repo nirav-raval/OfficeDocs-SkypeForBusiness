@@ -1,7 +1,7 @@
 ---
 title: How do I look up my support PIN?
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.topic: article
 ms.service: msteams

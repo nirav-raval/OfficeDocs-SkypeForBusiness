@@ -55,10 +55,6 @@ Here are some examples on how you can use these export APIs:
 
     To learn more about Teams Retention policy, see the [Manage retention policies for Microsoft Teams](/microsoftteams/retention-policies) for further details.
 
-## What isn't supported by the Teams Export APIs?
-
-- **Teams Copilot Interactions & Microsoft 365 Chat:** Export API doesn't support user to Copilot interaction messages and Microsoft 365 chat messages sent by the bot.
-
 ## How to access Teams Export APIs
 
 - **Example 1** is a simple query to retrieve all the messages of a user or team without any filters:
@@ -99,7 +95,6 @@ Here are some examples on how you can use these export APIs:
   ```HTTP
   GET https://graph.microsoft.com/v1.0/users/{id}/onlineMeetings/getAllTranscripts(meetingOrganizerUserId='{userId}',startDateTime={startDateTime},endDateTime={endDateTime})
   ```
-
 
 > [!NOTE]
 > The API returns response with next page link in case of multiple results. For getting next set of results, simply call GET on the url from @odata.nextlink. If @odata.nextlink isn't present or null then all messages are retrieved.
@@ -338,7 +333,6 @@ No model declaration enables access to APIs with limited usage per each requesti
 
 For more information, see [Use Graph APIs to fetch transcript](/microsoftteams/platform/graph-api/meeting-transcripts/api-transcripts#get-calltranscript-content).
 
-
 ## Export API filters
 
 Export API hosted on the Teams Graph Service gets all user messages from the Substrate user mailbox using `users/{userId}/chats/getAllMessages`. Export API retrieves both sent and received messages for a user which leads to export of duplicate messages when calling the API for all users in the chat thread.
@@ -396,3 +390,26 @@ $filter=from/application/applicationIdentityType eq '<appType>' or from/user/id 
  - the query returns messages sent by the system if `messageType eq 'systemEventMessage'` is present
 
 These parameters can be combined between them using the OR operators as well as by combining with the `lastModifiedDateTime` `$filter` parameter.
+
+## Microsoft 365 Copilot Interactions & Microsoft 365 Chat (Preview)
+
+The new Copilot Activity Export API will allow you to export Copilot interactions data which includes the user prompt to Copilot and the Copilot response back to the user. This API will capture the user intent and Copilot accessed resources and the response back to the user across Microsoft 365 Copilot apps such as Teams, Word and Outlook. 
+
+## How to access Copilot Activity Export APIs (Preview)
+
+- **Example 1** is a simple query to retrieve all the copilot interactions without any filters (beta):
+
+  ```HTTP
+  GET https://graph.microsoft.com/beta/copilot/users/{id}/interactionHistory/getAllEnterpriseInteractions 
+  ```
+- **Example 2** is a simple query to retrieve all the copilot interactions with appclass filters (beta):
+
+  ```HTTP
+  GET https://graph.microsoft.com/beta/copilot/users/{id}/interactionHistory/getAllEnterpriseInteractions?$filter=appClass eq 'IPM.SkypeTeams.Message.Copilot.Teams or appClass eq 'IPM.SkypeTeams.Message.Copilot.BizChat' (beta)
+  ```
+## Prerequisites to access Copilot Activity Export APIs (Preview)
+
+Application permissions are used by apps that run without a signed-in user present; application permissions can only be approved by an administrator. The following permissions are needed:
+  
+  - *AiEnterpriseInteraction.Read.All*: enables access to all copilot interactions across Microsoft 365 apps and Microsoft 365 Chat
+  - A **Microsoft 365 Copilot license** is required for accessing the new Copilot Activity Export API.

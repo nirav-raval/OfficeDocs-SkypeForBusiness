@@ -1,13 +1,13 @@
 ---
 title: Get started with team templates in the Teams admin center
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 audience: Admin
 ms.topic: conceptual
 ms.service: msteams
 ms.reviewer: yinchang
-ms.date: 09/12/2018
+ms.date: 10/30/2024
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

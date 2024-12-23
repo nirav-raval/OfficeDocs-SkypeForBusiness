@@ -1,7 +1,7 @@
 ---
 title: "Search for telephone numbers for users"
-ms.author: crowe
-author: CarolynRowe
+ms.author: scottfrancis
+author: sfrancis206
 manager: pamgreen
 ms.reviewer: davlick, roykuntz, jastark
 ms.date: 11/28/2017

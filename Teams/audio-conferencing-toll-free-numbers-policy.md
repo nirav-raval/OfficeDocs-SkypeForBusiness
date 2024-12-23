@@ -1,7 +1,7 @@
 ---
 title: Audio Conferencing toll-free number policies
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: mshaikh
 ms.date: 02/21/2024

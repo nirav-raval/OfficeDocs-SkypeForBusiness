@@ -1,7 +1,7 @@
 ---
 title: "How many telephone numbers can you get?"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: davlick, roykuntz, jastark
 ms.date: 03/13/2024

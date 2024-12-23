@@ -262,6 +262,17 @@ When organizing meetings, the meeting type that gets scheduled is based on the m
 | SfbWithTeamsCollab, SfbOnly | All meetings scheduled in Skype for Business. Teams add-in isn't available in Outlook. Consider using SfbWithTeamsCollabAndMeetings instead, which allows all users whether on-premises or TeamsOnly to use Teams for meetings.|
 | Islands | By default, meetings can be scheduled in either Skype for Business or Teams. Both add-ins are available in Outlook. However, you can optionally require that users in Islands always schedule meetings in Teams by assigning them an instance of TeamsMeetingPolicy with the PreferredMeetingProviderForIslandsMode=Teams.|
 
+### New Teams and Skype for Business call hold synchronization
+
+When making or receiving a call in the new Teams client while an existing Skype for Business call is ongoing, the call in Skype for Business does not automatically go on hold. The reverse scenario has the same problem. To enable call hold synchronization between the new Teams client and the Skype for Business client ensure the following:
+
+- The new Teams client is version 24261.1100.3128.2662 or greater.
+- Apply these group policy registry key updates:
+  - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Lync\Enable21Interop` with DWORD set to `0x01`
+  - `Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Lync\EnableIPCForHoldResume` with DWORD set to `0x01`
+
+After applying the registry changes and having the appropriate version of the new Teams client, be sure to restart both the Teams client and the Skype for Business client. This will enable call hold synchronization between Skype for Business and Teams.
+
 ### Interoperability
 
 As described above in [Interoperability of Teams and Skype for Business](#interoperability-of-teams-and-skype-for-business), Teams supports interop with Skype for Business in certain scenarios. Interop communication refers to a chat or call between a Skype for Business user and a Teams user. Interop communication is only possible between two users; multi-party chat/calling or adding additional users isn't supported.

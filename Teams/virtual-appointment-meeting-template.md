@@ -6,7 +6,7 @@ manager: jtremper
 ms.topic: conceptual
 ms.service: msteams
 ms.reviewer: jewilcze
-ms.date: 09/13/2024
+ms.date: 11/11/2024
 search.appverid: MET150
 searchScope:
   - Microsoft Teams
@@ -24,7 +24,7 @@ appliesto:
 
 # Manage the Virtual appointment meeting template in Microsoft Teams
 
-**APPLIES TO:** ✔️Meetings ✖️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a x for no](/office/media/icons/cancel-teams.png)Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 ![Information icon](media/info.png) **Some features described in this article require [Teams Premium](teams-add-on-licensing/licensing-enhance-teams.md)**.
 
@@ -51,9 +51,9 @@ To learn more, see [Manage meeting templates in Teams](manage-meeting-templates.
 ![Information icon](media/info.png) **This is a [Teams Premium](teams-add-on-licensing/licensing-enhance-teams.md) feature. Meeting organizers must have a Teams Premium license to use this feature.**.
 
 > [!NOTE]
-> This feature is currently available in Canada, the United Kingdom, and the United States. Your users can only send SMS text notifications to people who have a valid Canada phone number (+1 country code), United Kingdom phone number (+44 country code), or United States phone number (+1 country code). SMS text notifications are sent in English.
+> This feature is currently available in Canada, the Netherlands, New Zealand, Norway, the United Kingdom, and the United States. Your users can send SMS text notifications to people who have a valid Canada (+1 country code), Netherlands (+31 country code), New Zealand (+64 country code), Norway (+47 country code), United Kingdom (+44 country code), or United States phone number (+1 country code). The text notifications are sent in the language of the meeting organizer.
 
-You can control whether your users can choose to send SMS text notifications to external guests in appointments that they schedule using the template. When this feature is enabled for a user, they'll see  the SMS notifications option in the template.
+You can control whether your users can choose to send SMS text notifications to external guests in appointments that they schedule using the template. When this feature is enabled for a user, they see the SMS notifications option in the template.
 
 - If the user chooses **Send text notifications** (the default setting), external guests will receive appointment confirmation, update, and reminder text messages that include the Teams meeting join link and appointment details.
 - If the user chooses **Don't send text notifications**, external guests won't receive text messages about their appointment.
@@ -93,6 +93,8 @@ You can assign the policy directly to users, either individually or at scale thr
 - If a user doesn't have access to this feature, either through policy restrictions or if they don't have a Teams Premium license, the SMS notifications option isn't visible in the template when they schedule a new appointment or when they edit an existing appointment in which the feature was previously enabled.
 
 - If a user who has access to this feature chose **Send text notifications** when they scheduled an appointment, and then their access is turned off, no additional text messages are sent to the external guest.
+
+- For the Netherlands, the **Phone number** field on the form might require an 11-digit number to successfully send SMS notifications. If you experience issues, add zeros (0) to the beginning of the phone number to reach an 11-digit value.
 
 ### SMS notifications usage report
 

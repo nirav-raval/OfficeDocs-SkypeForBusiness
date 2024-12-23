@@ -1,7 +1,7 @@
 ---
 title: Try or purchase Audio Conferencing in Microsoft 365 for Teams
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: oscarr
 ms.date: 02/21/2024

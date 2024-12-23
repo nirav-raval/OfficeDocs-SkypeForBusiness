@@ -1,7 +1,7 @@
 ---
 title: 'Teams voice Contoso case study: Location-based routing'
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 06/17/2020
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: PSTN connectivity options
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 08/10/2023
 ms.topic: article
@@ -15,7 +15,7 @@ ms.collection:
   - m365solution-scenario
   - highpri
   - Tier1
-ms.reviewer: crowe
+ms.reviewer: scottfrancis
 f1.keywords:
 - CSH
 ms.custom: 

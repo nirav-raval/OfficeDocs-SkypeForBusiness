@@ -1,7 +1,7 @@
 ---
 title: Set the PIN length for Audio Conferencing meetings
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: oscarr
 ms.date: 02/22/2024

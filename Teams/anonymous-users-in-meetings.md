@@ -1,10 +1,10 @@
 --- 
 title: Manage anonymous participant access to Teams meetings, webinars, and town halls (IT admins)
-ms.author: jtremper
-author: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: 
 ms.date: 01/23/2024
-manager: pamgreen
 ms.topic: article
 ms.service: msteams
 audience: admin
@@ -22,7 +22,7 @@ description: For IT Pros - Learn how anonymous meeting participation works in Mi
 
 # Manage anonymous participant access to Teams meetings, webinars, and town halls (IT admins)
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
 
 Anonymous participants in meetings, webinars, and town halls hosted by your organization are those participants who can't be verified. This could include:
 

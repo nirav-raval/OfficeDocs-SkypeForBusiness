@@ -1,7 +1,7 @@
 ---
 title: Use manufacturing team templates
-author: lana-chin
-ms.author: v-chinlana
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 audience: admin
 ms.topic: conceptual

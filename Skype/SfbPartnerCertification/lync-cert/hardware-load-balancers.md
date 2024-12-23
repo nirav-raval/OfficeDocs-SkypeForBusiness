@@ -39,8 +39,8 @@ For qualification, Lync Server requires integrating hardware load balancers in t
 
 |Vendor|Qualified Product|Software Version Tested|Vendor's Lync Page|
 |:--- |:--- |:--- |:--- |
-|[A10Networks](https://www.a10networks.com/)| AX Series 1000, 2200, 3200 <br/><hr> 64-bit AX Series 2500, 2600, 3000, 5100, 5200| 2.4.3 |  [AX Series for Lync 2010 Overview and Deployment Guide](https://www.a10networks.com/solutions/|
-|[Array Networks](http://www.arraynetworks.com/) | APV Series | ArrayOS TM 8.x or later |Deployment Guide for Array Networks APV Application Delivery Controllers and Microsoft Lync Server 2010|
+|[A10Networks](https://www.a10networks.com/)| AX Series 1000, 2200, 3200 <br/><hr> 64-bit AX Series 2500, 2600, 3000, 5100, 5200| 2.4.3 |  [AX Series for Lync 2010 Overview and Deployment Guide](https://www.a10networks.com/solutions/)|
+|[Array Networks](https://arraynetworks.com) | APV Series | ArrayOS TM 8.x or later |Deployment Guide for Array Networks APV Application Delivery Controllers and Microsoft Lync Server 2010|
 |AVANU |Webmux 481SD, 591SGQ, 690PG| V8.x and up|[WebMux and Microsoft Lync 2010](https://avanu.com/skype-for-business-load-balancing/)|
 |[BarracudaNetworks](https://www.barracuda.com/products)|Barracuda Load Balancer ADC Model 340, 440 or 640|3.3.1.005, 3.5.0.008| [Barracuda Load Balancer Deployment Guide](https://techlib.barracuda.com/ADC/MSLyncDeployOverview)|
 |Brocade |ServerIron XL,4G,GTC,GTE,350,450 &amp; 850<br/><hr> ServerIron ADX 1000, 4000, 10000|SI V10.0.0a<br/><hr>V12.1, V12.2|[Brocade Communications' Microsoft Unified Communications Solutions](https://www.brocade.com/partnerships/technology-alliance-partners/partner-details/microsoft/microsoft-office-communications-server/index.page)|

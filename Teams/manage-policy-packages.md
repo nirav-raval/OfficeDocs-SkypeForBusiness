@@ -154,5 +154,5 @@ This video is about managing policy packages.
 
 - [Assign policy packages](assign-policy-packages.md)
 - [Teams policy packages for EDU admins](policy-packages-edu.md)
-- [Teams policy packages for healthcare](policy-packages-healthcare.md)
+- [Teams policy packages for frontline workers](policy-packages-flw.md)
 - [Teams policy packages for government](policy-packages-gov.md)

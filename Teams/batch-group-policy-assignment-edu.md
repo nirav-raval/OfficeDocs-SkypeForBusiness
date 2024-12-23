@@ -1,8 +1,8 @@
 ---
 title: Assign policies to large sets of users in your school
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: angch
 ms.date: 03/09/2020
 ms.topic: article

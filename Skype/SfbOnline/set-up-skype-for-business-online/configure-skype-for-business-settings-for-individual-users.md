@@ -105,10 +105,6 @@ To configure these settings in bulk, use PowerShell. See [Set up your computer f
    
 To configure these settings in bulk, use PowerShell. See [Set the phone numbers included on invites](../audio-conferencing-in-office-365/set-the-phone-numbers-included-on-invites.md) [Set up your computer for Windows PowerShell](../set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell.md).
 
-
-[!INCLUDE [LinkedIn Learning Info](../../common/office/linkedin-learning-info.md)]
-  
-   
 ## Related topics 
 
 [Set up Skype for Business Online](set-up-skype-for-business-online.md)

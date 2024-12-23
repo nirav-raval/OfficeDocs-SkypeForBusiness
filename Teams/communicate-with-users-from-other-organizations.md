@@ -1,7 +1,7 @@
 ---
 title: Use guest access and external access to collaborate with people outside your organization
-ms.author: jtremper
-author: jacktremper
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.reviewer: majaisin
 ms.date: 06/28/2024

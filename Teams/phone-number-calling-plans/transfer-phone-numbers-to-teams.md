@@ -1,10 +1,10 @@
 ---
 title: Transfer phone numbers to Microsoft Teams
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: parththakkar
-ms.date: 03/26/2024
+ms.reviewer: leiaglezer
+ms.date: 11/22/2024
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -26,83 +26,121 @@ ms.custom: seo-marvel-mar2020
 
 # Transfer phone numbers to Microsoft Teams
 
-This article is for administrators and IT professionals. The article describes how to transfer phone numbers from your current service provider to Microsoft Teams. This article applies to Microsoft Calling Plans and services.
+This article is for administrators and IT professionals porting their phone numbers from their current service provider into Microsoft Teams Calling Plans in the Teams Admin Center (TAC). Once completed, Microsoft becomes your Public Switched Telephone Network (PSTN) service provider.
 
-To transfer your phone numbers, you can use the porting step-by-step guide in the Microsoft Teams admin center. After you port your phone numbers to Teams, Microsoft becomes your service provider. For more information, see [How many phone numbers can you get?](../how-many-phone-numbers-can-you-get.md)
+Before you start, review prerequisite knowledge referenced in the following articles:
 
-Before you start, review the information in [What's a port order](port-order-overview.md). If you have any of the following types of numbers that you need to transfer to Teams, you'll need to download the correct forms and send them to us:
-
-- Dial-in conferencing bridges
-- Auto attendants or other service numbers
-- Toll-free phone numbers
-- More than 999 user (subscriber) phone numbers that you need to transfer to Teams
-
-For more information about submitting the necessary forms, see [Manage phone numbers for Calling Plans and services](../manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization.md).
+- [What's a port order](port-order-overview.md)
+- [How many phone numbers can you get?](../how-many-phone-numbers-can-you-get.md)
+- [Country or region specific articles](../manage-phone-numbers.md).
 
 > [!NOTE]
-> We process port orders for transferring phone numbers only on United States business days and not on public holidays or weekends.
->
-> Porting availability for Toll-free phone numbers may vary by country and region. For more information, see your [country or region specific articles](../manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization.md).
+> If you have more than 999 phone numbers that you need to transfer to Teams in one port request, don't use the port wizard. Navigate to the [Phone Number Service Center portal](https://pstnsd.powerappsportals.com/create-ticket/) and create/submit a new "Port in" case with the [Telephone Number Services (TNS) - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
+
+Microsoft's Telephone Number Service Center completes ports orders only on United States business days and not on public holidays or weekends.
 
 ## Create a port order and transfer your phone numbers to Teams
 
-1. In the left navigation of the Microsoft Teams admin center, go to **Voice** > **Phone numbers**. Select **Numbers**, and then select **Port** to start the porting wizard.
+1. In the Teams admin center, launch the port wizard:
+   - In the left navigation rail, go to **Voice** > **Phone numbers**.
+   - Select the **Numbers** tab, and then from the table's header menu, select **Port**.
 
-2. Review the information on the **Get started** page, and then when you're ready, select **Next**.
+### Get started
 
-3. On the **Select location and number type** page, specify the following, and then select **Next**:
+On the **Get started** page, populate the fields as per your request.
 
-    - **Country or region**: Country or region where you're getting numbers.
-    - **Phone number type**: Type of number, such as geographic or toll-free numbers.
-    - **Numbers assigned to**: What the numbers are assigned to. For example, users, or conferencing or voice features.
+- **Country or region**: Specify the country or region where you're porting numbers.
+- **List your phone number**: Add your phone numbers manually or by uploading a list.
 
-4. On the **Add account information** page, complete the following, and then select **Next**.
+    - **To add phone numbers manually**: Enter numbers in E.164 format, separated by a comma or semicolon. Ranges are not supported. Optional dashes or hyphens are allowed.
+    - **To upload a list of phone numbers**: Use a CSV file with one column labeled **PhoneNumber**. Each row should contain a single phone number in E.164 format.
 
-    > [!NOTE]
-    > The information displayed on this page is determined by the country or region and number type. Each country and region has different regulations on the information that's required to port numbers. What you see on this page may be different from what's described here.
+### Manage numbers
 
-    - **Order details**: 
-        - **Order name**: Name of your order
-        - **Notification emails**: Email addresses to receive order notifications. If you enter multiple email addresses, separate each with a semicolon.
-        - **Transferred date**: Transfer date issued by your current service provider.
-    - **Phone number details**
-        - **Port type**: Whether you're doing a full-port to transfer all your numbers or a partial-port to transfer some of your numbers.
-    - **Person requesting details**  
-        - Your organization name and contact details of the person requesting the transfer.
-    - **Current provider's details**
-        - **Billing telephone number (BTN)**: Your BTN in E.164 format, which requires a + sign to prepend the number. For example, for a North America number, use +1XXXYYYZZZZ format.
-        - Other details including the name of your current service provider, your account number, and your service address.
-            
-5. On the **Add numbers** page, select **Select a file**, browse to and select the CSV file that contains the phone numbers that you want to transfer, and then select **Next**.  
+The **Manage numbers** page checks that the number format is correct, matches the specified country or region, and is valid before proceeding.
 
-    > [!NOTE]
-    > The CSV file must have only one column with a header named **PhoneNumber**. Each phone number must be on a separate row and can be digits only or in E.164 format.
+If the number validation summary isn't successful, view the details to understand the reason.
 
-6. On the **Complete your order** page, select **Upload a signed Letter of Authorization** to upload a scanned copy of the signed Letter of Authorization (LOA).
+- Select **View details** in the number validation summary pane, or select the phone number validation failure below **Validation status** to check the reasons for phone number failure.
 
-    If you haven't already downloaded and signed the LOA, do the following:
-    
-    1. Select **Download the template** to download the LOA for your country or region. 
-    2. Print the LOA.
-    3. Have the LOA signed by the person who is authorized to make changes to the account.
-    4. Scan the signed LOA, and then select **Upload a signed Letter of Authorization** to upload it.
+- If failure isn't understood, you may create a case with the TNS-Service Desk team through the [Phone Number Service Center portal](https://pstnsd.powerappsportals.com/create-ticket/).
+    - For the scenario where you don't understand the number validation result, select **Case Type = General Inquiry** and in the description, provide the number validation summary that you see in TAC along with the list of phone numbers that you're trying to port.
 
-7. Review your order details, and then select **Submit**. You must submit the order for it to be processed.
+The number validation summary must indicate all numbers are valid before you can proceed. If there are no errors, continue.
 
-For more information about LOAs to port/transfer existing phone numbers and additional documentation requirements, see [Manage phone numbers for Calling Plan](/microsoftteams/manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization).
-    
-To port/transfer more than 999 phone numbers, or if you experience issues with the porting process in the Microsoft Teams admin center, you can [manually submit a port order](/microsoftteams/phone-number-calling-plans/manually-submit-port-order) to the TNS Service Desk for your region.
+### Add account information
+
+On the **Add account information** page, complete the following, and then select **Next**.
+
+> [!NOTE]
+> The information displayed on this page is determined by the country or region and number type. Each country and region has different regulations on the information that's required to port numbers. What you see on this page may be different from what's described here.
+
+1. **Order details**: Input required name for your port request. The order name you specify here becomes viewable by you in the Teams Admin Center during the porting process and after order completion for your records.
+
+2. **Port details**: Enter the Billing Telephone Number (BTN) in E.164 format.
+
+    - If you enter a BTN number that isn't in the list of numbers that you're porting, your request is automatically categorized as a **Partial port** and the BTN will remain with your current service provider after the port is complete.
+    - If you enter a BTN number that matches a number in the list of numbers that you're porting, you have two options.
+
+        - **Option 1**: Port **all numbers in my account**. If you choose this option, the account with your current service provider will be closed after the port is complete.
+        - **Option 2**: Port **some numbers in my account, and I'm including my account's BTN**. If you choose this partial port option, you also have the option to enter a new BTN to designate for the account that is still open with your current service provider. Designating a replacement BTN is optional.
+
+> [!NOTE]
+> All information input for your organization and current service provider must match *exactly* with the current service provider's records.
+>
+> Some fields are optional, but some service providers require the optional fields.
+
+3. **Organization details**: Enter your organization's name.
+
+4. **Current service provider details**: Provide the current service provider's name, account number, and security PIN. The account PIN is required to port mobile numbers.
+
+5. **Requester details**: Populate this information with the contact details of the person who Microsoft can contact with port order status updates.
+
+6. **Authorized user details**: Populate this information with the contact details of the person who is the authorized user with your current service provider.
+
+7. **How do you want to sign the Letter of Authorization?**: Select whether you want e-signature or manual upload for the Letter of Authorization.
+
+8. **Service address**: Enter the service address exactly as it matches the current service provider's record. Emergency addresses can be assigned later, when assigning the number to a user.
+
+9. **Default number usage**: Select the intended type of usage for the numbers. If you would like to change it, select *Yes, change usages* to go to the **Add number features** page. If you select *No*, the wizard skips you to the **Complete your order** page.
+
+### Add number features
+
+The add number features page is where you update the number usage. Usage is a category of service for the phone numbers.
+
+- For numbers assigned to users, the default number type is geographic phone numbers and is listed as **User**.
+
+- For numbers assigned to voice applications, such as Auto-Attendants and Call Queues, the number usage type should be set as **Voice app**.
+
+- For numbers assigned to audio conferencing, the number usage type should be set to **Conference**.
+
+Toll-free numbers default to **Voice app**, but you can make changes to the default number usages in this section of the wizard.
+
+To update the number usage, check the desired number and select **Update number usage**. Then, from the right-hand side rail, use the drop-down and select your desired number usage to assign to the numbers.
+
+### Complete your order
+
+- If you selected **Paper signature** in the **Add account information** page, you can download a Letter of Authorization template.
+
+    - The template is prepopulated with the information you input in the wizard.
+    - Once signed, you upload a copy of the signed Letter of Authorization and then you can select **Submit** and the port request proceeds.
+
+- If you selected **E-signature** in the **Add account information** page, the authorized user receives an email to sign the Letter of Authorization once you select **Complete and send e-signature request**.
+
+    - Once they electronically sign, the port request proceeds.
 
 ## What happens next
 
-When we receive your port order, you'll receive an email that verifies your request. Your request is updated daily, and you'll be notified of its progress and status in email. If your port request is rejected by the carrier, contact the [TNS Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md) for assistance.
+When we receive your port order, you receive an automated email that confirms your request. All port order status changes generate automated email notifications to you about the order. If your port request is rejected by the carrier, if you need help with your port request, or if you have any questions about your port request, contact the [TNS Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md) for assistance.
 
-To view the status of your port order, in the left navigation of the Microsoft Teams admin center, go to  **Voice** > **Port orders**, and then select **Order history**. Each port order status is listed in the **Status** column. To learn more, see [What's the status of your port orders?](port-order-status.md)
+> [!NOTE]
+> If you already have a case open with the TNS-Service Desk for your port request, update that existing ticket instead of creating a new case.
 
+To view the status of your port order, in the left navigation of TAC, go to  **Voice** > **Port orders**, and then select **Order history**. Each port order status is listed in the **Status** column. To learn more, see [What's the status of your port orders?](port-order-status.md)
 
 ## Report phone number issues
 
-If you notice any issues with the ported numbers within the first 24-48 hours after the port is completed, contact the [TNS Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md). For any issues beyond 48 hours, contact the Microsoft Support Team.
+If you notice any issues with the ported numbers within the first 24-48 hours after the port is completed, contact the [TNS Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md). For any issues beyond 48 hours, follow normal Microsoft Support process.
 
 ## Related articles
 

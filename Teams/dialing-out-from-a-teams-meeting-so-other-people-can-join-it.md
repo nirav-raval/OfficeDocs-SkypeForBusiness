@@ -1,7 +1,7 @@
 ---
 title: "Dialing out from a meeting so other people can join"
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: oscarr
 ms.date: 02/22/2024

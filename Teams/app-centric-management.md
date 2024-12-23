@@ -1,7 +1,7 @@
 ---
 title: App centric management to manage user access to Teams apps
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 audience: admin
@@ -13,7 +13,7 @@ ms.collection:
   - M365-collaboration
   - Tier1
 search.appverid: MET150
-ms.date: 08/27/2024
+ms.date: 11/14/2024
 ms.reviewer: mhayrapetyan
 description: Manage access to Teams apps using app centric management.
 f1.keywords:
@@ -27,16 +27,22 @@ ms.custom: seo-marvel-apr2020
 # Use app centric management to manage access to apps
 
 > [!IMPORTANT]
-> All organizations don't have app centric management feature available. If you were not using custom permission policies and you weren't an enterprise customer, we migrated your organization to use this feature. If you are using custom permission policies or you are an enterprise customer, then you will soon be able to migrate to the app centric management feature on your own. For timelines, see [Message Center post MC688930](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC688930) or [Microsoft 365 roadmap item 151829](https://www.microsoft.com/en-US/microsoft-365/roadmap?filters=&searchterms=151829).
->
-> If you see policies on the [permission policies page](https://admin.teams.microsoft.com/policies/app-permission), continue to [use app permission policies](teams-app-permission-policies.md) or migrate to this feature on your own.
-> If your org is now using the app centric management feature, you see the following message on the permission policy page.
+> All organizations don't have app centric management feature available. If you were not using custom permission policies and you weren't an enterprise customer, we automatically migrated your organization to use this feature. You see the following message on the permission policy page:
 >
 > :::image type="content" source="media/acm-policy-page.png" alt-text="Screenshot showing the permissions policy change for organization that are using app centric management.":::
+>
+> If you're using custom permission policies or you're an enterprise customer, then you must manually migrate to the app centric management feature. For timelines, see [Message Center post MC688930](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC688930) or [Microsoft 365 roadmap item 151829](https://www.microsoft.com/en-US/microsoft-365/roadmap?filters=&searchterms=151829).
+>
+> If you see policies on the [permission policies page](https://admin.teams.microsoft.com/policies/app-permission), continue to [use app permission policies](teams-app-permission-policies.md) or migrate to this feature on your own.
 
-App centric management functionality introduces a new way to control access to Teams apps for users and groups. It replaces app permission policies. This functionality lets you specify which users and groups can use each app and you can control it on a per-app basis.
+With the introduction of app centric management functionality, admins have two methods to control the access and availability of apps and copilot agents.
 
-You can manage access to apps for individual users, supported groups, or everyone in the organization. You have complete control over who can or can't add apps in your organization. You can also control the access to new apps that we publish to Teams app store.
+* Continue to [use permission policies](teams-app-permission-policies.md).
+* Use the feature if already auto-migrated or [manually migrate to app centric management](#migrate-to-app-centric-management). It replaces app permission policies.
+
+This functionality lets you specify which users and groups can use each app or a copilot agent and you can control it on a per-app basis.
+
+Whatever method your use, you can manage access to apps for individual users, supported groups, or everyone in the organization. You have complete control over who can or can't add apps in your organization. You can also control the access to new apps that we publish to Teams app store.
 
 ## How is app centric management different than permission policy
 
@@ -67,7 +73,7 @@ Previously, we automatically migrated organizations that weren't using any custo
 | Assisted          | Administrator | Org uses one or more custom policies    | Guided UI in admin center             |
 | Automatic         | Microsoft     | Org uses only the default global policy | Automatic, without admin intervention |
 
-We strongly recommend that you prepare for the migration and follow these steps to prepare:
+To migrate your organization, follow these steps:
 
 1. Log into Teams admin center and access Teams apps > [Permission policies](https://admin.teams.microsoft.com/policies/app-permission) page. Take inventory of the apps in the permission policies and identify the users and groups that the apps are allowed or blocked for. During the migration, you may have to manually edit the availability for some apps for the existing users and groups. For details, see step 5.
 
@@ -85,31 +91,31 @@ We strongly recommend that you prepare for the migration and follow these steps 
    * Available to specific users and groups: List of apps that are selectively allowed for at least one org user or a supported group.
    * Available to no one: List of apps that nobody in the org can use.
 
-1. In each tab, you can modify the app availability to one of the [three app availability types](#how-is-app-centric-management-different-than-permission-policy), as necessary. Edit availability option appears in **Available to specific users and groups** tab if the app availability isn't clear and admin input is needed to proceed. It is because the apps aren't present in the policies that you selected to migrate or have conflicting availability. You must assign such apps to before you can proceed.
+1. In each tab, you can modify the app availability to one of the [three app availability types](#how-is-app-centric-management-different-than-permission-policy), as necessary. Edit availability option appears in **Available to specific users and groups** tab if the app availability isn't clear and admin input is needed to proceed. Either the apps aren't present in the policies that you selected to migrate or selected policies contain conflicting availability. You must assign such apps to one of the availability types before you can proceed.
 
-    :::image type="content" source="media/acm-migration-availability.png" alt-text="Screenshot showing three tabs during migration that help you review and modify the app availability.":::
+    :::image type="content" source="media/acm-migration-availability.png" alt-text="Screenshot showing three tabs during migration that help you review and modify the app availability." lightbox="media/acm-migration-availability.png":::
 
    > [!TIP]
-   > If you see many apps in this tab, you likely have policies that have conflicting apps availability. For example, a policy that allows many apps and another policy that blocks the same apps. In such a scenario, we recommend that you uncheck the policy that leads to a conflict or you edit the availability in this tab.
+   > If you see many apps in this tab, you likely have policies that have conflicting apps availability. For example, a policy that allows an app and another policy that blocks the same app. In such a scenario, we recommend that you uncheck the policy that leads to a conflict or you edit the availability in this tab.
 
 1. You can validate the changes on a per-app or a per-user basis. Select a tab and type the name of the app or the user.
 
     :::image type="content" source="media/acm-verify-per-app.png" alt-text="Screenshot showing the option to verify available of for each user and users who receive a particular app."  lightbox="media/acm-verify-per-app-large.png":::
 
-1. On the final review UI, you can see the apps, their availability, and the Org-wide app settings that apply after the migration. You can download this information as a CSV file to evaluate further. For example, you can use the inventory mapping from Step 1 to ensure that the app availability is as intended. Once assured, select **Start migration** and follow the prompts.
+1. On the final review UI, you can see the apps, their availability, and the Org-wide app settings that apply after the migration. You can download this information as a CSV file to evaluate further. For example, you can use the inventory mapping from Step 1 to ensure that the app availability is as intended. Once assured, select **Start migration** and follow the prompts. Migration may take up to 24 hours to complete.
 
-    :::image type="content" source="media/acm-migration-review.png" alt-text="Screenshot showing the last UI to review all settings.":::
+    :::image type="content" source="media/acm-migration-review.png" alt-text="Screenshot showing the last UI to review all settings."  lightbox="media/acm-migration-review-large.png":::
 
-During migration, you can save a draft of the migration progress using the **Finish later** option. Also, you can cancel and delete the saved draft using the **Reset all changes** option.
+During migration, you can save a draft of the migration progress using the **Finish later** option. You can cancel the migration and delete the saved draft using the **Reset all changes** option.
 
 > [!NOTE]
-> The existing Manage apps UI gets disabled when you start the migration. If you aren't ready to proceed or want to make change to the exiting permission policies, open the wizard and select the Reset all changes option. You can restart the migration again.
+> While migrating, you can't make changes to app assignments. The existing UI gets disabled when you start the migration. If you aren't ready to proceed or want to make change to the exiting permission policies, open the migration wizard and select the Reset all changes option. You'll lose the progress and can restart the migration later.
 
-After migration, your blocked apps continue to remain unavailable to users. The statuses of such apps show as `unblocked` now, but the apps are assigned to `No one` in the `Available to` column on the Manage apps page. It means that org user can't use the app, just as you intended before.
+After migration, your blocked apps continue to remain unavailable to users. The statuses of such apps show as `unblocked` now, but the apps are assigned to `No one` in the `Available to` column on the Manage apps page. It means that org user can't use the app, just as you intended before. Users can view the apps in store and [request access to apps](user-requests-approve-apps.md).
 
 ## Add or modify app availability for users
 
-To let users add and use an app, you must assign users or groups to an app. It takes up to 24-72 hours for the changes to take effect. In rare cases, it may take up to 6 days for the availability changes to reflect in the client.
+To let users add and use an app or a copilot agent, you must assign users or groups to an app. To make any apps or copilot agents available in your organization, ensure that the settings to allow these are the same in Teams admin center and in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps) in the Integrated Apps page. It takes up to 24 hours for the changes to take effect. In rare cases, it may take up to 6 days for the availability changes to reflect in the client.
 
 1. In Teams admin center, go to the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page, search for the required app, and select the app name to open its app details page. You can't assign apps in bulk.
 
@@ -119,7 +125,7 @@ To let users add and use an app, you must assign users or groups to an app. It t
 
 1. Select the required option from **Manage who can install this app** menu. When assigning users or groups, search for the user or the group from the **Search for users or groups** menu. Select **Apply**.
 
-    :::image type="content" source="media/acm-add-modify-access.png" alt-text="Screenshot showing how to define the app availability from the app details page.":::
+    :::image type="content" source="media/acm-add-modify-access.png" alt-text="Screenshot showing how to define the app availability from the app details page." lightbox="media/acm-add-modify-access.png":::
 
 1. To remove one or more users or groups from an app, select the rows and select **Remove**.
 

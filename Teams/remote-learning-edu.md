@@ -1,8 +1,8 @@
 ---
 title: Get started with Microsoft Teams for remote learning
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: reference
 ms.service: msteams
 audience: admin
@@ -161,8 +161,8 @@ This approach allows you to either use SDS to create groups for each class (reco
 
 After class groups are prepared, educators can convert their groups into teams:
 
-1. Select the Teams tab in Teams.
-2. At the top of the client, select the **Suggested classes** icon.
+1. Select the **Chat** tab in Teams.
+2. At the top of the Teams client, select the **Suggested classes** icon.
 
 #### Benefits of educator-led team creation
 

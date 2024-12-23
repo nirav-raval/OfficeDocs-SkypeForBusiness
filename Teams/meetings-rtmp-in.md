@@ -24,7 +24,7 @@ description: Learn to set up RTMP-In for Teams meetings for admins.
 
 # Manage RTMP-In for Teams meetings, webinars, and town halls
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
 
 [!INCLUDE[Teams Premium](includes/teams-premium-ecm.md)]
 

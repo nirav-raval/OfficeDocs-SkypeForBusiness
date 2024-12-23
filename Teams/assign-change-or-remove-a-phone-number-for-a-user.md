@@ -1,7 +1,7 @@
 ---
 title: "Manage phone numbers for users"
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: julienp, roykuntz, jastark
 ms.date: 02/14/2024

@@ -51,7 +51,7 @@ To set up Shared Calling, you need to perform the following steps. These steps a
 
 1. Assign a location to the resource account for emergency calling.
 
-1. Configure resource accounts with service numbers. Communication Credits might be required if your tenant doesn't have the New commerce experience calling subscriptions, or you don't want to post pay for calls.
+1. Configure resource accounts with service numbers. Communication Credits might be required if your calling plan is a Microsoft Online Subscription Agreement (MOSA), or you don't want to post-pay for calls.
 
 1. Create voice routing policy without PSTN usages.
 

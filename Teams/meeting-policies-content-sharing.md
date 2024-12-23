@@ -25,7 +25,7 @@ description: Learn to manage meeting policy settings in Teams for content sharin
 
 # Manage meeting policies for content sharing
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
 Content sharing settings control how users present a screen or app during a chat, meeting, webinar, or town hall. You can configure admin settings for screen sharing mode, PowerPoint sharing, whiteboard, and shared notes. (For information about how to manage who can present and who can request control, see [Manage who can present and request control in Teams meetings](meeting-who-present-request-control.md).)
 

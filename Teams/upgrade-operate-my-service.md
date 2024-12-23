@@ -261,7 +261,7 @@ filter provided, or you can download the roadmap to an Excel file for further
 analysis. For each feature, the roadmap gives a short description, along with
 the anticipated release date.
 
-In the [Microsoft Teams blog](https://techcommunity.microsoft.com/t5/Microsoft-Teams-Blog/bg-p/MicrosoftTeamsBlog), you can learn about best practices, trends, and news about Teams product updates. Expect to find major feature updates to Teams to be announced here. You can also subscribe to the blog through an RSS feed. You can then add [the RSS feed](https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=MicrosoftTeamsBlog) directly into a Teams channel, so all the important news is delivered directly inside of Teams.
+In the [Microsoft Teams blog](https://microsoft.sharepoint.com/teams/WhatsNext/SitePages/Meetings-in-Microsoft-Teams.aspx?web=1), you can learn about best practices, trends, and news about Teams product updates. Expect to find major feature updates to Teams to be announced here. You can also subscribe to the blog through an RSS feed. You can then add [the RSS feed](https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=MicrosoftTeamsBlog) directly into a Teams channel, so all the important news is delivered directly inside of Teams.
 
 All features that are released are documented in the [Release Notes for
 Microsoft

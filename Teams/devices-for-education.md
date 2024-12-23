@@ -1,8 +1,8 @@
 ---
 title: Teams devices for Education
-author: mstonysmith
-ms.author: tonysmit
-manager: pamgreen
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: elaineho
 ms.date: 2/27/2024
 ms.topic: article

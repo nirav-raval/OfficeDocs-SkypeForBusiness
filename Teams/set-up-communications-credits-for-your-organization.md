@@ -1,10 +1,10 @@
 ---
-title: Set up Communications Credits for your organization
+title: Set up Communication Credits for your organization
 ms.author: danismith
 author: DaniEASmith
-manager: pamgreen
-ms.reviewer: mikedav
-ms.date: 04/19/2023
+manager: jtremper
+ms.reviewer: dachocro
+ms.date: 11/18/2024
 ms.topic: article
 ms.assetid: bb9f2a8d-f5be-41ed-9d19-25dea5ca9f52
 ms.tgt.pltfrm: cloud
@@ -24,113 +24,89 @@ f1.keywords:
 - CSH
 ms.custom: 
   - Licensing
-description: Learn how to set up communication credits (PSTN Consumption) billing licenses for your users and organization.
+  - admindeeplinkMAC
+  - admindeeplinkTEAMS
+description: Learn how to set up Communication Credits licenses for your users and organization.
 ---
 
-# Set up Communications Credits for your organization
+# Set up Communication Credits for your organization
 
-If you want to use toll-free numbers with Microsoft Teams, you need to set up Communications Credits. Microsoft recommends that you set up Communications Credits for your Microsoft Teams Calling Plan (Domestic, International, or Pay-As-You-Go) and Audio Conferencing users who need to dial out to **any destination**. Some destinations may not be included in your Calling Plans or Audio Conferencing subscriptions.
+Set up Communication Credits for your **Microsoft Teams Calling Plan** (Domestic, International, or Pay-As-You-Go) and **Audio Conferencing** users who need to dial out to **any destination**.
 
 When you sign up for Calling Plans and/or Audio Conferencing, you get some minutes depending on your country/region. For more information, see [Country or region availability list for Audio Conferencing and Calling Plans](./country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans.md#select-your-country-or-region-to-see-whats-available-for-your-organization).
 
-If you don't set up Communications Credits, and you run out of minutes for your organization, those users won't be able to make calls or dial out from Audio Conferencing meetings. You can get more information, including recommended funding amounts, by reading [What are Communications Credits?](what-are-communications-credits.md)
+If you don't set up Communication Credits, and your organization runs out of minutes, users won't be able to make calls or dial out from Audio Conferencing meetings. Learn more at [What are Communication Credits?](what-are-communications-credits.md)
   
 For more information about plans and pricing, [see the rates here](https://go.microsoft.com/fwlink/p/?LinkId=799523).
 
 > [!IMPORTANT]
-> **For customers with new commerce experience calling subscriptions:**
->
-> The new commerce experience (NCE) allows customers to pay for services after the services have been consumed, also known as post-usage billing.
->
-> Because Communication Credits is a pre-paid budget to support outgoing minutes, it’s not available to purchase for customers with NCE calling subscriptions.
->
-> Instead, NCE customers will pay for overage outgoing minutes after they've used them. There's no need for a pool of Communication Credits.
->
-> For more information about the new commerce experience for calling subscriptions, see [Enable pay-as-you-go for your subscription](/microsoft-365/commerce/subscriptions/manage-pay-as-you-go-services) and [New commerce overage for telco pay-as-you-go](/partner-center/new-commerce-telco-payg).
+> Microsoft Customer Agreement (MCA) customers don't need to purchase Communication Credits. Instead, MCA customers need to turn of Communication Credits automatic recharge. For instructions on how to turn off Communication Credits auto recharge, see [Turn off Communication Credits auto recharge for Microsoft MCA customers](turn-off-communication-credits-auto-recharge-mca-customers.md).
 
 To set up Communication Credits for your organization, follow these steps:
 
-1. [Assign an Audio Conferencing and/or Phone System with Calling Plan license to your users](#step-1-assign-an-audio-conferencing-andor-phone-system-with-calling-plan-license-to-your-users).
+1. [Assign an Audio Conferencing and/or Teams Calling Plan license to your users](#step-1-assign-an-audio-conferencing-andor-a-teams-calling-plan-license-to-your-users).
+2. [Set up Communication Credits for your organization](#step-2-set-up-communication-credits-for-your-organization).
+3. [Assign Communication Credits licenses to users](#step-3-assign-communication-credits-licenses-to-users).
 
-2. [Set up Communications Credits for your organization](#step-2-set-up-communications-credits-for-your-organization).
+You can update your payment options at any time. On the **Billing** > **Your products** page in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), select **Communication Credits** and make your updates.
 
-3. [Assign a Communications Credits license to users](#step-3-assign-a-communications-credits-license-to-users).
+## Step 1: Assign an Audio Conferencing and/or a Teams Calling Plan license to your users
   
-## Step 1: Assign an Audio Conferencing and/or Phone System with Calling Plan license to your users
-  
-Communication Credits can be enabled for users that have either an Audio Conferencing license, a Phone System with Calling Plan license, or both.
+Communication Credits are enabled for users who have either an **Audio Conferencing** license or **Teams Calling Plan** license.
   
 - Assign an **Audio Conferencing** license to your users. See [Assign Microsoft Teams add-on licenses](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
 
   After you assign this license, you need to set up Audio Conferencing. For step-by-step instructions, see [Try or purchase Audio Conferencing in Microsoft 365 or Office 365](try-or-purchase-audio-conferencing-in-office-365-for-teams.md).
 
-- Assign **Phone System** and a **Domestic**, **International**, or **Pay-As-You-Go** Calling Plan license to your users. See [Assign Microsoft Teams add-on licenses](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
-
-  > [!NOTE]
-  > Although it's not required for Communications Credits, you still need to assign a **Domestic Calling Plan**, **International Calling Plan**, or **Pay-As-You-Go** license.
+- Assign **Teams Phone** licenses and a **Domestic**, **International**, or **Pay-As-You-Go** Calling Plan license to your users. See [Assign Microsoft Teams add-on licenses](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
   
   After you assign these licenses, you need to get your phone numbers for your organization, and then assign those numbers to the people in your organization. For step-by-step instructions, see [Set up Calling Plans](set-up-calling-plans.md).
-
-For more information, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
   
-## Step 2: Set up Communications Credits for your organization
+## Step 2: Set up Communication Credits for your organization
 
-1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal) with your work or school account.
+1. Sign in to [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) using your admin credentials.
+1. In the left navigation menu, go to **Marketplace** > **All products**.
+1. Search for **Communication Credits**.
+1. Select the **Details** button under **Communication Credits** to add funds.
+    1. You can add funds manually at any time.
+    1. Funding Communication Credits also adds **Communication Credits** licenses to your tenant to assign to users.
+1. Fill in your billing details.
+1. Select the **Apply auto-recharge** hyperlink.
+1. On the **Auto-recharge settings** pane, check the **Auto-recharge settings** box.
+1. Choose your auto-recharge options:
+   - **Add this amount**: Enter the amount to add to your account when the auto-recharge happens.
+   - **When balance is below**: Enter in the amount that *triggers* the auto recharge. Once your balance falls below this amount, the recharge amount is added automatically to your account.
+1. Select the **Save** button.
+1. Double check all of your billing information and subscription options.
+1. Select the **Place order** button.
 
-2. In the left navigation of the Microsoft 365 admin center, go to **Billing** > **Purchase Services**.
+### Considerations when setting up Communication Credits
 
-3. Look for **Communication Credits** under the **add-ons** category or search for **Communication Credits** in the **Search all product categories** search box and select **Details**.
+- Funds apply only to Communication Credits at Microsoft published rates when the services are used. Any funds not used within *12 months* of the purchase date expire and are forfeited.
 
-4. Review the service information and select **Buy**. (Note: A fixed number of Communication Credits licenses are automatically selected in every order.)
+- When using the auto-recharge function, invoicing for Communication Credits is generated when the trigger amount is reached and a recharge transaction is processed. Communication credit amounts are used in a first-in, first-out manner.
 
-5. On the Checkout page, enter your payment information and fill in the required information:
+## Step 3: Assign Communication Credits licenses to users
 
-   - **Add funds** Enter the amount that you want to add to your account.
+If you don't assign **Communication Credits** licenses to your users, those users can't make calls or dial out from Audio conferencing meetings.
 
-   - **Auto-recharge** Enabling auto-recharge will automatically refill your account when the balance falls below the threshold that you set.
+A large amount of **Communication Credits** licenses are automatically added to your tenant when funding your Communication Credits balance, which you can then assign to users.
 
-     Microsoft recommends that you use the **Auto-recharge** setting to avoid any disruption of service if your Communications Credits balance reaches zero. You'll be sent an email when recharge transactions succeed, when recharge transactions fail (such as an expired credit card), and when your Communications Credits balance reaches zero.
+Assign a Communication Credits license to each user by following these steps, even to users assigned an **Microsoft 365 E5** plan:
 
-   - **Recharge amount** Enter the amount in the **Recharge with** box that you want added to your account once it reaches the trigger amount below.
+1. Sign into the [**Microsoft 365 admin center**](https://go.microsoft.com/fwlink/p/?linkid=2024339) using your admin credentials.
+1. In the left navigation menu, select **Users** > **Active Users**.
+1. Select a user's name from the list.
+1. Select the **Licenses and apps** tab.
+1. Check the **Communication Credits** license checkbox.
+1. Select the **Save changes** button.
 
-   - **Trigger amount** Enter the amount in **When the balance falls below** box that will be used to ' *trigger*  ' the auto-recharge. Once your balance falls below this amount, the recharge amount will be added automatically to your account.
+Also, you can use [PowerShell](/powershell/module/teams/) to assign licenses to multiple users in bulk.
 
-      > [!NOTE]
-     > Funds will be applied only to Communications Credits at Microsoft published rates when the services are used. Any funds not used within 12 months of the purchase date will expire and be forfeited.
-     >
-     > When using the auto-recharge function, invoicing for Communication Credits is generated when the trigger amount is reached and a recharge transaction is processed. Communication credit amounts are used in a first in first out manner. To learn how to check your monthly usage, read [Microsoft Teams PSTN usage report](/microsoftteams/teams-analytics-and-reports/pstn-usage-report).
+## Related articles
 
-6. Select **Place order**.
-
-    >[!IMPORTANT]
-    >If you are a volume licensing customer, you may wish to use your enterprise agreement for payment. If you have multiple enterprise agreement numbers, you will be able to select which enterprise agreement you would like to use for payment. You will also be given an opportunity to specify a purchase order number to associate with the enterprise agreement number (if applicable) once Support enables this.
-
-Each organization will have a different usage of Calling Plan volume and rates to consider. You need to get this type of usage data from your current service provider. Organizations already using Microsoft Teams as their service provider can get usage data by reviewing it in the **Microsoft Teams admin center** > **Analytics & reports** > **Usage reports** > **PSTN and SMS (preview) usage** report.
-  
-When you're setting up Communications Credits, you'll need to investigate call usage for your organization to determine the amounts you need. You can get call usage information by reviewing the **PSTN and SMS (preview) usage** report. This report lets you export the call data records to Excel if you need to store the data or create custom reports. To learn how to see usage, read [Microsoft Teams PSTN usage report](/microsoftteams/teams-analytics-and-reports/pstn-usage-report).
-  
-## Step 3: Assign a Communications Credits license to users
-
-1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal) with your work or school account.
-
-2. In the left navigation of the Microsoft 365 admin center, go to **Users** > **Active users**, and then select a user from the list.
-
-3. Choose **Licenses and Apps**.
-
-4. Toggle **Communications Credits** to **On** to assign this license, and then select **Save**.
-
-    > [!NOTE]
-    > Even if you have users who are assigned an **Enterprise E5** license, it's still recommended that you do this.
-
-    > [!TIP]
-    > You can use [Powershell](/powershell/module/teams/) to assign licenses and apps to multiple users with one command.
-  
-## For more information
-
-- You can see more information by [signing in to the Microsoft 365 admin center](https://portal.office.com/adminportal/home?add=sub&amp;adminportal=1#/catalog) and going to **Billing** > **Subscriptions** > **Add subscriptions**.
-  
-- For more information about licenses, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
-
-- For more information about Calling Plans, see [Set up Calling Plans](set-up-calling-plans.md) and [Calling Plans for Microsoft 365](calling-plans-for-office-365.md).
-
-- For more information about adding funds and managing Communication Credits, see [Add funds and manage Communications Credits](add-funds-and-manage-communications-credits.md).
+- [What are Communication Credits?](what-are-communications-credits.md)
+- [Turn off Communication Credits auto recharge for Microsoft MCA customers](turn-off-communication-credits-auto-recharge-mca-customers.md).
+- [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+- [Set up Calling Plans](set-up-calling-plans.md).
+- [Calling Plans for Microsoft 365](calling-plans-for-office-365.md).

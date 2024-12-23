@@ -1,7 +1,7 @@
 ---
 title: Manually submit a port order
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: mikedav, roykuntz, jastark
 ms.date: 10/24/2019

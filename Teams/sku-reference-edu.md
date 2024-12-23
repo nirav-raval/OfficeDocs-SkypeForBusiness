@@ -1,8 +1,8 @@
 ---
 title: Education SKU reference
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: 
 ms.date: 03/10/2020
 ms.topic: article

@@ -51,10 +51,12 @@ This article defines terms as specified in the following list.
 - [Phase 5: Add Edge Server to pilot pool](phase-5-add-edge-server-to-pilot-pool.md)
     
 - [Phase 6: Move from pilot deployment into production](phase-6-move-from-pilot-deployment-into-production.md)
+
+- [Phase 7: Migrate Persistent Chat pool](migrate-persistent-chat-pool.md)  
+
+- [Phase 8: Complete post-migration tasks](phase-7-complete-post-migration-tasks.md)
     
-- [Phase 7: Complete post-migration tasks](phase-7-complete-post-migration-tasks.md)
-    
-- [Phase 8: Decommission legacy pools](phase-8-decommission-legacy-pools.md)
+- [Phase 9: Decommission legacy pools](phase-8-decommission-legacy-pools.md)
     
 
 

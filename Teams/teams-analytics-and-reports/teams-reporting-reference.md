@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams analytics and reporting
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: heidip
+author: MicrosoftHeidi
+manager: jtremper
 audience: Admin
 ms.topic: conceptual
 ms.service: msteams
@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-collaboration
   - m365initiative-meetings
-description: In this article, you will learn about the Teams reports that are available in the Microsoft Teams admin center.
+description: In this article, learn about the Teams reports that are available in the Microsoft Teams admin center.
 appliesto: 
   - Microsoft Teams
 ms.custom: seo-marvel-apr2020
@@ -24,7 +24,7 @@ ms.custom: seo-marvel-apr2020
 
 # Microsoft Teams analytics and reporting
 
-A new analytics and reporting experience for Microsoft Teams is available in the Microsoft Teams admin center. You can run different reports to get insights into how users in your organization are using Teams. For example, you can see how many users communicate through channel and chat messages and the kinds of devices they use to connect to Teams. Your organization can use the information from the reports to better understand usage patterns, help make business decisions, and inform training and communication efforts.
+An analytics and reporting experience for Microsoft Teams is available in the Microsoft Teams admin center. You can run different reports to get insights into how users in your organization are using Teams. For example, you can see how many users communicate through channel and chat messages and the kinds of devices they use to connect to Teams. Your organization can use the information from the reports to better understand usage patterns, help make business decisions, and inform training and communication efforts.
 
 ## How to access the reports
 
@@ -47,11 +47,11 @@ Here's a list of the Teams reports available in the Microsoft Teams admin center
 We're continually improving the Teams reporting experience and adding features and functionality. Over time, we'll be building additional capabilities into the reports and adding new reports in the Microsoft Teams admin center.
 
 |Report  |Public |GCC |GCCH |DoD |What's measured? |
-|---------|---------|---------|---------|---------|---------|
+|--------|-------|----|-----|----|-----------------|
 |[Teams usage report](teams-usage-report.md)  |Yes|Yes|Yes|Yes|  Active users<br/>Active users in teams and channels<br/>Active channels<br/>Messages<br/>Privacy setting of  teams<br/>Active guests in a team  <br/>Active external users (in shared channels)<br/>Shared channel-specific details within a team (new)|
 |[Teams user activity report](user-activity-report.md)  |Yes|Yes|Yes|Yes|Active internal and external (In shared channels) users<br/> Messages a user posted in a team chat<br/>Messages a user posted in a private chat<br/>  1:1 calls a user participated in<br/> Number of meetings user organized <br/>Number of meetings user participated in<br/>Meetings Audio, Video and Screen sharing time<br/>   Last activity date of a user  <br>Shared channel interactions of a user (new)</br>   |
 |[Teams device usage report](device-usage-report.md)   |Yes|Yes|Yes|Yes|  Windows users<br/>Mac users<br/>iOS users<br/>Android phone users     |
-|[Teams app usage report (new)](app-usage-report.md)   |Yes|Yes|No|No|  Total active users of the app<br/>Total active teams using the app<br/>Total apps installed (new)<br/>Total inactive apps <br/>Total 1P vs 3P vs LoB app usage (new)     |
+|[Teams app usage report](app-usage-report.md)   |Yes|Yes|No|No|  Total active users of the app<br/>Total active teams using the app<br/>Total apps installed (new)<br/>Total inactive apps <br/>Total 1P vs 3P vs LoB app usage (new)     |
 |[Teams Premium feature usage report](teams-premium-usage-report.md)   |Yes|No|No|No|  Total reached users<br/>Total meetings<br/>|
 |[Teams live event usage report](teams-live-event-usage-report.md)   |Yes|Yes|No|No|  Total views<br>Start time<br>Event status<br>Organizer<br>Presenter<br>Producer<br>Recording setting<br>Production type    |
 |[Teams PSTN blocked users report](pstn-blocked-users-report.md)   |Yes|Yes|No|No|  Display name<br>Phone number<br>Reason<br>Action type<br>Action date and time   |
@@ -75,10 +75,10 @@ To make the identifiable information in usage reports anonymous, you have to be 
 1. In Microsoft 365 admin center, go to the **Settings** \> **Org Settings**, and under **Services** tab, choose **Reports**.
 
 2. Select **Reports**, and then choose to **Display concealed user, group, and site names in all reports**. This setting gets applied both to the usage reports in Microsoft 365 admin center as well as Teams admin center.
-  
+
 3. Select **Save changes**.
 
 > [!NOTE]
-> Enabling this setting will de-identify user, group, and site name information in the [Teams user activity report](user-activity-report.md), [Teams device usage report](device-usage-report.md), and [Teams usage report](teams-usage-report.md). Starting September 1, 2021, this setting is enabled by default for everyone as part of our ongoing commitment to help protect important information and enable companies to support their local privacy laws.
+> Enabling this setting de-identifies user, group, and site name information in the [Teams user activity report](user-activity-report.md), [Teams device usage report](device-usage-report.md), and [Teams usage report](teams-usage-report.md). From September 1, 2021, this setting is enabled by default for everyone as part of our ongoing commitment to help protect important information and enable companies to support their local privacy laws.
 >
 >This setting also applies to Microsoft 365 usage reports in Microsoft 365 admin center, Microsoft Graph, and Power BI.

@@ -1,9 +1,9 @@
 ---
 title: Quick start - Set up Microsoft Teams for Education
 description: IT administrators at education institutions can use this quick start guide to deploy Microsoft Teams for Education across their organization.
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 audience: admin
 displayType: one-column
 ms.date: 08/30/2018
@@ -96,6 +96,8 @@ You can create teams for:
 - PLCs.
 - Staff members.
 - Anyone.
+
+Teams for Education allows admins to create team templates that educators can use to quickly set up teams. For information on how to create team templates, see [Get started with team templates in the Teams admin center](get-started-with-teams-templates-in-the-admin-console.md). To create custom team templates, see [Create a custom team template in Microsoft Teams](create-a-team-template.md).
 
 Once your pilots are complete, you’ll have the feedback you need to plan your broad Teams deployment.
 

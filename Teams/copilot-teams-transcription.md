@@ -28,19 +28,22 @@ description: Learn how to manage Microsoft 365 Copilot in Teams meetings and eve
 
 # Manage Microsoft 365 Copilot in Teams meetings and events
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
 Microsoft 365 Copilot in Teams meetings and events is an artificial intelligence (AI) tool that captures important conversation points. Each meeting and webinar participant with a Microsoft 365 Copilot license can ask prompts that are only visible to them. Participants and organizers can learn things like who said what and where people agree or disagree. Microsoft 365 Copilot in Teams can also recommend follow-up tasks, all in real time during a meeting. Organizers, co-organizers, and presenters can use Copilot during town hall events. As an admin, you can manage how users in your org use Copilot for Teams meetings and events.
 
 There are two ways for users in your organization to use Copilot in meetings and events:
 
-**1. During and after the meeting**<br>
+> [!IMPORTANT]
+> When organizers turn off Copilot for their meeting or event, recording and transcription are also turned off.
+
+**1. During and after the meeting**
 
 When organizers create a meeting or event, they can set Copilot's value to **During and after the meeting** from the dropdown in their meeting options. Once someone starts transcription, licensed users can select the Copilot button for use during, and after the meeting or event.
 
 To learn more about how organizers can use Copilot during and after the meeting, see [Get started with Microsoft 365 Copilot in Teams in Microsoft Teams meetings](https://support.microsoft.com/office/get-started-with-copilot-in-microsoft-teams-meetings-0bf9dd3c-96f7-44e2-8bb8-790bedf066b1).
 
-**2. Only during the meeting**<br>
+**2. Only during the meeting**
 
 When organizers create a meeting or event, they can set Copilot's value to **Only during the meeting** from the dropdown in their meeting options. Once someone with a Microsoft 365 Copilot license selects the Copilot button during the meeting or event, Copilot runs for all licensed users. This option relies on speech-to-text audio processing data that isn't saved after the meeting or event ends. Users can't access Copilot in Teams and its history after the meeting or event.
 
@@ -100,7 +103,7 @@ You can apply your Copilot meeting policies to groups or individual users. You c
 
 To manage how users in your org use Copilot in Teams meetings and events, use the **`-Copilot`** parameter within the PowerShell [**CsTeamsMeetingPolicy**](/powershell/module/teams/set-csteamsmeetingpolicy) cmdlet.
 
-To allow users to use Copilot **Only during the meeting** in meetings and events created by organizers with this policy,:
+To allow users to use Copilot **Only during the meeting** in meetings and events created by organizers with this policy:
 
 ```PowerShell
 Set-CsTeamsMeetingPolicy -Identity <policy name> -Copilot Enabled

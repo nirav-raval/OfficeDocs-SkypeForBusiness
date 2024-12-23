@@ -1,14 +1,14 @@
 ---
 title: Preinstall Teams apps for your org users
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: conceptual
 ms.service: msteams
 ms.subservice: teams-apps
 ms.custom: intro-get-started
 audience: admin
-ms.date: 07/31/2024
+ms.date: 11/30/2024
 ms.collection: 
   - M365-collaboration
   - tier2
@@ -24,7 +24,7 @@ ms.localizationpriority: medium
 ---
 # Preinstall apps for your users
 
-IT admins can install Microsoft Teams apps that work on Microsoft Outlook and the Microsoft 365 app (formerly known as Office.com) for some or all users in their organization. You can easily preinstall the apps on the supported hosts. Alternately, users install apps on their own if you [allow users to use apps](manage-apps.md#allow-or-block-apps). You can proactively install apps for users so that you help them discover apps easily, ensure app retention, and save user's effort to install. For example, you can install IT helpdesk or ticketing app for all new employees to provide an easy and quick way for new joiners to seek support.
+Admins can install Microsoft Teams apps that work on Microsoft Outlook and the Microsoft 365 app (formerly known as Office.com) for some or all users in their organization. You can easily preinstall the apps on the supported hosts so that your users receive the apps easily. Alternately, users install apps on their own if you [make apps available to users for use](manage-apps.md#allow-or-block-apps). You can proactively install apps for users so that you help them discover apps easily, ensure app retention, and save user's effort to install. For example, you can install IT helpdesk or ticketing app for all new employees to provide an easy and quick way for the new joiners to seek IT support.
 
 ## Preinstall apps in user's Teams client
 

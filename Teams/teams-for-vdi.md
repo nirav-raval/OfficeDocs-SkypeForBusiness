@@ -6,7 +6,7 @@ manager: jtremper
 ms.topic: article
 ms.service: msteams
 ms.reviewer: amitsri
-ms.date: 10/13/2023
+ms.date: 10/30/2024
 audience: admin
 description: Learn how to run classic Microsoft Teams in a Virtualized Desktop Infrastructure (VDI) environment.
 ms.localizationpriority: medium
@@ -23,6 +23,9 @@ appliesto:
 
 # Classic Teams for Virtualized Desktop Infrastructure
 
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
+
 >[!Important]
 >This article describes the requirements and limitations of using classic Microsoft Teams in a virtualized environment.
 >
@@ -30,7 +33,7 @@ appliesto:
 
 ## What is VDI?
 
-Virtual Desktop Infrastructure (VDI) is virtualization technology that hosts a desktop operating system and applications on a centralized server in a data center. This enables a complete, and personalized, desktop experience for users with a fully secured and compliant centralized source.
+Virtual Desktop Infrastructure (VDI) is virtualization technology that hosts a desktop operating system and applications on a centralized server in a data center. VDI enables a complete, and personalized, desktop experience for users with a fully secured and compliant centralized source.
 
 Teams in a virtualized environment supports chat and collaboration. And with the Azure Virtual Desktop, Citrix, and VMware platforms, calling and meeting functionality is also supported.
 
@@ -50,7 +53,7 @@ Using Teams in a virtualized environment requires the following components.
 - **Virtualization broker**: The resource and connection manager to the virtualization provider, such as Azure.
 - **Virtual desktop**: The Virtual Machine (VM) stack that runs Teams.
 - **Thin client**: The device that the user physically interfaces with.
-- **Teams desktop app**: The Teams desktop client app in the VM. This can be divided into three major sub-components:
+- **Teams desktop app**: The Teams desktop client app in the VM. This component can be divided into three major sub-components:
   - Desktop client: Win32 native app, installed via .exe (auto update enabled) or .msi (auto update disabled). *Version Example: 1.6.00.18681*
   - Web client: a common component for both Teams native desktop app and web (browser) app, it auto updates every time the app starts (even in non-persistent environments). *Version Example: 1.0.0.2023052414.*
   - Shim: a VDI and VDI partner specific component that is bundled with the Web client, hence it auto updates. *Version Example: 1.14.0.1 (Citrix), 21494295 (VMware), 1.1.2206.13001 (Azure Virtual Desktop/W365)*
@@ -112,7 +115,7 @@ You can deploy the Teams desktop app for VDI using a per-machine installation or
 
 For a dedicated persistent setup, both per-machine and per-user installation will work. However, for a non-persistent setup, Teams requires a per-machine installation in order to work efficiently. See the [Non-persistent setup](#non-persistent-setup) section.
 
-With per-machine installation, automatic updates are disabled. This means that to update the Teams app, you must uninstall the current version to update to a newer version. With per-user installation, automatic updates are enabled.
+With per-machine installation, automatic updates are disabled. To update the Teams app, you must uninstall the current version to update to a newer version. With per-user installation, automatic updates are enabled.
 
 > [!IMPORTANT]
 > Keep the Teams desktop app in your VDI environment up to date. Teams desktop app versions with release dates that are more than 90 days older than the [current version's release date](/officeupdates/teams-app-versioning) aren't supported. Unsupported Teams desktop app versions show a blocking page to users and request that they update their app.
@@ -140,7 +143,7 @@ The following is the recommended minimum VM configuration.
 
 In a non-persistent setup, users' local operating system changes are not retained after users log off. Such setups are commonly shared multi-user sessions. VM configuration varies based on the number of users and available physical server resources.
 
-For a non-persistent setup, the Teams desktop app must be installed per-machine to the golden image. This ensures an efficient launch of the Teams app during a user session. To learn more, see the [Install or update the Teams desktop app on VDI](#install-or-update-the-teams-desktop-app-on-vdi) section.
+For a non-persistent setup, the Teams desktop app must be installed per-machine to the golden image, which ensures an efficient launch of the Teams app during a user session. To learn more, see the [Install or update the Teams desktop app on VDI](#install-or-update-the-teams-desktop-app-on-vdi) section.
 
 Using Teams in a non-persistent setup also requires a profile-caching manager for efficient Teams runtime data synchronization. Efficient data synchronization ensures that the appropriate user-specific information (such as a user's data, profile, or settings) is cached during the user's session. Make sure data in these two folders are synced:
 
@@ -148,7 +151,7 @@ Using Teams in a non-persistent setup also requires a profile-caching manager fo
 - `C:\Users\username\AppData\Roaming\Microsoft\Teams (%AppData%\Microsoft\Teams)`
 
 > [!NOTE]
-> A roaming folder (or, if you are using folder redirection, a caching manager) is required to ensure that the Teams app has the runtime data and files required to run the application. This is necessary to mitigate network latency issues or network glitches, which would otherwise cause application errors and a slow experience due to unavailable data and files.
+> A roaming folder (or, if you are using folder redirection, a caching manager) is required to ensure that the Teams app has the runtime data and files required to run the application. This folder is necessary to mitigate network latency issues or network glitches, which would otherwise cause application errors and a slow experience due to unavailable data and files.
 
 There are a variety of caching manager solutions available, such as [FSLogix](/fslogix/overview). Consult your caching manager provider for specific configuration instructions.
 
@@ -252,7 +255,7 @@ In addition to chat and collaboration, Teams on VDI with calling and meetings is
 ![Diagram showing Teams on VDI architecture.](media/teams-on-vdi-architecture.png)
 
 > [!IMPORTANT]
-> If you currently run Teams without AV optimization in VDI and you use features that are not supported yet for optimization (such as Give and take control when app sharing), you have to set virtualization provider policies to turn off Teams redirection. This means that Teams media sessions won't be optimized. For steps on how to set policies to turn off Teams redirection, contact your virtualization provider.
+> If you currently run Teams without AV optimization in VDI and you use features that are not supported yet for optimization (such as Give and take control when app sharing), you have to set virtualization provider policies to turn off Teams redirection. Which means that Teams media sessions won't be optimized. For steps on how to set policies to turn off Teams redirection, contact your virtualization provider.
 
 ### Network requirements
 
@@ -421,7 +424,7 @@ Teams VDI policies are available in the Teams module. These policies are active 
 - `Set-CsTeamsVdiPolicy`
 
 > [!NOTE]
-> This is only for non-optimized environments.
+> This policy is only for non-optimized environments.
 
 ### Connect to Microsoft Teams PowerShell
 
@@ -442,7 +445,7 @@ When users whose VDI `DisableCallsAndMeetings` policy is set to `$true` sign int
 All types of calling should be disabled.
 
 > [!NOTE]
-> This is only for non-optimized environments.
+> This policy is only for non-optimized environments.
 
 ```PowerShell
 New-CsTeamsVdiPolicy -Identity DisableCallsAndMeetingsTrue -DisableCallsAndMeetings $true -DisableAudioVideoInCallsAndMeetings $false
@@ -465,7 +468,7 @@ When users whose VDI `DisableAudioVideoInCallsAndMeetings` policy is set to `$tr
 - Can't hold person-to-person audio and video calls from VDI.
 
 > [!NOTE]
-> This is only for non-optimized environments.
+> This policy is only for non-optimized environments.
 
 ```powershell
 $PolName = "DisableCallsAndMeetingsAV"
@@ -499,7 +502,7 @@ if($cleanup){
 - In Citrix persistent VDI environments where Teams was installed using the .exe, if the user disconnects from the Virtual Machine while Teams is running, Teams auto-updates can result in the user being in a non-optimized state for Audio/Video when they reconnect to their sessions. We recommend that users quit Teams before they disconnect from Citrix Virtual Desktops to avoid this scenario. This behavior is fixed in Teams 1.6.00.12455.
 - Teams should be deployed either per user or per machine. Deployment of Teams for concurrent per user and per machine is not supported. To migrate from either per machine or per user to one of these modes, follow the uninstall procedure and redeploy to either mode.
 - In Citrix Remote PC environments users might not be optimized if they roam between the office and home.  
-For example, a user launching Microsoft Teams from the office (i.e. connected to the device locally via console) that later locks the device and reconnects to the Windows session via HDX will not be optimized. This requires a Microsoft Teams restart to properly detect the new state. This can be prevented by deploying the following registry key on the Remote PC:  
+For example, a user launching Microsoft Teams from the office (i.e. connected to the device locally via console) that later locks the device and reconnects to the Windows session via HDX will not be optimized. This circumstance requires a Microsoft Teams restart to properly detect the new state. This circumstance can be prevented by deploying the following registry key on the Remote PC:  
 HKLM/Software/Microsoft/Teams
 
 Name: VDIOptimizationMode
@@ -553,7 +556,7 @@ The following are known issues and limitations for calling and meetings:
 
 #### Teams crashes or the Teams sign in screen is blank
 
-This is a known issue with Citrix VDA versions 1906 and 1909. To work around this issue, add the following registry `DWORD` value, and set it to `204` (hexadecimal):
+This issue is a known issue with Citrix VDA versions 1906 and 1909. To work around this issue, add the following registry `DWORD` value, and set it to `204` (hexadecimal):
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\CtxHook\AppInit_Dlls\SfrHook\Teams.exe
 

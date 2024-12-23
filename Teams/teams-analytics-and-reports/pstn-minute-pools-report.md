@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams PSTN minute pools report
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 audience: Admin
 ms.topic: article

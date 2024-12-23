@@ -1,8 +1,8 @@
 ---
 title: Microsoft Education FAQ for IT admins
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: article
 ms.service: msteams
 ms.reviewer: rowille

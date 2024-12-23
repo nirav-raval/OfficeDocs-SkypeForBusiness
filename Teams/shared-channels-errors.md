@@ -1,8 +1,8 @@
 ---
 title: Shared channels errors in Microsoft Teams
-author: jacktremper
-ms.author: jtremper
-manager: pamgreen
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: jasonlewis
 ms.date: 06/28/2024
 ms.topic: article
@@ -23,13 +23,14 @@ description: Learn how to use fix errors in shared channels in Microsoft Teams.
 
 # Shared channels errors in Microsoft Teams
 
-If your users see error messages when trying to add people from outside your organization to shared channels, check the settings in this article. 
+If your users see error messages when trying to add people from outside your organization to shared channels, check the settings in this article.
 
 ## Due to admin policy, you can't add external people to the channel. For more info, talk to your admin.
 
 Teams uses Microsoft 365 Groups for team membership. The Microsoft 365 Groups guest settings must be turned on in order for people outside the organization to be added to a shared channel. If your users see this error, check the Microsoft 365 Groups settings for people outside the organization.
 
-To set Microsoft 365 Groups settings for people outside the organization
+To set Microsoft 365 Groups settings for people outside the organization:
+
 1. In the Microsoft 365 admin center, in the left navigation pane, expand **Settings**.
 1. Click **Org settings**.
 1. In the list, click **Microsoft 365 Groups**.
@@ -40,8 +41,9 @@ To set Microsoft 365 Groups settings for people outside the organization
 
 Teams channel policies determine how users can interact with shared channels. If users see this error message, check the channel policy for that user.
 
-To set the policy for inviting people outside the organization to shared channels
-1. In the left navigation of the Microsoft Teams admin center, go to Teams > Teams policies.
+To set the policy for inviting people outside the organization to shared channels:
+
+1. In the left navigation of the Microsoft Teams admin center, go to **Teams** > **Teams policies**.
 1. Select the policy that your user is assigned to.
 1. Ensure that **Invite external users to shared channels** is **On**.
 1. If you made changes, select **Apply**.
@@ -52,7 +54,8 @@ For more information about Teams channel policies, see [Manage channel policies 
 
 If your users see this error, then they're prevented from sharing the channel with people in the other organization by the Microsoft Entra cross-tenant access settings. This may be due to the inbound settings in your organization or the outbound settings in the other organization.
 
-To check the inbound settings for your organization
+To check the inbound settings for your organization:
+
 1. In [Microsoft Entra ID](https://aad.portal.azure.com), select **External Identities**, and then select **Cross-tenant access settings**.
 1. Select the inbound access link for the organization that you want to check.
 1. On the **B2B direct connect** tab, choose **Customize settings**.

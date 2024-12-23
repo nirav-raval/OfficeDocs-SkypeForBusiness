@@ -1,7 +1,7 @@
 ---
 title: Supported rate centers and coverage for Calling Plans
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: davlick, julienp
 ms.date: 08/28/2020

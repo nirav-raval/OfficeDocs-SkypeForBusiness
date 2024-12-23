@@ -1,8 +1,8 @@
 ---
 title: Use supervised chats
-author: MicrosoftHeidi
-ms.author: heidip
-manager: jacktremper
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.reviewer: angch
 ms.date: 01/22/2021
 ms.topic: article

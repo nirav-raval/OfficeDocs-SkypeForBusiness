@@ -21,6 +21,9 @@ appliesto:
 
 # Sample script - classic Microsoft Teams firewall PowerShell script
 
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
+
 This sample script, which needs to run on client computers in the context of an elevated administrator account, will create a new inbound firewall rule for each user folder found in c:\users. When Teams finds this rule, it will prevent the Teams application from prompting users to create firewall rules when the users make their first call from Teams.
 
 ```powershell

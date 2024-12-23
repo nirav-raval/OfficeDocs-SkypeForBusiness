@@ -1,7 +1,7 @@
 ---
 title: Direct Routing SBA
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 08/15/2024
 ms.topic: article
@@ -30,7 +30,7 @@ Occasionally, a customer site using Direct Routing to connect to Microsoft Teams
 
 In this scenario, assume that the customer site--called a branch--temporarily can't connect to the Microsoft cloud through Direct Routing. However, the intranet inside the branch is still fully functional, and users can connect to the Session Border Controller (SBC) that is providing PSTN connectivity.
 
-This article describes how to use a Survivable Branch Appliance (SBA) to enable Teams Phone to continue to make and receive Public Switched Telephone Network (PSTN) calls in case of an outage.
+This article describes how to use a Survivable Branch Appliance (SBA) with Teams Phone to support continuity of making and receiving Public Switched Telephone Network (PSTN) calls in case of an outage.
 
 ## Prerequisites
 
@@ -231,17 +231,23 @@ For step-by-step guidance on how to configure your Session Border Controller wit
 
 The following are known issues and considerations:
 
-- Because the SBA relies on authentication tokens that are valid for 24 hours and are renewed daily, the SBA can support outages for up to 24 hours from the last authentication. If an outage occurs 20 hours after the last authentication token renewal, the SBA will be operational only for the remaining 4 hours.
+- In SBA mode
+    - the SBA supports expired client authentication tokens for up to 7 days from the token expiration.
+    - the Teams client won't be able to connect to the SBA if the Teams client is triggered to negotiate a new token. For example, if a user quits and restarts their Teams client or restarts their device.
+    - the Teams client won't be able to validate itself with an SBA that it hasn't previously connected with, in the last 24 hours.
 
-- If the tenant is using Continuous Access Evaluation (CAE) tokens, the SBA will be operational only for about 30 minutes, due to the nature of continuous access evaluation. An alternative would be to dissable CAE for the tenant.
+- In SBA mode, the following user actions aren't supported:
+    - switching their Teams client to another tenant
+    - sharing location information during an emergency call (E911). Users can still make emergency call but location information won't be shared.
+    - reaching other Teams users with reverse number lookup against Microsoft Entra ID Contacts. A dialed number will still be processed by SBA and routed over PSTN.
+
+
+- If the tenant is using Continuous Access Evaluation (CAE) tokens, the SBA will be operational only for about 30 minutes, due to the nature of continuous access evaluation. An alternative would be to disable CAE for the tenant.
 
 - When you add new Survivable Branch Appliances, it might take time before you can use them in Survivable Branch Appliance policies.
 
-- When you assign a Survivable Branch Appliance policy to a user, it might take time before the SBA is shown in the output of Get-CsOnlineUser. 
+- When you assign a Survivable Branch Appliance policy to a user, it might take time before the SBA is shown in the output of Get-CsOnlineUser.
 
-- Reverse number lookup against Microsoft Entra ID Contacts isn't performed. 
-
-- Making an emergency call to an emergency number configured for dynamic emergency calling (E911) is not supported.
 
 ## Report an issue
 

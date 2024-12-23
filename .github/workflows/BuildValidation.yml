@@ -1,0 +1,21 @@
+name: Build validation
+
+permissions:
+  pull-requests: write
+  statuses: write
+      
+on: 
+  issue_comment:
+    types: [created]
+
+jobs:
+
+  build-status:
+    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-BuildValidation.yml@workflows-test
+    with:
+      PayloadJson: ${{ toJSON(github) }}
+    secrets:
+      AccessToken: ${{ secrets.GITHUB_TOKEN }}
+
+
+  

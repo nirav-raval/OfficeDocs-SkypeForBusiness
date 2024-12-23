@@ -1,9 +1,9 @@
 ---
 title: Plan your voice solution in Microsoft Teams
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
-ms.date: 08/03/2023
+ms.date: 12/17/2024
 ms.topic: article
 ms.service: msteams
 audience: admin
@@ -15,7 +15,7 @@ ms.collection:
   - m365solution-scenario
   - highpri
   - Tier1
-ms.reviewer: crowe
+ms.reviewer: scottfrancis
 f1.keywords:
 - CSH
 ms.custom: 
@@ -38,19 +38,22 @@ You might want the simplest solution&mdash;Microsoft Teams Phone with Calling Pl
 
 If you answer yes to the following, then Teams Phone with Calling Plan is the right solution for you:
 
-- Calling Plan is available in your region.
+- Calling Plan is available in your region. To confirm Calling Plan availability, see [Confirm Microsoft Calling Plan availability](calling-plan-overview.md).
 - You don't need to retain your current PSTN carrier.
 - You want to use Microsoft-managed access to the PSTN.
 
-If you’re a small to medium business (300 or fewer people), Microsoft now bundles Teams Phone with a Domestic Calling Plan. 
+If you're a small to medium business (300 or fewer people), Microsoft now bundles Teams Phone with a Domestic Calling Plan. 
 
-However, your situation might be more complex. For example, you might have offices in locations where Calling Plan isn't available. Or you might need a combination solution that supports a complex, multi-national deployment, with different requirements for different geographic locations. Microsoft supports a combination of solutions:
+However, your situation might be more complex. For example, you might have offices in locations where Calling Plan isn't available. Or you might need to accommodate existing, on-premises telephony infrastructure. Microsoft can solve for any PSTN or on-premises integration, with a variety of integration options.
 
 - Teams Phone with Calling Plan
 - Teams Phone with your own PSTN carrier with Operator Connect
-- Teams Phone with your own PSTN mobile carrier with Teams Phone Mobile 
+- Teams Phone with your own PSTN mobile carrier with Teams Phone Mobile
 - Teams Phone  with your own PSTN carrier with Direct Routing
-- A combination solution that uses Teams Phone with Calling Plan, Teams Phone with Operator Connect, and/or Teams Phone with Direct Routing
+
+You aren't limited to one integration. Just because you have a portion of users who are located in a country or region where Microsoft doesn't have a Calling Plan option doesn't mean all of your users have to be served by the one solution for those remote users.
+
+You can have a combination solution that uses Teams Phone with Calling Plan, Teams Phone with Operator Connect, Teams Phone with Teams Phone Mobile, and/or Teams Phone with Direct Routing.
 
 For a visual summary of all the voice solution options, see the voice solutions poster.
 
@@ -61,28 +64,34 @@ If you're interested in PSTN conferencing for meetings, you'll want to read abou
 
 ## What do you need to read?
 
-**Required for all.** Some of the sections in this article pertain to all organizations. For example, everyone should read about Teams Phone and understand the options for connecting to the Public Switched Telephone Network (PSTN).
+### Required for all
+
+Some of the sections in this article pertain to all organizations. For example, everyone should read about Teams Phone and understand the options for connecting to the Public Switched Telephone Network (PSTN).
 
 | Required for all | Description |
 | :------------|:-------|
 | [**Teams Phone**](#teams-phone) | Microsoft's technology for enabling call control and Private Branch Exchange (PBX) capabilities in the Microsoft 365 cloud with Microsoft Teams. |
 | [**Public Switched Telephone Network (PSTN) connectivity options**](#public-switched-telephone-network-connectivity-options) | Choose Microsoft as your telephony carrier or connect your own telephony carrier to Microsoft Teams by using Operator Connect or Direct Routing. Combined with Teams Phone, PSTN connectivity options enable your users to make phone calls all over the world.|
 
-**Depending on your requirements.** Some of the sections in this and related articles are pertinent depending on your existing deployment and requirements. For example, Location-Based Routing is only required for Direct Routing customers in geographic locations that do not allow toll bypass.
+### Depending on your requirements
 
-Consider which of these other configurations you might need:
+Next, consider which of these other configurations you might need:
 
 ![Diagram 2 shows other voice components, such as Phone numbers from Microsoft, Dial plans and call routing, and so on.](media/voice-consider-additional-components.png)
+
+Some of the sections in this and related articles are pertinent depending on your existing deployment and requirements, for example:
+
+- **Location-Based Routing** is only required for Direct Routing customers in geographic locations that don't allow toll bypass.
+- **Phone number management** is only required for Microsoft Calling Plan customers.
 
 | Depending on your requirements | Description |
 | :------------|:-------|
 | [**Phone number management**](pstn-connectivity.md#phone-number-management) | How to get and manage phone numbers differs depending on your PSTN connectivity option. Read this section if you need to obtain phone numbers, transfer existing numbers, obtain service numbers, and so on. |
 | [**Call routing and dial plans**](pstn-connectivity.md#call-routing-and-dial-plans) | How to configure and manage dial plans that translate dialed phone numbers into an alternate format (typically E.164 format) for call authorization and call routing. Read this section if you need to understand what dial plans are and whether you need to specify dial plans for your organization.|
 | [**Emergency calling**](pstn-connectivity.md#emergency-calling) | How to manage and configure emergency calling differs depending on your PSTN connectivity option. Read this section if you need to understand how to manage emergency calling for your organization. |
-| [**Location-Based Routing for Direct Routing**](pstn-connectivity.md#location-based-routing-for-direct-routing) |How to use Location-Based Routing (LBR) to restrict toll bypass for Microsoft Teams users based on their geographic location. Read this section if your organization is using Direct Routing at a location that doesn't allow toll bypass.
+| [**Location-Based Routing for Direct Routing**](pstn-connectivity.md#location-based-routing-for-direct-routing) |How to use Location-Based Routing (LBR) to restrict toll bypass for Microsoft Teams users based on their geographic location. Read this section if your organization is using Direct Routing at a location that doesn't allow toll bypass. |
 | [**Network topology for cloud voice features**](pstn-connectivity.md#network-topology-for-voice-features) | If your organization is deploying Location-Based Routing (LBR) for Direct Routing or dynamic emergency calling, you must configure network settings for these features in Microsoft Teams. Read this section if you're implementing LBR for Direct Routing, or if you're implementing dynamic emergency calling with Calling Plan or Direct Routing. |
-| [**Migrate your existing voice solution**](#migrate-your-existing-voice-solution-to-teams) | What you need to think about when migrating your voice solution to Teams.  Read this section if you're migrating from an existing voice solution to Teams. 
-
+| [**Upgrade your existing Skype for Business voice solution**](#upgrade-your-existing-skype-for-business-voice-solution-to-teams) | What you need to think about when upgrading your voice solution to Teams. Read this section if you're upgrading from an existing Skype for Business deployment to Teams. |
 
 ## Teams Phone
 
@@ -98,7 +107,7 @@ This article introduces the following Teams Phone key features and functionality
 - [Cloud Voicemail](#cloud-voicemail)
 - [Calling identity](#calling-identity)
 
-![Diagram 3 shows Teams Phone contains Auto attendants and call queries, Cloud voicemail, and Calling identity.](media/phone-system-contains.png)
+  ![Diagram 3 shows Teams Phone contains Auto attendants and call queries, Cloud voicemail, and Calling identity.](media/phone-system-contains.png)
 
 For information about all Teams Phone features, and how to set up Teams Phone, see the following articles:
 
@@ -132,6 +141,7 @@ For more information about Cloud Voicemail and its configuration, see the follow
 
 - [Set up Cloud Voicemail](set-up-phone-system-voicemail.md)
 - [Manage voicemail policies](manage-voicemail-policies.md)
+- [Manage voicemail settings](manage-voicemail-settings.md)
 
 ### Calling identity
 
@@ -153,7 +163,7 @@ You can choose a combination of options, which enables you to design a solution 
 
 Most Teams Phone features are the same regardless of the PSTN connectivity option you choose. There are some differences in functionality, however, that affect how you configure certain Teams Phone features, such as call routing and emergency calling. For more information about PSTN connectivity options and configuration considerations, see [PSTN connectivity options](pstn-connectivity.md).
 
-## Migrate your existing voice solution to Teams
+## Upgrade your existing Skype for Business voice solution to Teams
 
 For an organization that is upgrading to Teams, the ultimate goal is to move all users to TeamsOnly mode. Using Teams Phone is only supported when the user is in TeamsOnly mode. If you need basic information about upgrading to Teams, start here:
 
@@ -163,6 +173,4 @@ For an organization that is upgrading to Teams, the ultimate goal is to move all
 
 For guidance on planning a Teams voice solution as part as your overall plan to upgrade to Teams, see [PSTN considerations for upgrading to Teams from Skype for Business on-premises](upgrade-to-teams-on-prem-pstn-considerations.md).
 
-For more information about how to implement your voice migration, see the [Contoso voice migration case study](voice-case-study-overview.md). The case study describes how a fictional multi-national corporation, Contoso, implemented a Teams voice solution for their organization. 
-
- 
+For more information about how to implement your voice migration, see the [Contoso voice migration case study](voice-case-study-overview.md). The case study describes how a fictional multi-national corporation, Contoso, implemented a Teams voice solution for their organization.

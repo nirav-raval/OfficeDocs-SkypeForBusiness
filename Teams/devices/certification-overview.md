@@ -29,7 +29,9 @@ This program tests the devices based on a set of rigorous specifications, coveri
 
 You can connect effortlessly and collaborate at your best. Certified for Teams are designed to ensure that you are seen and heard at your best in every Teams meeting and call, wherever you are. Choose devices that are built for Microsoft Teams and, tested to offer a deeply immersive experience that makes it easy to collaborate, communicate, and connect with your team.
 
-With more online meetings and calls than ever, trust our extensively validated devices to elevate the way you present yourself in every meeting and call whether you are in a conference room or at your desk.
+With more online meetings and calls than ever, trust our extensively validated devices to elevate the way you present yourself in every meeting and call whether you are in a conference room or at your desk.  
+  
+Certified Microsoft Teams Rooms systems are available on both Windows and Android operating systems. Whether you should choose a Teams Rooms system on Windows or Android depends on your specific needs and budget. For a comparison of features available on each operating system, check out [Teams Rooms on Windows and Android feature comparison](/microsoftteams/rooms/teams-devices-feature-comparison?tabs=Commercial). 
 
 If you want to know more, see:
 

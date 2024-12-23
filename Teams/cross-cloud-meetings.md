@@ -1,8 +1,8 @@
 ---
 title: Meet with people in other Microsoft 365 cloud environments
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: article
 ms.service: msteams
 audience: admin

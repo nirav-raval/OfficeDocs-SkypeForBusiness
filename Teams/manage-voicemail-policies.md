@@ -1,10 +1,10 @@
 ---
 title: Manage Voicemail Policies
-author: CarolynRowe
-ms.author: crowe
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
-ms.reviewer: jenstr
-ms.date: 05/21/2021
+ms.reviewer: vijurtse, colongma
+ms.date: 12/13/2024
 ms.topic: article
 ms.assetid: 9c590873-b014-4df3-9e27-1bb97322a79d
 ms.tgt.pltfrm: cloud
@@ -16,14 +16,14 @@ ms.collection:
   - Tier1
 audience: Admin
 appliesto: 
-  - Skype for Business
   - Microsoft Teams
+  - Skype for Business
 ms.localizationpriority: medium
 f1.keywords: 
   - CSH
 ms.custom: 
   - Phone System
-description: Manage Voicemail Policies for your users.
+description: Learn how to manage Cloud Voicemail policies for your users.
 ---
 
 # Manage Cloud Voicemail policies for your users
@@ -101,31 +101,21 @@ You can also use PowerShell to configure and assign existing or new voicemail po
 - [Remove-CsOnlineVoicemailPolicy](/powershell/module/teams/remove-csonlinevoicemailpolicy)
 
 ## Voicemail policy settings
-  
-- **Enable transcription** - This setting controls whether the Cloud Voicemail service generates a text transcription of the recorded voicemail and include it in the voicemail message. The transcription is done based on the language detected in the recorded voicemail.
+
+- **Users can edit call answering rules** - This setting controls whether the user is allowed to configure voicemail call answering rules in Microsoft Teams.
+- **Maximum recording duration** - The maximum recording length controls the maximum time a voicemail can be recorded. The default is 5 minutes.
+- **Primary prompt language** and **Secondary prompt language** - By default, the voicemail system prompts are presented to callers in the language selected by the user when setting up their voicemail. If there is a business requirement to have the voicemail system prompts presented in two languages, a primary and secondary language can be set.
+- **Voicemail transcription** - This setting controls whether the Cloud Voicemail service generates a text transcription of the recorded voicemail and include it in the voicemail message. The transcription is done based on the language detected in the recorded voicemail.
+- **Translation for transcriptions** - This setting controls whether the Cloud Voicemail service translates the transcription of the recorded voicemail. The translation is attempted in the preferred language of the voicemail receiver.
+- **Mask profanity in voicemail transcription** - This setting controls whether the Cloud Voicemail service masks profanity found in the transcription of the voicemail.
+- **Users can share data for service improvement** - This setting specifies whether voicemail and transcription data is shared with the service for training and improving accuracy. If set to false, voicemail data isn't be shared, regardless of user choice.
+- **Play preamble audio file before voicemail greeting** - The audio file to play to the caller before the user's voicemail greeting is played.
+- **Play postamble audio file after voicemail greeting** - The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.
+- **Disconnect the call if preamble or postamble audio can't be played** - Is playing the Pre- or Postamble mandatory before the caller can leave a message.
 
 > [!NOTE]
 > When transcription is turned off, the email users receive contains a message indicating that the audio quality wasn't good enough for transcription to take place.
 
-- **Transcription translation** - This setting controls whether the Cloud Voicemail service translates the transcription of the recorded voicemail. The translation is attempted in the preferred language of the voicemail receiver.
-
-- **Transcription profanity masking** - This setting controls whether the Cloud Voicemail service masks profanity found in the transcription of the voicemail.
-
-- **Maximum recording duration** - The maximum recording length controls the maximum time a voicemail can be recorded. The default is 5 minutes.
-
-- **Call answering rules** - This setting controls whether the user is allowed to configure voicemail call answering rules in Microsoft Teams.
-
-- **Dual language system prompts** - By default, the voicemail system prompts are presented to callers in the language selected by the user when setting up their voicemail. If there is a business requirement to have the voicemail system prompts presented in two languages, a primary and secondary language can be set and they might not be the same.
-
-- **PreambleAudioFile** - The audio file to play to the caller before the user's voicemail greeting is played.
-
-- **PostambleAudioFile** - The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.
-
-- **PreamblePostambleMandatory** - Is playing the Pre- or Postamble mandatory before the caller can leave a message.
-
-### Share data for service improvements
-
-This setting specifies whether voicemail and transcription data is shared with the service for training and improving accuracy. If set to false, voicemail data isn't be shared, regardless of user choice.
 
 ## Related articles
 

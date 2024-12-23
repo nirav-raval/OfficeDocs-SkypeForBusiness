@@ -3,7 +3,7 @@ title: Manage Queues app for Microsoft Teams
 author: mkbond007
 ms.author: mabond
 manager: pamgreen
-ms.date: 09/13/2024
+ms.date: 12/06/2024
 ms.topic: article
 ms.reviewer: colongma, emkirby
 audience: admin
@@ -25,12 +25,9 @@ search.appverid: MET150
 
 ## Overview of Queues app
 
-> [!NOTE]
-> Queues app is currently in [public preview](public-preview-doc-updates.md).
-
 The Queues app is a Teams-native solution designed to empower organizations to manage customer engagements efficiently, unlocking a set of advanced call functionalities for Teams Phone Call queues and Auto attendants, such as:
 
-- **Call queue management**: Admins can now delegate authorized users, also known as leads or supervisors, to manage and configure Call queues and Auto attendants directly from the Teams client. Authorized users can configure Call queues and Auto attendants from Call settings and they can opt agents into and out of the queue from Queues app. For more information, see [Configure Queues app](#configure-users-for-queues-app).
+- **Call queue management**: Admins can now delegate authorized users, also known as leads or supervisors, to manage and configure Call queues and Auto attendants directly from the Teams client. Authorized users can configure Call queues and Auto attendants from Call settings, and they can opt agents into and out of the queue from Queues app. For more information, see [Configure Queues app](#configure-users-for-queues-app).
 
 - **Real-time metrics**: The number of waiting calls, average wait time, longest call waiting time metrics, and more are included in real-time metrics within the Queues app. The analytics report shows activity made in the queue from 12:00 AM local time of the signed in user. For more information on real-time reports, see [Auto attendant and Call queue real-time reports](aa-cq-real-time-reports.md).
 
@@ -40,7 +37,7 @@ Queues app is designed to enhance call queue handling capabilities within Teams 
 
 Keep the following in mind:
 
-- Queues app is currently only supported on Teams desktop and Mac clients, not on web, mobile, or Virtualized Desktop Infrastructure (VDI) clients.
+- The Queues app is currently only supported on Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients, not on web or mobile clients.
 - Queues app is available in all regions where Teams Phone is supported. For more information, see [Country/region availability for Teams Phone](calling-plan-overview.md).
 - Queues app is currently only available in public clouds, including GCC.
 - For the best experience in Queues app, we advise having no more than 100 call queues assigned per user.
@@ -61,7 +58,7 @@ For more information on Teams Phone, see [What is Teams Phone](what-is-phone-sys
 
 ### Prerequisites
 
-Queues app is enabled by default for all Teams users in your organization who are assigned both a Teams Premium and Teams Phone license who and are voice enabled.
+Queues app is enabled by default for all Teams users in your organization who are assigned both a Teams Premium and Teams Phone license and who are voice enabled.
 
 As an IT admin, you can manage Queues app settings and designate *authorized users* to perform various actions such as adding and removing queue members, changing call handling flows, configuring auto attendant greetings, and more. For users who need additional capabilities to manage day-to-day operational changes, such as team leads, you must set up a voice applications policy and assign this policy to authorized users. You can allow authorized users to control call queue membership, greetings, call routing rules, and hours of operation.
 
@@ -80,7 +77,7 @@ Your users, both queue members and leads, can find information on using the Queu
 ## Set up Queues app
 
 > [!NOTE]
-> You can turn off Queues app via the the Teams admin center. However, doing so also turns off other Microsoft apps like Insights and Tasks. Navigate to **Teams apps** > **Manage apps**. Select **Actions** > **Org-wide app settings** > **Microsoft apps**. Select **Off** and **Save**.
+> You can turn off the Queues app via the Teams admin center. However, doing so also turns off other Microsoft apps like Insights and Tasks. Navigate to **Teams apps** > **Manage apps**. Select **Actions** > **Org-wide app settings** > **Microsoft apps**. Select **Off** and **Save**.
 
 ### Step 1: Assign licenses to users in your organization
 
@@ -96,7 +93,7 @@ App setup policies let you customize Teams to highlight the apps that are most i
 
 Any user with a Teams Phone and Teams Premium license has access to Queues app and can pin the app on their Teams client. If the app isn’t pinned by you via an app setup policy, your users can still view Queues app in the app bar flyout under **View more apps**.
 
-To automatically pin the Queues app in the Teams client for your users, do the following:
+To automatically pin the Queues app in the Teams client for your users, do the following steps:
 
 1. In the Teams admin center, go to **Teams apps** > **Setup policies**.
 1. Select an existing policy or select **Add** to create a new policy.

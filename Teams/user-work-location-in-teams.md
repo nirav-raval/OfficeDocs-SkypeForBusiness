@@ -1,7 +1,7 @@
 ---
 title: User work location in Teams
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.topic: article
 ms.service: msteams

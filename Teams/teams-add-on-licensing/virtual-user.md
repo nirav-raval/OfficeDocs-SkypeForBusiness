@@ -45,7 +45,7 @@ Your organization is allotted **Teams Phone Resource Account** licenses based on
 
 For every 10 user licenses of **Teams Phone Standard**, **Teams Phone with Calling Plan**, or devices with **Teams Shared Devices** license in your organization, one more **Teams Phone Resource Account** license becomes available.  Most organizations will have enough **Teams Phone Resource Account** licenses based on this scaling plan.
 
-In the event more **Teams Phone Resource Account** licenses are required, you can purchase more **Teams Phone Resource Account** licenses beyond the standard allocation through EA, EAS, EES, CSP, Web Direct, NCE – Customer led, and NCE – Partner led or your Microsoft account representative at a cost.
+In the event more **Teams Phone Resource Account** licenses are required, you can purchase more **Teams Phone Resource Account** licenses beyond the standard allocation through EA, EAS, EES, CSP, Web Direct, MCA – Customer led, and MCA – Partner led or your Microsoft account representative at a cost.
 
 Your allocation of **Teams Phone Resource Account** licenses is not automatically added to your tenant. You will need to go through the purchasing process for **Teams Phone Resource Account** licenses. Licenses within your allocation of **Teams Phone Resource Account** licenses will be zero cost. Any **Teams Phone Resource Account** license that exceeds your allocation of licenses will have a cost.
 

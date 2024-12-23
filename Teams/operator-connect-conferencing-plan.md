@@ -1,7 +1,7 @@
 ---
 title: Plan for Operator Connect Conferencing
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.date: 02/22/2024
 ms.topic: article
@@ -14,7 +14,7 @@ ms.collection:
   - m365initiative-meetings
   - highpri
   - Tier1
-ms.reviewer: crowe
+ms.reviewer: scottfrancis
 search.appverid: MET150
 f1.keywords:
 - NOCSH

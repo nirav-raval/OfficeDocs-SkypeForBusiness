@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: kramachandra
-ms.date: 09/30/2024
+ms.date: 11/18/2024
 ms.topic: article
 audience: Admin
 ms.service: msteams
@@ -45,12 +45,12 @@ The logs are output as a ZIP file in c:\rigel.
 <a name="Display"> </a>
 
 ### Display Sleep/Wake Behavior
-Teams Rooms on Windows devices are configured out of the box to send no video signal after 10 minutes of inactivity, at which time the Windows PC will stop sending video from its video outputs. You need to configure front of room displays in PC mode if available or set displays to automatically sleep/wake on an inactive/active HDMI video signal, consult your display OEM documentation for guidance. If the display doesn't support any of the mentioned functionalities, you may be able to use a display controller to enable the desired behavior over CEC or RS-232 control:
+Teams Rooms on Windows devices are configured out of the box to send no video signal after 10 minutes of inactivity, at which time the Windows PC will stop sending video from its video outputs. You need to configure front of room displays in PC mode if available or set displays to automatically sleep/wake on an inactive/active HDMI video signal, consult your display OEM documentation for guidance. If the display doesn't support any of the mentioned functionalities, you may be able to use a display controller to enable the desired behavior over CEC or RS-232 control. We do not certify displays or display controllers due to the abundance of offerings in the market, this list offers a few options for display controls that have worked in the past:
 - [Crestron HD-CTL-101](https://www.crestron.com/Products/Control-Hardware-Software/Hardware/Control-Modules/HD-CTL-101)
 - [Liberty DL-UHDILC](https://secure.libertycable.com/product_details.php?pitem=DL-UHDILC)
 - [Extron HD CTL 100](https://www.extron.com/article/hdctl100ad)
 
-If the displays aren't visible to the Windows PC when in their sleep state, Teams Rooms may report display disconnected alerts messages in Teams Admin Center and the Pro Management Portal and you may experience instability with your Teams Rooms devices. Windows believes the displays are physically disconnected. Consult your display manufacturer documentation for how to configure your displays in a way that keeps the HDMI sync with the Windows PC. If unsuccessful, powered Extended Display Identification Data (EDID) emulators/minders can be used to mitigate the instability and prevent monitoring alerts, several options are listed:
+If the displays aren't visible to the Windows PC when in their sleep state, Teams Rooms may report display disconnected alerts messages in Teams Admin Center and the Pro Management Portal and you may experience instability with your Teams Rooms devices. Windows believes the displays are physically disconnected. Consult your display manufacturer documentation for how to configure your displays in a way that keeps the HDMI sync with the Windows PC. If unsuccessful, powered Extended Display Identification Data (EDID) emulators/minders can be used to mitigate the instability and prevent monitoring alerts. We do not certify or offer support for EDID minders but several options are listed which have worked for other customers:
 
 - [Extron EDID 101H 4K PLUS](https://www.extron.com/product/edid101h4kplus)
 - [StarTech EDID Emulator](https://www.startech.com/en-us/audio-video-products/vsedidhd)
@@ -129,11 +129,8 @@ You can also perform this task directly on the device with these steps:
 
 1. Switch to Admin mode
 2. Open Windows Explorer and follow the instructions for your app version:
-3. If running Teams Rooms on Windows 4.19.82.0 or earlier:
-4. Navigate to: `C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalCache\Roaming\Microsoft\`
-5. Delete the **Teams** folder
-6. If running Teams Rooms 5.0.0 or newer:
-7. Navigate to: `C:\Users\Skype\AppData\Local\Packages\MSTeamsRooms_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams`
+1. Navigate to: `C:\Users\Skype\AppData\Local\Packages\MSTeamsRooms_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams`
+
 8. Delete everything inside the MSTeams folder
 9. Restart the Teams Rooms device and allow it to return to the Teams Rooms interface
 

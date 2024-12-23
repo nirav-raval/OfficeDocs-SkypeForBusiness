@@ -1,9 +1,9 @@
 ---
 ms.date: 07/01/2023
 title: Plan for meetings with external participants in Microsoft Teams
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+author: DaniEASmith
+ms.author: danismith
+manager: jtremper
 ms.topic: conceptual
 ms.service: msteams
 ms.reviewer: alsolom
@@ -77,11 +77,11 @@ Cross-cloud meetings are supported as follows:
 
 |Meet with:|Commercial|GCC|GCC High|DoD|China|
 |:---------|:--------:|:-:|:------:|:-:|:---:|
-|Commercial|          |✔️|✔️      |✔️ |✔️  |  
-|GCC       |✔️       |   |✔️      |✔️ |✔️  |  
-|GCC High  |✔️       |✔️|         |✔️ |     |  
-|DoD       |✔️       |✔️|✔️      |    |     |  
-|China     |✔️       |✔️|         |    |     |  
+|Commercial|          |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)      |![Image of a checkmark for yes](/office/media/icons/success-teams.png) |![Image of a checkmark for yes](/office/media/icons/success-teams.png)  |  
+|GCC       |![Image of a checkmark for yes](/office/media/icons/success-teams.png)       |   |![Image of a checkmark for yes](/office/media/icons/success-teams.png)      |![Image of a checkmark for yes](/office/media/icons/success-teams.png) |![Image of a checkmark for yes](/office/media/icons/success-teams.png)  |  
+|GCC High  |![Image of a checkmark for yes](/office/media/icons/success-teams.png)       |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|         |![Image of a checkmark for yes](/office/media/icons/success-teams.png) |     |  
+|DoD       |![Image of a checkmark for yes](/office/media/icons/success-teams.png)       |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)      |    |     |  
+|China     |![Image of a checkmark for yes](/office/media/icons/success-teams.png)       |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|         |    |     |  
 
 [Meet with people in other Microsoft 365 clouds](cross-cloud-meetings.md)
 

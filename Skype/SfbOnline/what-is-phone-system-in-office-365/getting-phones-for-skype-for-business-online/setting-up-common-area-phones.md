@@ -95,7 +95,7 @@ For more information, see [Add a user](https://support.office.com/article/1970f7
     ![Screenshot of user phone number.](../../images/cap-user-number.png)
 
    > [!Note]
-   > Users will only show up if they have a **Phone System** licence applied. If you just did this, then sometimes it takes a bit for the user to show up in the list.
+   > Users will only show up if they have a **Phone System** license applied. If you just did this, then sometimes it takes a bit for the user to show up in the list.
 
 For more stuff, see [Get phone numbers for your users](/microsoftteams/getting-phone-numbers-for-your-users).
 

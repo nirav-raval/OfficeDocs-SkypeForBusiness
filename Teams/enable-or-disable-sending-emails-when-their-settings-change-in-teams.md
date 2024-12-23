@@ -1,7 +1,7 @@
 ---
 title: "Email options when Audio Conferencing settings change"
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: oscarr
 ms.date: 02/21/2024

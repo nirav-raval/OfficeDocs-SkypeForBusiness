@@ -11,6 +11,7 @@ ms.collection:
   - m365initiative-meetings
   - highpri
   - Tier1
+  - magic-ai-copilot
 ms.reviewer: richardzhang
 ms.date: 4/29/2024
 search.appverid: MET150
@@ -26,7 +27,10 @@ appliesto:
 
 [!INCLUDE[Teams Premium](includes/teams-premium-ecm.md)]
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✔️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
+
+> [!NOTE]
+> When organizers turn off Microsoft 365 Copilot in Teams meetings and events, recording and transcription are also turned off. To learn more about Copilot, see [Manage Microsoft 365 Copilot in Teams meetings and events](copilot-teams-transcription.md).
 
 In Microsoft Teams meetings and events, there's an option for recordings to have automatic transcription. Transcription allows users to play back meeting recordings with closed captions and review important discussion items in the transcript. Transcription and captions help create inclusive content for viewers.
 

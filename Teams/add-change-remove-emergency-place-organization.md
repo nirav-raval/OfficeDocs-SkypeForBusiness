@@ -1,7 +1,7 @@
 ---
 title: Add places to emergency locations
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: jastark, roykuntz
 ms.date: 06/26/2023

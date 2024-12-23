@@ -1,9 +1,9 @@
 ---
 title: Understand teams and channels in Microsoft Teams
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniESmith
+ms.author: danismith
 manager: jtremper
-ms.date: 09/12/2024
+ms.date: 11/04/2024
 audience: Admin
 ms.topic: conceptual
 ms.service: msteams
@@ -23,23 +23,15 @@ appliesto:
 - Microsoft Teams
 ---
 
-
 # Understand teams and channels in Microsoft Teams
 
-The concepts of teams and channels are fundamental to a healthy, productive implementation of Microsoft Teams. 
+The concepts of teams and channels are fundamental to a healthy, productive implementation of Microsoft Teams.
 
 - A team is a collection of people, content, and tools that work together to produce a business outcome for your company. Teams is built on Microsoft 365 Groups, and changes to Microsoft 365 group membership sync to the team.
 
-- Channels are the collaboration spaces within a team in which the actual work is done. 
+- Channels are the collaboration spaces within a team in which the actual work is done.
 
 To read more about teams and channels, see the [Overview of teams and channels in Microsoft Teams](teams-channels-overview.md). For comprehensive Teams adoption guidance, get the [Teams Adoption Guide](https://aka.ms/teamstoolkit). To learn more about Teams and Microsoft 365 Groups, see [Microsoft 365 Groups and Microsoft Teams](office-365-groups.md) and [Learn more about Microsoft 365 Groups](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
-
-
-**View this short video**
-<br>
-> [!VIDEO https://www.youtube.com/embed/WkAVgNKn0hs]    
-
-
 
 Team access types determine who can join a team:
 

@@ -25,7 +25,7 @@ description: Learn to manage who can present and take control in Teams meetings.
 
 # Manage who can present and request control in Teams meetings and webinars
 
-**APPLIES TO:** ✔️Meetings ✔️Webinars ✖️Town halls
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a x for no](/office/media/icons/cancel-teams.png)Town halls
 
 As an admin, you can manage who can present in meetings and webinars and whether participants and external participants can request control of the presentation.
 

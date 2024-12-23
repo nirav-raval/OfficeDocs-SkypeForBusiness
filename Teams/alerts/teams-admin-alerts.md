@@ -1,13 +1,13 @@
 ---
 title: Microsoft Teams Monitoring and Alerting 
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: heidip
+author: MicrosoftHeidi
+manager: jtremper
 audience: Admin
 ms.topic: conceptual
 ms.service: msteams
 ms.reviewer: vapati
-ms.date: 07/30/2023
+ms.date: 10/30/2024
 f1.keywords:
 ms.localizationpriority: medium
 search.appverid:

@@ -230,10 +230,13 @@ Write-Host "Script ran successfully. Key container $keyContainerName created. Pr
 ## Back-end databases that work with Skype for Business Server 2019
 <a name="DBs"></a>
 
-When you install Skype for Business Server 2019 Standard Edition, SQL Server 2016 Express (64-bit edition) is also installed.
+When you install Skype for Business Server 2019 Standard Edition, SQL Server 2016 Express (64-bit edition) is also installed. Starting with Skype for Business 2019 CU8, Standard Edition also supports SQL Server 2022 Express (64-bit edition). This is achieved by running an in place upgrade of SQL Express on existing installation of Skype for Business 2019 CU8 (or later) Standard Edition.
+
+Starting with Skype for Business 2019 CU8, Skype for Business Server 2019 Enterprise Edition also supports SQL Server 2022 Express (64-bit edition) for local SQL express instances. This can also be updated by an in place upgrade of SQL Express.
 
 Skype for Business Server 2019 Enterprise Edition requires the full version of SQL Server, as indicated here (only 64-bit edition; don't use 32-bit editions):
-  
+
+- Microsoft SQL Server 2022 (64-bit edition) - must be run together with the latest updates, starting with Skype for Business Server 2019 CU8
 - Microsoft SQL Server 2019 (64-bit edition) - must be run together with the latest updates
 - Microsoft SQL Server 2017 (64-bit edition) - must be run together with the latest updates
 - Microsoft SQL Server 2016 (64-bit edition) - must be run together with the latest updates
@@ -252,13 +255,13 @@ Make sure that you have an active/passive configuration for SQL Clustering, whic
 For failover clustering, you can have:
   
 Two-node:
-  
+- Microsoft SQL Server 2022 Standard (64-bit edition), and we recommend running with the latest service pack, starting with Skype for Business Server 2019 CU8.  
 - Microsoft SQL Server 2019 Standard (64-bit edition), and we recommend running with the latest service pack.
 - Microsoft SQL Server 2017 Standard (64-bit edition), and we recommend running with the latest service pack.
 - Microsoft SQL Server 2016 Standard (64-bit edition), and we recommend running with the latest service pack.
 
 Sixteen-node:
-  
+- Microsoft SQL Server 2022 Enterprise (64-bit edition), and we recommend running with the latest service pack, starting with Skype for Business Server 2019 CU8.
 - Microsoft SQL Server 2019 Enterprise (64-bit edition), and we recommend running with the latest service pack.
 - Microsoft SQL Server 2017 Enterprise (64-bit edition), and we recommend running with the latest service pack.
 - Microsoft SQL Server 2016 Enterprise (64-bit edition), and we recommend running with the latest service pack.
@@ -340,7 +343,7 @@ It doesn't get easier than this. It's a single domain forest, a common topology.
 
 ![A single forest, single tree and mutiple domains diagram.](../../SfbServer/media/63b9f0dd-6bac-4ba9-ae68-8be032d09dcb.png)
   
-This diagram shows a single forest, again, but it has one or more child domains also (there are three in this specific example). S,o the domain the users are created in might be different from the domain Skype for Business Server 2019 is deployed to. Why worry about this situation? It's important to remember that when you deploy a Skype for Business Server Front End pool, all the servers in that pool need to be in a single domain. You can have cross-domain administration via Skype for Business Server support of Windows universal administrator groups.
+This diagram shows a single forest, again, but it has one or more child domains also (there are three in this specific example). So the domain the users are created in might be different from the domain Skype for Business Server 2019 is deployed to. Why worry about this situation? It's important to remember that when you deploy a Skype for Business Server Front End pool, all the servers in that pool need to be in a single domain. You can have cross-domain administration via Skype for Business Server support of Windows universal administrator groups.
   
 In the previous diagram, you can see that users from one domain are able to access Skype for Business Server pools from the same domain or from different domains, even if those users are in a child domain.
   
@@ -389,7 +392,7 @@ In this topology, there are one or more user forests, and Skype for Business Ser
   
 With this scenario, there are multiple forests on-premises, with a resource forest topology. There is a full trust relationship between the Active Directory forests. The Microsoft Entra Connect tool is used to synchronize accounts between the on-premises user forests and Microsoft 365 or Office 365.
   
- The organization also has Microsoft 365 or Office 365, and uses [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to synchronize their on-premises accounts with Microsoft 365 or Office 365. Users who are enabled for Skype for Business are enabled via Microsoft 365 or Office 365 and Skype for Business Online. Skype for Business Server is not deployed on-premises.
+The organization also has Microsoft 365 or Office 365, and uses [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to synchronize their on-premises accounts with Microsoft 365 or Office 365. Users who are enabled for Skype for Business are enabled via Microsoft 365 or Office 365 and Skype for Business Online. Skype for Business Server is not deployed on-premises.
   
 Single sign-on authentication is provided by an Active Directory Federation Services farm located in the user forest.
   
@@ -461,9 +464,9 @@ So certificate planning is a must. Now, let's look at a list of some of the thin
 - Auto-enrollment is supported for internal servers running Skype for Business Server 2019.
     
 - Auto-enrollment isn't supported for Skype for Business Server 2019 Edge Servers.
-    
-> [!NOTE]
-> Using the RSASSA-PSS signature algorithm is unsupported and may cause errors on login and call forwarding issues, among other problems. 
+
+  > [!NOTE]
+  > Using the RSASSA-PSS signature algorithm is unsupported and may cause errors on login and call forwarding issues, among other problems. 
   
 - Encryption key lengths of 1024, 2048, and 4096 are supported. Key lengths of 2048 and greater are recommended.
     

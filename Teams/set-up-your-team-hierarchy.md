@@ -1,7 +1,7 @@
 ---
 title: Set up your team targeting hierarchy
-author: Lana-Chin
-ms.author: v-chinlana
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.topic: conceptual
 ms.service: msteams

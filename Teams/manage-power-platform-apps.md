@@ -1,7 +1,7 @@
 ---
 title: Manage Microsoft Power Platform apps in the Microsoft Teams admin center
-author: ashishguptaiitb
-ms.author: guptaashish
+author: surbhigupta12
+ms.author: surbhigupta
 manager: prkosh
 ms.topic: article
 ms.tgt.pltfrm: cloud

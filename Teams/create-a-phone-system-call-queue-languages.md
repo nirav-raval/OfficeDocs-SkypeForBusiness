@@ -1,10 +1,10 @@
 ---
 title: "Microsoft Teams call queue supported languages"
-author: DaniEASmith
-ms.author: danismith
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 02/05/2021
+ms.date: 10/31/2024
 ms.topic: article
 ms.assetid: 
 ms.tgt.pltfrm: cloud

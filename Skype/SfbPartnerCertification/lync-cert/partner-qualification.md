@@ -26,7 +26,7 @@ description: Partner qualification requirements for Lync include Infrastructure,
 # Lync Online Dedicated partner qualified solutions and technical requirements
 
 ## Infrastructure
-With the launch of Skype for Business, we'll no longer qualify solutions for Lync Server. Instead, see the  [infrastructure certified for Skype for Business](../certification/infra.md).
+With the launch of Skype for Business, we'll no longer qualify solutions for Lync Server. Instead, see the [infrastructure certified for Skype for Business](../certification/infra.md).
 
 ## Lync Services
 E911 service provider and other services vendors interested in qualifying their offering for Lync Server or Exchange Server must meet both technical and marketing requirements. Participation in the program is solely at Microsoft’s discretion. Upon successful completion, the product, service, and firmware combinations tested will be listed on this site.
@@ -42,7 +42,7 @@ With the launch of Lync Server, there will no longer be qualifying solutions wit
 ### Program requirements for qualification
 - Company must have a standard NDA signed with Microsoft.
 - Join Microsoft Connect to obtain specifications and test plans (see below).
-- Join [Microsoft Partner Program](https://partners.microsoft.com/).
+- Join [Microsoft Partner Program](https://partner.microsoft.com/).
 - Become member of [TSANet](http://www.tsanet.org/).
 - Successfully meet technical Qualification Program requirements at [TekVizion](http://microsoftuc.tekvizionlabs.com/) or WIPRO labs for the respective qualification level.
 - Provide Quick Start Guide for configuration steps for Lync Server or Exchange Server.
@@ -62,18 +62,18 @@ The timeline that follows shows the approximate timeline for the qualification p
 
 To begin the process, vendors should:
 - Download the trial versions of the product.
-- Register to join the Microsoft Unified Communications Open Interoperability Program by visiting Microsoft Connect, logging in with their Passport account, click Invitations on the left navigation, and use this Invitation code: oip-YJ3X-7FK4
+- Register to join the Microsoft Unified Communications Open Interoperability Program by visiting Microsoft Connect, logging in with their Passport account, select Invitations on the left navigation, and use this Invitation code: oip-YJ3X-7FK4
 
 > [!NOTE]
 > You must use a Passport account that matches your corporate email address.
 > - Fill out the survey and click Submit. To be approved, you must provide your corporate email address from an enterprise telephony infrastructure vendor.
 
-Upon approval into the program (allow 4-5 business days), Microsoft will provide access to the technical specifications, documentation on the program requirements and information on how to engage with tekVizion.
+Upon approval into the program (allow 4-5 business days), Microsoft provides access to the technical specifications, documentation on the program requirements and information on how to engage with tekVizion.
 
 ## Lync Video Interoperability Program
 
 The Microsoft Lync Video Interoperability Program tests and qualifies partners’ video solutions to provide interoperability with Microsoft Office Communications Server 2007 R2 and Microsoft Lync Server 2010 and to provide a premium experience for customers. Microsoft Lync provides interoperability with three different types of video solutions:
-- **Video teleconference (VTC)**&nbsp;&nbsp;&nbsp;A video endpoint registers directly with Microsoft Office Communications Server 2007 R2 and Microsoft Lync Server 2010 and provides a seamless user experience so that Lync users can connect to the VTC systems as if it were another contact. The VTC system will appear with presence information and allow user to one select initiate video calls to the VTC.
+- **Video teleconference (VTC)**&nbsp;&nbsp;&nbsp;A video endpoint registers directly with Microsoft Office Communications Server 2007 R2 and Microsoft Lync Server 2010 and provides a seamless user experience so that Lync users can connect to the VTC systems as if it were another contact. The VTC system appears with presence information and allow user to one select initiate video calls to the VTC.
 - **Multipoint control unit (MCU)**&nbsp;&nbsp;&nbsp;A multipoint control unit allows for multi-party conferencing by providing users the use of virtual room or video bridge where multiple parties can connect and conduct video conferencing. These virtual rooms/video bridges will appear in the OCS and Lync contact list to allow those users to connect and participate in multiparty video calls.
 - **Gateway (GW)**&nbsp;&nbsp;&nbsp;A gateway allows connection with different network and provides Microsoft Lync access to different protocols to make video calls. Microsoft Lync uses SIP for signaling and H.263 and RTVideo as the video codec. Gateways provide access to other protocols such as H.323, H.261 and H.264. ‘Optimized for’ – IP phones, headsets, conference room systems and other devices that offer a rich and integrated experience giving customers the power to get the most out of their Lync experience and return on investment.
 
@@ -99,6 +99,7 @@ Partners interested in joining the Microsoft Lync Video Interoperability Program
 - Provide dedicated website for Lync support products, including support, ordering, and technical documentation.
 
 ### Technical requirements of qualification
+
 The specific details of qualification will be provided from Microsoft to the partner once the partner has formally been accepted to the program.  In general, partner solution will need to meet this level of functionality to be qualified:
 - 720p HD video quality
 - Wideband audio quality
@@ -112,16 +113,16 @@ The specific details of qualification will be provided from Microsoft to the par
 
 The diagram that follows displays the approximated timeline for the qualification process. The timeline shows tasks that can be performed concurrently and suggested order of precedence. The times aren't guaranteed since scheduling could preempt the flow.
 
-
 ***Technical qualifications timeline***
 
 ![timeline.](../media/timeline4technicalqualification.png)
 
 ### How to engage
+
 Currently video qualification tests are performed by Microsoft Lync logo team. To introduce yourself and obtain more specifics, email LyncLogo.
 
 ## Compatible Devices Program
-The Compatible Devices Program currently qualifies devices for Lync 2013 client on Windows-based machines. For nonwindows clients Microsoft recommends that you evaluate the USB consumer product lines offered by the device manufacturers that are part of the Compatible Devices Program. IP phones can also be used in nonwindows based environments, excluding the PC pairing functionalities.
+The Compatible Devices Program currently qualifies devices for Lync 2013 client on Windows-based machines. For non-windows clients Microsoft recommends that you evaluate the USB consumer product lines offered by the device manufacturers that are part of the Compatible Devices Program. IP phones can also be used in non-windows based environments, excluding the PC pairing functionalities.
 **‘Optimized for’**&nbsp;&nbsp;&nbsp;IP phones, headsets, conference room systems and other devices that offer a rich and integrated experience giving customers the power to get the most out of their Lync experience and return on investment.
 **Other compatible IP phones**&nbsp;&nbsp;&nbsp;IP phones tested to provide interoperability and quality of experience without gateways.
 
@@ -137,6 +138,7 @@ Only products that pass the stringent requirements can participate in the Lync l
 
 #### USB Peripherals, PCs, and Meeting Room Devices
 This program qualifies partner developed and designed USB headsets, handsets, webcams, PCs, and meeting room devices and systems to work with Lync. At a high-level, the partner must follow these steps to submit a device for qualification to the Lync logo program:
+
 - Meet the above criteria to be in the partner program;
 - Complete contract and product addendums;
 - Download test specifications;
@@ -145,6 +147,7 @@ This program qualifies partner developed and designed USB headsets, handsets, we
 - Obtain final approval from Lync logo team.
 
 Functional testing for meeting room devices is conducted by Microsoft. Audio and video testing for Optimized for Lync Devices (USB peripherals, PCs, and Meeting room devices) is conducted at one of two independent test labs that have been trained and validated to perform testing according to the Lync Logo standards. The approved independent labs are:
+
 - [AST Technology Labs](http://www.asttechlabs.com/certifications/Microsoft-Lync.aspx)
 - [PAL (Taipei, Taiwan)](http://www.pal-acoustics.com/index.php?a=services&id=132&lang=en)
 
@@ -156,6 +159,7 @@ For clarifications on joining the program, e-mail lynclogo@microsoft.com.
 
 ### Other compatible IP phones
 This program qualifies partner developed and designed IP phones that interoperate with Lync based on a combination of publicly available Windows Protocols (WSPP) and Microsoft Office Protocols. Device manufacturers interested in qualifying devices must have:
+
 - A long-term interest in developing product lines for the Microsoft Lync platform.
 - A proven record of developing and marketing enterprise grade IP phones.
 - Established global enterprise sales channels.

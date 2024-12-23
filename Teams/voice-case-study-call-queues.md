@@ -1,7 +1,7 @@
 ---
 title: 'Teams voice Contoso case study: Auto attendants and call queues'
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.date: 06/17/2020
 ms.topic: article
@@ -34,7 +34,7 @@ Depending on the site type, Contoso had the following needs:
 
 - Site Type B: Skype for Business Enterprise Voice 
 
-  Site Type B had existing auto attendants and call queues that needed to migrate to Teams. Contoso needed to keep the phone numbers associated with the auto attendants. Contoso moved the majority of these sites to Phone System with Calling Plans. However, in the few locations where Calling Plans was not available, Contoso moved these sites to a Direct Routing configuration.  
+  Site Type B had existing auto attendants and call queues that needed to migrate to Teams. Contoso needed to keep the phone numbers associated with the auto attendants. Contoso moved most these sites to Phone System with Calling Plans. However, in the few locations where Calling Plans wasn't available, Contoso moved these sites to a Direct Routing configuration.  
 
 - Site Type C: Skype for Business Enterprise Voice & traditional legacy telephony system 
 
@@ -51,7 +51,7 @@ Depending on the site type, Contoso had the following needs:
   - Q: How will the calls be routed to members in a call queue: attendant, serial, or round robin routing? 
     A: Contoso decided to use Attendant routing, 
 
-  - Q: How will we determine when a user should or should not get a call? 
+  - Q: How will we determine when a user should or shouldn't get a call? 
     A: Contoso decided to use call handling options to determine if the agent is available: presence-based routing. 
 
 ## Configuration
@@ -76,7 +76,7 @@ The steps to set up an auto attendant and a call queue include the following out
 
 Contoso had to set up the phone number provided by the local carrier as the service number in Office 365.
 
-- To set up a phone number available through Direct Routing, Contoso followed the instructions located in [Manage Resource Accounts](manage-resource-accounts.md). Because Office 365 is not aware of the on-premises phone numbers, Contoso used PowerShell to complete the setup.   
+- To set up a phone number available through Direct Routing, Contoso followed the instructions located in [Manage Resource Accounts](manage-resource-accounts.md). Because Office 365 isn't aware of the on-premises phone numbers, Contoso used PowerShell to complete the setup.   
 
 - To configure the Cloud auto attendant, Contoso followed the steps outlined in [Set up a Cloud auto attendant](create-a-phone-system-auto-attendant.md). 
 

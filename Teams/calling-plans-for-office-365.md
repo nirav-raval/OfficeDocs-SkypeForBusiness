@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams Calling Plans
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz
 ms.date: 08/05/2024
@@ -118,7 +118,7 @@ There are three **Pay-As-You-Go Calling Plan** options to choose from:
     > [!NOTE]
     > Depending on your plan, you may need to buy more add-ons before you can buy Teams Phone licenses. To learn more, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
 
-2. After you buy Teams Phone licenses, you can buy a Calling Plan by [signing in to the Microsoft 365 admin center and choose **Billing**](https://go.microsoft.com/fwlink/p/?linkid=868433) > **Purchase services** > **Add-on subscriptions**, and then selecting **Buy now**. 
+2. After you buy Teams Phone licenses, you can buy a Calling Plan by [signing in to the Microsoft 365 admin center and choose **Billing**](https://go.microsoft.com/fwlink/p/?linkid=868433) > **Purchase services** > **Add-on subscriptions**, and then selecting **Buy now**.
 
 You can buy and assign different Calling Plans to different users, depending on the needs of your organization. After you select the Calling Plan you need, proceed to checkout. You assign a plan to each user in the Microsoft 365 admin center. To learn how, see [Assign Microsoft Teams add-on licenses](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
 
@@ -128,29 +128,25 @@ Pay-As-You-Go Calling Plans don't have a set number of outgoing call minutes lik
 
 There are two ways you can fund and use minutes with a Pay-As-You-Go Calling Plan:
 
-- **Purchase the Pay-As-You-Go Calling Plan through the new commerce experience (NCE)**
-  - Customers who purchased their calling plan through the new commerce experience are able to pay for the outgoing call minutes they used in the previous month. This billing is also called post-usage or post-consumption billing.
-  - For instructions on purchasing a calling plan through the new commerce experience, see [Enable pay-as-you-go for your subscription](/microsoft-365/commerce/subscriptions/manage-pay-as-you-go-services) and [New commerce overage for telco pay-as-you-go](/partner-center/new-commerce-telco-payg).
+- **Purchase the Pay-As-You-Go Calling Plan with a Microsoft Customer Agreement (MCA)**
+  - Customers who purchased their calling plan with a Microsoft Customer Agreement (MCA) are able to pay for the outgoing call minutes they used in the previous month. This billing is also called post-usage or post-consumption billing.
+  - For instructions on purchasing a calling plan with an MCA, see [Enable pay-as-you-go for your subscription](/microsoft-365/commerce/subscriptions/manage-pay-as-you-go-services) and [New commerce overage for telco pay-as-you-go](/partner-center/new-commerce-telco-payg).
 
 - **Purchase Communication Credits**
-  - This option is for customers who didn't purchase their calling plan through the new commerce experience (NCE). These customers need to purchase Communication Credits to fund their Pay-As-You-Go Calling Plan.
+  - This option is for customers who purchased their calling plan with a Microsoft Online Subscription Agreement (MOSA). These customers need to purchase Communication Credits to fund their Pay-As-You-Go Calling Plan.
   - For instructions on how to purchase and assign Communication Credits, see [Set up Communication Credits for your organization](set-up-communications-credits-for-your-organization.md).
-
 
 ## Pricing information
 
 - [Pricing for Calling Plans and Teams Phone](https://www.microsoft.com/microsoft-365/microsoft-teams/voice-calling).
 
-
-## Related content 
+## Related content
 
 For more information, see the following articles:
 
 - [Set up Calling Plans](set-up-calling-plans.md)
 - [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
-- [Add funds and manage Communications Credits](add-funds-and-manage-communications-credits.md)
 - [Plan your voice solution](cloud-voice-landing-page.md)
 - [PSTN connectivity options](pstn-connectivity.md)
 
 When signed in to the Teams admin center, see the [Plan and Implement your Microsoft Teams Phone Deployment Guide](https://go.microsoft.com/fwlink/?linkid=2224790). This guide customizes your experience based on your environment. To review best practices without signing in and activating automated setup features, see the [Microsoft 365 setup portal](https://go.microsoft.com/fwlink/?linkid=2222974).
-

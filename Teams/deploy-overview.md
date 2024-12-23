@@ -3,7 +3,7 @@ title: IT Admins - Microsoft Teams deployment overview
 author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
-ms.date: 10/09/2023
+ms.date: 10/28/2024
 ms.topic: concept-article
 ms.service: msteams
 audience: admin

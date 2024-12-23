@@ -22,6 +22,9 @@ ms.custom: seo-marvel-jun2020
 
 # How Microsoft Teams uses memory
 
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
+
 Some Microsoft Teams users have questions about how Teams uses memory. This article describes how memory is used by Teams, and why the Teams desktop application (app) and the Teams web app do not prevent other apps and workloads on the same computer from having enough memory to run optimally. Teams is designed to use modern web technology. To achieve this, the Teams desktop client was developed on Electron, which uses Chromium for rendering. This is the same rendering engine behind many of today's most popular browsers, including Edge and Chrome.
 
 ## How Teams works

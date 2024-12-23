@@ -2,8 +2,8 @@
 title: Set up Microsoft Teams meeting add-on for Google Workspace
 ms.author: wlibebe
 author: wlibebe
-ms.reviewer: aravin
-ms.date: 01/11/2021
+ms.reviewer: jason.hochstadt
+ms.date: 10/31/2024
 manager: pamgreen
 ms.topic: article
 audience: admin
@@ -27,20 +27,16 @@ appliesto:
 
 # Set up Microsoft Teams meeting add-on for Google Workspace
 
-Using the Microsoft Teams meeting add-on lets Google calendar users schedule and join a Microsoft Teams meeting directly from Google Workspace. Users will get access to Teams meetings features including video and audio conferencing, screen sharing, meeting chat, digital whiteboards, and more. Stay connected and organized to get more done together across work, school, and life.
+The Microsoft Teams meeting add-on lets Google calendar users schedule and join a Microsoft Teams meeting directly from Google Workspace. These get access to Teams meetings features including video and audio conferencing, screen sharing, meeting chat, digital whiteboards, and more.
 
-The Microsoft Teams meeting add-on for Google Workspace must be enabled by a Teams admin before tenant users can access the app.
+The Microsoft Teams meeting add-on for Google Workspace is on by default. To learn about how your users use the Microsoft Teams meeting add-on for Google Workspace, see [Install the Microsoft Teams meeting add-on for Google Workspace](https://support.microsoft.com/office/install-the-microsoft-teams-meeting-add-on-for-google-workspace-bba2dfbe-0b2b-4ee7-be10-261ad80ddb60).
 
-## Enable or disable Microsoft Teams meeting add-on for Google Workspace in the Azure portal
+## Turn the Microsoft Teams meeting add-on for Google Workspace on or off in the Azure portal
 
-As a tenant administrator, you can enable or disable a Microsoft Teams meeting add-on for Google Workspace from your organization's admin account using the Azure portal.
-
-The add-on is enabled by default.
+As an admin, you can turn the Microsoft Teams meeting add-on for Google Workspace on or off using the Azure portal.
 
 1. Sign in to the Azure portal.
-
 2. Select **Enterprise applications** > **All applications**.
-
 3. Search for **Microsoft Teams meeting add-on for Google Workspace**.
 
    ![Azure portal showing all applications.](media/aad-add-google-workspace.png)
@@ -51,7 +47,7 @@ The add-on is enabled by default.
 
 5. (Optional) To disable the add-on, select **No** instead of **Yes** in Step 4.
 
-## Disable Microsoft Teams meeting add-on for Google Workspace using PowerShell
+## Turn the Microsoft Teams meeting add-on for Google Workspace off using PowerShell
 
 ```powershell
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
@@ -61,6 +57,7 @@ $appId = '7969c887-ba98-48bb-8832-6c9239929d7c'
 ```
 
 ## Check if a service principal already exists for the app
+
 ```powershell
 $ServicePrincipalUpdate =@{
   "accountEnabled" = "false"
@@ -87,7 +84,7 @@ See the Google documentation [Delete a Google Workspace Marketplace app](https:/
 
 ## Create the Microsoft Teams meeting add-on for Google Workspace using PowerShell
 
-In case the Microsoft Teams meeting add-on is not present in your tenant, you can create it using PowerShell: 
+In case the Microsoft Teams meeting add-on isn't present in your tenant, you can create it using PowerShell:
 
 ```powershell
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
@@ -106,3 +103,7 @@ if ($servicePrincipal) {
     Write-Host "Created the Service Principal"
 }
 ```
+
+## Related topics
+
+- [Plan for Teams meetings](plan-meetings.md)

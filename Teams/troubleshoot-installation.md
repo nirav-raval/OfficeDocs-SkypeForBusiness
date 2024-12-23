@@ -21,6 +21,9 @@ description: Learn how to troubleshoot installation and update issues for the Te
 
 # Troubleshoot classic Microsoft Teams installation and update issues on Windows
 
+> [!IMPORTANT]
+> The classic Team client is no longer supported. This client is not receiving further updates, including security updates. The classic Teams client will not work after June 30, 2025. You must upgrade to the new Teams client before that time. See [The new Microsoft Teams](new-teams-desktop-admin.md) for more information.
+
 This article provides guidance for how to diagnose and troubleshoot installation and update issues for the Teams desktop client app running on Windows. For additional troubleshooting information, see [Teams troubleshooting](/MicrosoftTeams/troubleshoot/teams).
 
 [!Important]

@@ -1,7 +1,7 @@
 ---
 title: Manage emergency calling policies in Microsoft Teams
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: jastark, roykuntz
 ms.date: 05/07/2024

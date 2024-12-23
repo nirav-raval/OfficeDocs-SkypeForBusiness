@@ -2,8 +2,8 @@
 title: "What is Teams Phone"
 ms.reviewer: roykuntz
 ms.date: 03/07/2024
-author: CarolynRowe
-ms.author: crowe
+author: sfrancis206
+ms.author: scottfrancis
 manager: pamgreen
 ms.topic: conceptual
 ms.tgt.pltfrm: cloud
@@ -37,9 +37,16 @@ Calls between users in your organization are handled internally within Teams Pho
 
 For making external calls, Teams Phone provides add-on options for connecting to the PSTN. For more information about voice solutions and PSTN connectivity options, see [Plan your Teams voice solution](cloud-voice-landing-page.md) and [Connect to the PSTN](#connect-to-the-public-switched-telephone-network-pstn). 
 
-**Licenses and voice enablement** - To use Teams Phone features, your organization must have a Teams Phone license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+### Licenses and voice enablement 
 
-Most features require you to assign the Teams Phone license and ensure that users are "voice enabled." To assign the license, use the [Set-CsPhoneNumberAssignment cmdlet](/powershell/module/teams/set-csphonenumberassignment) and set the **EnterpriseVoiceEnabled** parameter to $true. A few features, such as Auto attendant, do not require a user to be voice enabled (more about features in the next section).
+To use Teams Phone features, your users must have a Teams Phone Standard or E5 license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+
+In addition to licensing, the users must be "voice enabled."
+
+To voice enable your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
 
 ## Teams Phone features
 
